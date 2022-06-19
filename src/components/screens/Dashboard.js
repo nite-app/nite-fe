@@ -164,14 +164,14 @@ function Dashboard({ active, setActive }) {
           </div>
         </div>
       </div>
-      <div className="flex flex-col max-h-96">
+      <div className="flex flex-col ">
         <p className="font-semibold text-xl mt-10 mb-5 2xl:text-2xl">
           Analytics
         </p>
-        <div className="flex flex-col max-h-80 h-full 2xl:flex-row">
+        <div className="flex flex-col 2xl:flex-row">
           <div
             className="flex box-border w-full justify-center items-center p-5 mr-8 mb-5 rounded-2xl bg-white 
-            2xl:w-1/3 h-80 max-h-72"
+            2xl:w-1/3 h-80 max-h-72 2xl:mb-0"
           >
             <LineChart chartData={userData} chartOptions={userOptions} />
           </div>
