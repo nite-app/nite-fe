@@ -47,7 +47,7 @@ function Sidebar() {
             <p className="tab-text group-hover:text-black">Habits</p>
           </TabUnstyled>
         </TabsListUnstyled>
-        <div className="absolute bottom-0 mb-10 w-full box-border flex p-5 rounded-2xl transition-all duration-300 ease-linear">
+        <div className="absolute bottom-0 mb-10  box-border flex p-5 rounded-2xl transition-all duration-300 ease-linear">
           <IoMdSettings size={32} className="tab-icon group-hover:text-black" />
           <p className="tab-text group-hover:text-black">Settings</p>
         </div>
