@@ -13,7 +13,10 @@ import {
 
 function Sidebar() {
   return (
-    <div className="h-full w-3/12 bg-backpanel box-border flex flex-col rounded-3xl p-5 mr-5 z-50">
+    <div
+      className=" hidden h-full w-full bg-backpanel box-border flex-col rounded-3xl p-5 mr-5 z-50
+      md:flex w-3/12"
+    >
       <div className="p-5 flex box-border items-center">
         <div className="rounded-full bg-slate-400 p-4 mr-5">
           <p className="text-2xl font-semibold">AS</p>

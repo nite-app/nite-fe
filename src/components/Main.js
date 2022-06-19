@@ -19,8 +19,11 @@ function Main() {
 
   return (
     <TabsUnstyled defaultValue={0} className="is-active">
-      <div className="flex box-border p-5 w-screen bg-backlight relative">
-        <div>{active ? <CollapsedSidebar /> : <></>}</div>
+      <div
+        className="flex box-border p-5 w-screen bg-backlight relative
+        2xl:h-screen"
+      >
+        {active ? <Sidebar /> : <CollapsedSidebar />}
         <TabPanelUnstyled value={0} className="w-full">
           <Dashboard active={active} setActive={setActive} />
         </TabPanelUnstyled>
