@@ -113,61 +113,63 @@ function Dashboard({ active, setActive }) {
   function toggleSidebar() {}
 
   return (
-    <div className="w-full h-full box-border rounded-3xl bg-backpanel p-12 relative">
+    <div className="w-full h-full box-border rounded-3xl bg-backpanel p-8 relative">
       <div className="flex items-center cursor-pointer">
         <BsReverseLayoutSidebarInsetReverse
-          size={36}
+          size={28}
           className="mr-5"
           onClick={() => {
             setActive(!active);
           }}
         />
-        <p className="text-5xl font-semibold">Good morning, Anna</p>
+        <p className="text-3xl font-semibold">Good morning, Anna</p>
       </div>
       <div className="flex flex-col">
-        <p className="font-semibold text-2xl mt-8 mb-5">30 Days performance</p>
+        <p className="font-semibold text-xl mt-8 mb-5">30 Days performance</p>
         <div className="flex w-full">
-          <div className="min-w-max w-1/5 max-w-sm h-24 mr-8 rounded-xl p-5 bg-[url('./img/performance-1.png')] bg-cover">
-            <p className="font-semibold text-xl text-gray-300">Hours slept</p>
-            <p className="font-semibold text-xl text-gray-400">216</p>
+          <div className="min-w-max w-1/5 max-w-sm h-fit mr-8 rounded-xl p-5 bg-[url('./img/performance-1.png')] bg-cover">
+            <p className="font-semibold text-base text-gray-300">Hours slept</p>
+            <p className="font-semibold text-base text-gray-400">216</p>
           </div>
-          <div className="min-w-max w-1/5 max-w-sm h-24 mr-8 rounded-xl p-5 bg-[url('./img/performance-2.png')] bg-cover">
-            <p className="font-semibold text-xl text-gray-300">Average sleep</p>
-            <p className="font-semibold text-xl text-gray-400">7.2</p>
+          <div className="min-w-max w-1/5 max-w-sm h-fit mr-8 rounded-xl p-5 bg-[url('./img/performance-2.png')] bg-cover">
+            <p className="font-semibold text-base text-gray-300">
+              Average sleep
+            </p>
+            <p className="font-semibold text-base text-gray-400">7.2</p>
           </div>
-          <div className="min-w-max w-1/5 max-w-sm h-24 mr-8 rounded-xl p-5 bg-[url('./img/performance-3.png')] bg-cover">
-            <p className="font-semibold text-xl text-gray-300">
+          <div className="min-w-max w-1/5 max-w-sm h-fit mr-8 rounded-xl p-5 bg-[url('./img/performance-3.png')] bg-cover">
+            <p className="font-semibold text-base text-gray-300">
               Habits respected
             </p>
-            <p className="font-semibold text-xl text-gray-400">87</p>
+            <p className="font-semibold text-base text-gray-400">87</p>
           </div>
-          <div className="min-w-max w-1/5 max-w-sm h-24 mr-8 rounded-xl p-5 bg-[url('./img/performance-4.png')] bg-cover">
-            <p className="font-semibold text-xl text-gray-300">Notes taken</p>
-            <p className="font-semibold text-xl text-gray-400">23</p>
+          <div className="min-w-max w-1/5 max-w-sm h-fit mr-8 rounded-xl p-5 bg-[url('./img/performance-4.png')] bg-cover">
+            <p className="font-semibold text-base text-gray-300">Notes taken</p>
+            <p className="font-semibold text-base text-gray-400">23</p>
           </div>
         </div>
       </div>
-      <div className="flex flex-col max-h-96 min-h-max">
-        <p className="font-semibold text-2xl mt-10 mb-5">Analytics</p>
-        <div className="flex min-h-max max-h-80 h-full">
-          <div className="flex box-border justify-center items-center h-full p-5 max-h-80 mr-8 rounded-2xl bg-white min-w-max">
+      <div className="flex flex-col max-h-96">
+        <p className="font-semibold text-xl mt-10 mb-5">Analytics</p>
+        <div className="flex flex-col max-h-80 h-full">
+          <div className="flex box-border w-72 max-w-xs justify-center items-center p-5 mr-8 mb-5 rounded-2xl bg-white ">
             <LineChart chartData={userData} chartOptions={userOptions} />
           </div>
-          <div className="flex h-full h-min-max w-80 p-7 rounded-2xl bg-white">
+          <div className="flex h-full h-min-max w-full p-7 rounded-2xl bg-white">
             <p className="font-semibold text-xl">Sleep quality</p>
           </div>
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="font-semibold text-2xl mt-10 mb-5">Challenges</p>
-        <div className="grid grid-cols-2 gap-x-8 w-full h-full box-border">
+        <p className="font-semibold text-xl mt-10 mb-5">Challenges</p>
+        <div className="grid grid-rows-2 gap-x-8 gap-y-8 w-full h-full box-border">
           <div className="w-full mr-8 rounded-2xl p-8 box-border bg-white">
-            <p className="font-semibold text-3xl mb-5">Weekly target</p>
-            <p className="font-medium text-xl text-gray-400">25% Achieved</p>
+            <p className="font-semibold text-2xl mb-4">Weekly target</p>
+            <p className="font-medium text-lg text-gray-400">25% Achieved</p>
           </div>
           <div className="w-full rounded-2xl p-8 box-border bg-white">
-            <p className="font-semibold text-3xl mb-5">Monthly target</p>
-            <p className="font-medium text-xl text-gray-400">50% Achieved</p>
+            <p className="font-semibold text-2xl mb-4">Monthly target</p>
+            <p className="font-medium text-lg text-gray-400">50% Achieved</p>
           </div>
         </div>
       </div>
