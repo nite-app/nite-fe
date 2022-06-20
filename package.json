@@ -2,7 +2,7 @@
   "name": "nite",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://dev.niteapp.cf",
+  "homepage": "https://tw.niteapp.cf",
   "dependencies": {
     "@craco/craco": "^6.4.3",
     "@emotion/react": "^11.9.0",
