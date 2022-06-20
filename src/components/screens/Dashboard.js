@@ -129,7 +129,7 @@ function Dashboard({ active, setActive }) {
         <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
           30 Days performance
         </p>
-        <div className="flex w-full">
+        <div className="flex w-72 overflow-x-scroll 2xl:w-full 2xl:overflow-hidden">
           <div className="min-w-max w-1/5 max-w-sm h-fit mr-8 rounded-xl p-5 bg-[url('./img/performance-1.png')] bg-cover">
             <p className="font-semibold text-base text-gray-300 2xl:text-xl">
               Hours slept
