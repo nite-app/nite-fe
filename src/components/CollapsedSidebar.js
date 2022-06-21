@@ -44,7 +44,10 @@ function CollapsedSidebar() {
             />
             <span className="tab-tooltip group-hover:scale-100">Sleep 🌒</span>
           </TabUnstyled>
-          <TabUnstyled value={3} className="tab-item group mb-72">
+          <TabUnstyled
+            value={3}
+            className="tab-item group mb-72 md:mb-12 lg:mb-12"
+          >
             <CgCheckR
               size={32}
               className="collapsedtab-icon group-hover:text-black"

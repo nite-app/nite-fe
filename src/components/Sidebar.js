@@ -15,7 +15,7 @@ function Sidebar() {
   return (
     <div
       className=" hidden h-full w-full bg-backpanel box-border flex-col rounded-3xl p-5 mr-5 z-50
-      md:flex w-3/12"
+      xl:flex w-3/12 h-full"
     >
       <div className="p-5 flex box-border items-center">
         <div className="rounded-full bg-slate-400 p-4 mr-5">
