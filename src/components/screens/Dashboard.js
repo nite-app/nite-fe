@@ -112,7 +112,7 @@ function Dashboard({ active, setActive }) {
   });
 
   return (
-    <div className="w-full h-full box-border rounded-3xl bg-backpanel p-8 relative 2xl:p-12">
+    <div className="w-full h-full min-h-full box-border rounded-3xl bg-backpanel p-8 relative 2xl:p-12">
       <div className="flex items-center cursor-pointer">
         <BsReverseLayoutSidebarInsetReverse
           size={28}
@@ -185,7 +185,7 @@ function Dashboard({ active, setActive }) {
         <p className="font-semibold text-xl mt-10 mb-5 2xl:text-2xl">
           Challenges
         </p>
-        <div className="grid grid-rows-2 gap-x-8 gap-y-8 w-full h-full box-border 2xl:grid-cols-2 grid-rows-1">
+        <div className="grid grid-rows-2 gap-x-8 gap-y-8 w-full h-full box-border xl:grid-cols-2 grid-rows-1">
           <div className="w-full mr-8 rounded-2xl p-8 box-border bg-white">
             <p className="font-semibold text-2xl mb-4">Weekly target</p>
             <p className="font-medium text-lg text-gray-400">25% Achieved</p>

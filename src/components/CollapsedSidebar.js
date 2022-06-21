@@ -13,14 +13,14 @@ import {
 
 function CollapsedSidebar() {
   return (
-    <div className="relative h-full w-24 min-w-24 bg-backpanel box-border flex flex-col rounded-3xl p-5 items-center mr-5">
+    <div className="relative h-full w-full mb-5 min-w-24 bg-backpanel box-border flex flex-row rounded-3xl p-0 items-center mr-5 xl:flex-col w-24 p-5 xl:mb-0">
       <div className="p-5 flex box-border items-center justify-center">
         <div className="rounded-full bg-slate-400 p-4">
           <p className="text-2xl font-semibold">AS</p>
         </div>
       </div>
-      <div className="p-5 flex flex-col justify-center ">
-        <TabsListUnstyled className="flex flex-col justify-center">
+      <div className="p-5 flex flex-row justify-center xl:flex-col">
+        <TabsListUnstyled className="flex flex-row justify-center xl:flex-col">
           <TabUnstyled value={0} className="tab-item group">
             <MdSpaceDashboard
               size={32}
@@ -44,10 +44,7 @@ function CollapsedSidebar() {
             />
             <span className="tab-tooltip group-hover:scale-100">Sleep 🌒</span>
           </TabUnstyled>
-          <TabUnstyled
-            value={3}
-            className="tab-item group mb-72 md:mb-12 lg:mb-12"
-          >
+          <TabUnstyled value={3} className="tab-item group lg:mb-12">
             <CgCheckR
               size={32}
               className="collapsedtab-icon group-hover:text-black"
@@ -55,7 +52,7 @@ function CollapsedSidebar() {
             <span className="tab-tooltip group-hover:scale-100">Habits ✅</span>
           </TabUnstyled>
         </TabsListUnstyled>
-        <div className="group absolute flex p-5 mb-5 rounded-2xl bottom-0 box-border transition-all duration-300 ease-linear hover:bg-backlight">
+        <div className="group relative flex p-5 mb-0 rounded-2xl bottom-0 box-border transition-all duration-300 ease-linear hover:bg-backlight xl:absolute xl:mb-5">
           <IoMdSettings
             size={32}
             className="collapsedtab-icon group-hover:text-black"
