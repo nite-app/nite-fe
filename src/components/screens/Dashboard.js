@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsReverseLayoutSidebarInsetReverse } from "react-icons/bs";
 import LineChart from "../LineChart";
 import { chartData } from "../../Data";
@@ -110,6 +110,10 @@ function Dashboard({ active, setActive }) {
       line: {},
     },
   });
+  const [partOfTheDay, setPartOfTheDay] = useState();
+  useEffect(() => {
+    setPartOfTheDay(new Date().getHours() > 12 ? "Afternoon" : "Morning");
+  }, []);
 
   return (
     <div className="w-full h-full min-h-full box-border rounded-3xl bg-backpanel p-8 relative 2xl:p-12">
@@ -122,7 +126,7 @@ function Dashboard({ active, setActive }) {
           }}
         />
         <p className="text-3xl font-semibold 2xl:text-5xl">
-          Good morning, Anna
+          Good {partOfTheDay}, Anna
         </p>
       </div>
       <div className="flex flex-col">
