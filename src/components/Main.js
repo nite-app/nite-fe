@@ -30,7 +30,6 @@ function Main() {
           open={settingsOpen}
           onClose={() => setSettingsOpen(false)}
         ></Settings>
-        {/* Sidebar */}
         {active ? (
           <Sidebar
             settingsOpen={settingsOpen}

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BsReverseLayoutSidebarInsetReverse } from "react-icons/bs";
 import LineChart from "../LineChart";
 import { chartData } from "../../Data";
+import DonutChart from "../DonutChart";
 
 let width, height, gradient;
 function getGradient(ctx, chartArea) {
@@ -43,16 +44,6 @@ function Dashboard({ active, setActive }) {
       {
         label: "Monthly average",
         data: chartData.map((data) => data.average),
-        // borderColor: function (context) {
-        //   const chart = context.chart;
-        //   const { ctx, chartArea } = chart;
-
-        //   if (!chartArea) {
-        //     // This case happens on initial chart load
-        //     return null;
-        //   }
-        //   return getGradient(ctx, chartArea);
-        // },
         borderColor: "rgba(121,71,247,0.8)",
         backgroundColor: function (context) {
           const chart = context.chart;
@@ -110,6 +101,51 @@ function Dashboard({ active, setActive }) {
       line: {},
     },
   });
+
+  const [userData2, setUserData2] = useState({
+    labels: ["Completed", "Uncompleted"],
+    datasets: [
+      {
+        label: "Completion",
+        data: [25, 75],
+        backgroundColor: ["#F9896B", "#F6F6FC"],
+      },
+    ],
+  });
+
+  const [userOptions2, setUserOptions2] = useState({
+    responsive: true,
+    borderJoinStyle: "round",
+    cutout: "90%",
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  });
+
+  const [userData3, setUserData3] = useState({
+    labels: ["Completed", "Uncompleted"],
+    datasets: [
+      {
+        label: "Completion",
+        data: [50, 50],
+        backgroundColor: ["#F9896B", "#F6F6FC"],
+      },
+    ],
+  });
+
+  const [userOptions3, setUserOptions3] = useState({
+    responsive: true,
+    borderJoinStyle: "round",
+    cutout: "90%",
+    plugins: {
+      legend: {
+        display: false,
+      },
+    },
+  });
+
   const [partOfTheDay, setPartOfTheDay] = useState();
   useEffect(() => {
     setPartOfTheDay(new Date().getHours() > 12 ? "Afternoon" : "Morning");
@@ -191,12 +227,22 @@ function Dashboard({ active, setActive }) {
         </p>
         <div className="grid grid-rows-2 gap-x-8 gap-y-8 w-full h-full box-border xl:grid-cols-2 grid-rows-1">
           <div className="w-full mr-8 rounded-2xl p-8 box-border bg-white">
-            <p className="font-semibold text-2xl mb-4">Weekly target</p>
-            <p className="font-medium text-lg text-gray-400">25% Achieved</p>
+            <div>
+              <p className="font-semibold text-2xl mb-4">Weekly target</p>
+              <p className="font-medium text-lg text-gray-400">25% Achieved</p>
+            </div>
+            <div className="">
+              <DonutChart chartData={userData2} chartOptions={userOptions2} />
+            </div>
           </div>
           <div className="w-full rounded-2xl p-8 box-border bg-white">
-            <p className="font-semibold text-2xl mb-4">Monthly target</p>
-            <p className="font-medium text-lg text-gray-400">50% Achieved</p>
+            <div>
+              <p className="font-semibold text-2xl mb-4">Monthly target</p>
+              <p className="font-medium text-lg text-gray-400">50% Achieved</p>
+            </div>
+            <div className="">
+              <DonutChart chartData={userData3} chartOptions={userOptions3} />
+            </div>
           </div>
         </div>
       </div>
