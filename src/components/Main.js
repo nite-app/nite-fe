@@ -14,8 +14,11 @@ import Home from "./screens/Home";
 import Sleep from "./screens/Sleep";
 import Habits from "./screens/Habits";
 
+import Settings from "./Settings";
+
 function Main() {
   const [active, setActive] = useState(true);
+  const [settingsOpen, setSettingsOpen] = useState(false);
 
   return (
     <TabsUnstyled defaultValue={0} className="is-active">
@@ -23,7 +26,22 @@ function Main() {
         className="flex flex-col h-full box-border p-5 w-screen bg-backlight relative
         xl:flex-row 2xl:h-screen"
       >
-        {active ? <Sidebar /> : <CollapsedSidebar />}
+        <Settings
+          open={settingsOpen}
+          onClose={() => setSettingsOpen(false)}
+        ></Settings>
+        {/* Sidebar */}
+        {active ? (
+          <Sidebar
+            settingsOpen={settingsOpen}
+            setSettingsOpen={setSettingsOpen}
+          />
+        ) : (
+          <CollapsedSidebar
+            settingsOpen={settingsOpen}
+            setSettingsOpen={setSettingsOpen}
+          />
+        )}
         <TabPanelUnstyled value={0} className="w-full">
           <Dashboard active={active} setActive={setActive} />
         </TabPanelUnstyled>

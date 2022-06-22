@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { MdSpaceDashboard } from "react-icons/md";
 import { FaHome } from "react-icons/fa";
 import { RiMoonFill } from "react-icons/ri";
@@ -11,7 +11,7 @@ import {
   TabUnstyled,
 } from "@mui/base";
 
-function Sidebar() {
+function Sidebar({ settingsOpen, setSettingsOpen }) {
   return (
     <div
       className="hidden h-full w-full bg-backpanel box-border flex-col rounded-3xl p-5 mr-5 z-50
@@ -30,24 +30,33 @@ function Sidebar() {
           <TabUnstyled value={0} className="tab-item group p-5">
             <MdSpaceDashboard
               size={32}
-              className="tab-icon group-hover:text-black"
+              className="tab-icon group-hover:text-hovertxt"
             />
-            <p className="tab-text group-hover:text-black">Dashboard</p>
+            <p className="tab-text group-hover:text-hovertxt">Dashboard</p>
           </TabUnstyled>
           <TabUnstyled value={1} className="tab-item group p-5">
-            <FaHome size={32} className="tab-icon group-hover:text-black" />
-            <p className="tab-text group-hover:text-black">Home</p>
+            <FaHome size={32} className="tab-icon group-hover:text-hovertxt" />
+            <p className="tab-text group-hover:text-hovertxt">Home</p>
           </TabUnstyled>
           <TabUnstyled value={2} className="tab-item group p-5">
-            <RiMoonFill size={32} className="tab-icon group-hover:text-black" />
-            <p className="tab-text group-hover:text-black">Sleep</p>
+            <RiMoonFill
+              size={32}
+              className="tab-icon group-hover:text-hovertxt"
+            />
+            <p className="tab-text group-hover:text-hovertxt">Sleep</p>
           </TabUnstyled>
           <TabUnstyled value={3} className="tab-item group p-5">
-            <CgCheckR size={32} className="tab-icon group-hover:text-black" />
-            <p className="tab-text group-hover:text-black">Habits</p>
+            <CgCheckR
+              size={32}
+              className="tab-icon group-hover:text-lighttxt"
+            />
+            <p className="tab-text group-hover:text-hovertxt">Habits</p>
           </TabUnstyled>
         </TabsListUnstyled>
-        <div className="absolute bottom-0 mb-10  box-border flex p-5 rounded-2xl transition-all duration-300 ease-linear xl:relative xl:mb-0 2xl:absolute 2xl:mb-10">
+        <div
+          onClick={() => setSettingsOpen(!settingsOpen)}
+          className="absolute bottom-0 mb-10  box-border flex p-5 rounded-2xl transition-all duration-300 ease-linear xl:relative xl:mb-0 2xl:absolute 2xl:mb-10 hover:cursor-pointer"
+        >
           <IoMdSettings size={32} className="tab-icon group-hover:text-black" />
           <p className="tab-text group-hover:text-black">Settings</p>
         </div>

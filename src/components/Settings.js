@@ -6,7 +6,7 @@ function Settings({ open, onClose }) {
   return (
     <>
       <div className="settingsOverlay" onClick={onClose}></div>
-      <div className="settingsModal"></div>
+      <div className="settingsModal">Ciao</div>
     </>
   );
 }
