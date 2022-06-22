@@ -27,22 +27,22 @@ function Sidebar() {
       </div>
       <div className="p-5 flex flex-col justify-center ">
         <TabsListUnstyled className="flex flex-col justify-center">
-          <TabUnstyled value={0} className="tab-item group">
+          <TabUnstyled value={0} className="tab-item group p-5">
             <MdSpaceDashboard
               size={32}
               className="tab-icon group-hover:text-black"
             />
             <p className="tab-text group-hover:text-black">Dashboard</p>
           </TabUnstyled>
-          <TabUnstyled value={1} className="tab-item group">
+          <TabUnstyled value={1} className="tab-item group p-5">
             <FaHome size={32} className="tab-icon group-hover:text-black" />
             <p className="tab-text group-hover:text-black">Home</p>
           </TabUnstyled>
-          <TabUnstyled value={2} className="tab-item group">
+          <TabUnstyled value={2} className="tab-item group p-5">
             <RiMoonFill size={32} className="tab-icon group-hover:text-black" />
             <p className="tab-text group-hover:text-black">Sleep</p>
           </TabUnstyled>
-          <TabUnstyled value={3} className="tab-item group">
+          <TabUnstyled value={3} className="tab-item group p-5">
             <CgCheckR size={32} className="tab-icon group-hover:text-black" />
             <p className="tab-text group-hover:text-black">Habits</p>
           </TabUnstyled>
