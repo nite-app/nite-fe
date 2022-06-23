@@ -53,13 +53,6 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
             <p className="tab-text group-hover:text-hovertxt">Habits</p>
           </TabUnstyled>
         </TabsListUnstyled>
-        <div
-          onClick={() => setSettingsOpen(!settingsOpen)}
-          className="absolute bottom-0 mb-10  box-border flex p-5 rounded-2xl transition-all duration-300 ease-linear xl:relative xl:mb-0 2xl:absolute 2xl:mb-10 hover:cursor-pointer"
-        >
-          <IoMdSettings size={32} className="tab-icon group-hover:text-black" />
-          <p className="tab-text group-hover:text-black">Settings</p>
-        </div>
       </div>
     </div>
   );

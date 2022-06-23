@@ -58,18 +58,6 @@ function CollapsedSidebar({ settingsOpen, setSettingsOpen }) {
             </span>
           </TabUnstyled>
         </TabsListUnstyled>
-        <div
-          onClick={() => setSettingsOpen(!settingsOpen)}
-          className="group relative flex p-3 mb-0 rounded-2xl bottom-0 box-border transition-all duration-300 ease-linear hover:bg-backlight md:p-5 xl:absolute xl:mb-5"
-        >
-          <IoMdSettings
-            size={32}
-            className="collapsedtab-icon group-hover:text-black"
-          />
-          <span className="tab-tooltip group-hover:scale-100 xl:display:block">
-            Settings ⚙️
-          </span>
-        </div>
       </div>
     </div>
   );

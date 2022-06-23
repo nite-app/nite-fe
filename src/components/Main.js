@@ -23,7 +23,7 @@ function Main() {
   return (
     <TabsUnstyled defaultValue={0} className="is-active">
       <div
-        className="flex flex-col h-full box-border p-5 w-screen bg-backlight relative
+        className="flex flex-col h-screen box-border p-5 w-screen bg-backlight relative
         xl:flex-row 2xl:h-screen"
       >
         <Settings
