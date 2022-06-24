@@ -146,6 +146,25 @@ function Dashboard({ active, setActive }) {
     },
   });
 
+  const plugins = [
+    {
+      beforeDraw: function (chart) {
+        var width = chart.width,
+          height = chart.height,
+          ctx = chart.ctx;
+        ctx.restore();
+        var fontSize = (height / 160).toFixed(2);
+        ctx.font = fontSize + "em sans-serif";
+        ctx.textBaseline = "top";
+        var text = "Foo-bar",
+          textX = Math.round((width - ctx.measureText(text).width) / 2),
+          textY = height / 2;
+        ctx.fillText(text, textX, textY);
+        ctx.save();
+      },
+    },
+  ];
+
   const [partOfTheDay, setPartOfTheDay] = useState();
   useEffect(() => {
     setPartOfTheDay(new Date().getHours() > 12 ? "Afternoon" : "Morning");
@@ -232,7 +251,11 @@ function Dashboard({ active, setActive }) {
               <p className="font-medium text-lg text-gray-400">25% Achieved</p>
             </div>
             <div className="w-24 aspect-square mt-5 lg:mt-0">
-              <DonutChart chartData={userData2} chartOptions={userOptions2} />
+              <DonutChart
+                chartData={userData2}
+                chartOptions={userOptions2}
+                plugins={plugins}
+              />
             </div>
           </div>
           <div className="w-full rounded-2xl p-8 box-border bg-white lg:flex justify-between">
