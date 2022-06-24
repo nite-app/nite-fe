@@ -245,7 +245,7 @@ function Dashboard({ active, setActive }) {
           Challenges
         </p>
         <div className="grid grid-rows-2 gap-x-8 gap-y-8 w-full h-full box-border xl:grid-cols-2 grid-rows-1">
-          <div className="w-full mr-8 rounded-2xl p-8 box-border bg-white lg:flex justify-between">
+          <div className="w-full mr-8 rounded-2xl p-8 box-border bg-white md:flex justify-between">
             <div>
               <p className="font-semibold text-2xl mb-4">Weekly target</p>
               <p className="font-medium text-lg text-gray-400">25% Achieved</p>
@@ -258,7 +258,7 @@ function Dashboard({ active, setActive }) {
               />
             </div>
           </div>
-          <div className="w-full rounded-2xl p-8 box-border bg-white lg:flex justify-between">
+          <div className="w-full rounded-2xl p-8 box-border bg-white md:flex justify-between">
             <div>
               <p className="font-semibold text-2xl mb-4">Monthly target</p>
               <p className="font-medium text-lg text-gray-400">50% Achieved</p>
