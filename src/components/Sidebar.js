@@ -12,8 +12,6 @@ import {
   MenuUnstyled,
   MenuItemUnstyled, 
 } from "@mui/base";
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 
 function Sidebar({ settingsOpen, setSettingsOpen }) {
   const [anchorEl, setAnchorEl] = useState(null);
