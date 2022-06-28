@@ -51,7 +51,7 @@ body {
     @apply absolute w-auto p-2 left-24 rounded-md min-w-max bg-gray-400 text-xs font-semibold transition-all duration-200 scale-0 origin-left z-10 hidden;
   }
 
-  .menu-item{
+  .menu-item {
     @apply bg-white p-3 rounded-xl outline-none hover:bg-gray-100;
   }
 }
