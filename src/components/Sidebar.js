@@ -20,7 +20,6 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
   const open = Boolean(anchorEl);
   const handleMenuClick = (event) => {
     setAnchorEl(event.currentTarget);
-    console.log("open")
   };
   const handleClose = () => {
     setAnchorEl(null);
@@ -44,11 +43,11 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
         anchorEl={anchorEl}
         open={open}
         onClose={handleClose}
-        className="z-50"
+        className="z-50 p-2 bg-gray-200 rounded-2xl w-40"
       >
-        <MenuItemUnstyled onClick={handleClose}>Profile</MenuItemUnstyled>
-        <MenuItemUnstyled onClick={handleClose}>My account</MenuItemUnstyled>
-        <MenuItemUnstyled onClick={handleClose}>Logout</MenuItemUnstyled>
+        <MenuItemUnstyled className="menu-item group" onClick={handleClose}>Profile</MenuItemUnstyled>
+        <MenuItemUnstyled className="menu-item group mt-2" onClick={handleClose}>My account</MenuItemUnstyled>
+        <MenuItemUnstyled className="menu-item group mt-2" onClick={handleClose}>Logout</MenuItemUnstyled>
       </MenuUnstyled>
       <div className="p-5 flex flex-col justify-center ">
         <TabsListUnstyled className="flex flex-col justify-center">
