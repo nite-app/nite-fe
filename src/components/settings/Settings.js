@@ -70,7 +70,7 @@ function Settings({ open, onClose }) {
               <p className="settings-btntxt">✌️ About</p>
             </button>
             <button className="settings-btn mb-5">
-              <p className="settings-btntxt text-red-600">🛬 Logout</p>
+              <p className="settings-btntxt text-red-600">🛫 Logout</p>
             </button>
             {aboutOpen ? <About /> : <></>}
           </div>
@@ -95,7 +95,7 @@ function Settings({ open, onClose }) {
                       </p>
                     </TabUnstyled>
                     <button className="settings-tab p-5">
-                      <p className="settings-txt text-red-600">🛬 Logout</p>
+                      <p className="settings-txt text-red-600">🛫 Logout</p>
                     </button>
                   </TabsListUnstyled>
                 </div>
