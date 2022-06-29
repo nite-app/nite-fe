@@ -14,11 +14,14 @@ function Settings({ open, onClose }) {
   return (
     <>
       <div
-        className="absolute top-0 left-0 overflow-hidden w-screen h-screen z-20 bg-black opacity-50"
+        className="absolute top-0 left-0 overflow-hidden w-screen h-screen z-50 bg-black opacity-50"
         onClick={onClose}
       ></div>
       <div className="box-border absolute top-0 left-0 w-full h-full overflow-hidden flex m-auto z-50 p-5 bg-white rounded-none">
         <div className="flex flex-col box-border">
+          <div className="absolute top-10 right-10">
+            <IoClose size={32} onClick={onClose} />
+          </div>
           <div className="p-5 flex box-border items-center">
             <p className="font-semibold text-2xl">Settings</p>
           </div>

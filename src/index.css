@@ -45,7 +45,7 @@ body {
     @apply font-semibold text-xl text-lighttxt align-text-bottom transition-all duration-300 ease-linear;
   }
   .tab-item {
-    @apply relative flex items-center p-3 rounded-2xl mb-0 transition-all duration-300 ease-linear hover:bg-panelhover xl:mb-2;
+    @apply relative flex items-center p-5 rounded-2xl mb-0 transition-all duration-300 ease-linear hover:bg-panelhover xl:mb-2;
   }
   .tab-tooltip {
     @apply absolute w-auto p-2 left-24 rounded-md min-w-max bg-gray-400 text-xs font-semibold transition-all duration-200 scale-0 origin-left z-10 hidden;

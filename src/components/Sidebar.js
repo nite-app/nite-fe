@@ -30,7 +30,7 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
     >
       <div className="p-5 flex box-border items-center">
         <div
-          className="rounded-full bg-slate-400 p-4 mr-5"
+          className="rounded-2xl bg-slate-400 p-4 mr-5"
           onClick={handleMenuClick}
         >
           <p className="text-2xl font-semibold">AS</p>
