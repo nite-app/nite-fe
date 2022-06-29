@@ -11,7 +11,7 @@ function Personal() {
             type="text"
             name="nametxt"
             id=""
-            className="p-4 rounded-2xl bg-gray-300 box-border min-w-max text-md mb-2 focus:outline-none xl:mb-0 mr-3 xl:w-8/12"
+            className="p-4 rounded-2xl bg-gray-300 box-border min-w-max text-md mb-2 focus:outline-none xl:mb-0 xl:mr-3 xl:w-8/12"
             placeholder="Name"
           />
           <button className="rounded-2xl p-4 bg-gray-100 focus:outline-none xl:w-4/12">
@@ -26,7 +26,7 @@ function Personal() {
             type="text"
             name="emailtxt"
             id=""
-            className="p-4 rounded-2xl bg-gray-300 box-border min-w-max text-md mb-2 focus:outline-none xl:mb-0 mr-3 xl:w-8/12"
+            className="p-4 rounded-2xl bg-gray-300 box-border min-w-max text-md mb-2 focus:outline-none xl:mb-0 xl:mr-3 xl:w-8/12"
             placeholder="Email"
           />
           <button className="rounded-2xl p-4 bg-gray-100 focus:outline-none xl:w-4/12">
