@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BsReverseLayoutSidebarInsetReverse } from "react-icons/bs";
-import LineChart from "../LineChart";
+import LineChart from "../charts/LineChart";
 import { chartData } from "../../Data";
-import DonutChart from "../DonutChart";
+import DonutChart from "../charts/DonutChart";
 
 let width, height, gradient;
 function getGradient(ctx, chartArea) {

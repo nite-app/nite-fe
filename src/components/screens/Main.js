@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import Sidebar from "./Sidebar";
-import CollapsedSidebar from "./CollapsedSidebar";
+import Sidebar from "../sidebars/Sidebar";
+import CollapsedSidebar from "../sidebars/CollapsedSidebar";
 import {
   TabsUnstyled,
   TabsListUnstyled,
@@ -9,12 +9,12 @@ import {
 } from "@mui/base";
 
 // side components
-import Dashboard from "./screens/Dashboard";
-import Home from "./screens/Home";
-import Sleep from "./screens/Sleep";
-import Habits from "./screens/Habits";
+import Dashboard from "./Dashboard";
+import Home from "./Home";
+import Sleep from "./Sleep";
+import Habits from "./Habits";
 
-import Settings from "./Settings";
+import Settings from "../Settings";
 
 function Main() {
   const [active, setActive] = useState(true);
