@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 function Appearance() {
   const [lightSelected, setLightSelected] = useState(
-    "rounded-lg border-blue-600 border-4 md:rounded-xl lg:rounded-2xl"
+    "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
   );
   const [darkSelected, setDarkSelected] = useState(
-    "rounded-lg border-white border-4 md:rounded-xl lg:rounded-2xl"
+    "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
   );
   const [lightText, setLightText] = useState("✔️ Light");
   const [darkText, setDarkText] = useState("Dark");
@@ -23,10 +23,10 @@ function Appearance() {
               className={lightSelected}
               onClick={() => {
                 setLightSelected(
-                  "rounded-lg border-blue-600 border-4 md:rounded-xl lg:rounded-2xl"
+                  "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
                 );
                 setDarkSelected(
-                  "rounded-lg border-white border-4 md:rounded-xl lg:rounded-2xl"
+                  "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
                 );
                 setLightText("✔️ Light");
                 setDarkText("Dark");
@@ -41,10 +41,10 @@ function Appearance() {
               className={darkSelected}
               onClick={() => {
                 setLightSelected(
-                  "rounded-lg border-white border-4 md:rounded-xl lg:rounded-2xl"
+                  "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
                 );
                 setDarkSelected(
-                  "rounded-lg border-blue-600 border-4 md:rounded-xl lg:rounded-2xl"
+                  "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
                 );
                 setLightText("Light");
                 setDarkText("✔️ Dark");
