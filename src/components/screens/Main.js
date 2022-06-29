@@ -14,7 +14,7 @@ import Home from "./Home";
 import Sleep from "./Sleep";
 import Habits from "./Habits";
 
-import Settings from "../Settings";
+import Settings from "../settings/Settings";
 
 function Main() {
   const [active, setActive] = useState(true);

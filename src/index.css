@@ -33,6 +33,7 @@ body {
 .Mui-selected .tab-text {
   color: #000000;
 }
+
 #settingsModal {
   position: absolute;
   top: 50%;
@@ -59,5 +60,18 @@ body {
 
   .menu-item {
     @apply bg-white p-3 rounded-xl outline-none hover:bg-gray-100;
+  }
+
+  .settings-btn {
+    @apply p-4 pl-5 bg-gray-100 text-left rounded-2xl mt-2 w-full box-border;
+  }
+  .settings-tab {
+    @apply relative flex items-center p-5 rounded-2xl mb-0 transition-all duration-300 ease-linear hover:bg-panelhover xl:mb-2;
+  }
+  .settings-txt {
+    @apply font-medium text-xl text-black align-text-bottom transition-all duration-100 ease-linear;
+  }
+  .settings-btntxt {
+    @apply font-medium text-lg text-black align-text-bottom transition-all duration-300 ease-linear;
   }
 }
