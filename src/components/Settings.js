@@ -17,7 +17,10 @@ function Settings({ open, onClose }) {
         className="absolute top-0 left-0 overflow-hidden w-screen h-screen z-50 bg-black opacity-50"
         onClick={onClose}
       ></div>
-      <div className="box-border absolute top-0 left-0 w-full h-full overflow-hidden flex m-auto z-50 p-5 bg-white rounded-none">
+      <div
+        id="settingsModal"
+        className="box-border absolute top-0 left-0 w-full h-full overflow-hidden flex m-auto z-50 p-5 bg-white rounded-none lg:rounded-3xl lg:w-10/12 lg:h-3/4 xl:w-2/3"
+      >
         <div className="flex flex-col box-border">
           <div className="absolute top-10 right-10">
             <IoClose size={32} onClick={onClose} />
