@@ -20,12 +20,25 @@ function Main() {
   const [active, setActive] = useState(true);
   const [settingsOpen, setSettingsOpen] = useState(false);
 
+  const [mainStyle, setMainStyle] = useState(
+    "p-0 flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen"
+  );
+
+  useEffect(() => {
+    if (settingsOpen === true) {
+      setMainStyle(
+        "overflow-hidden p-0 flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen"
+      );
+    } else {
+      setMainStyle(
+        "p-0 flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen"
+      );
+    }
+  }, [settingsOpen]);
+
   return (
     <TabsUnstyled defaultValue={0} className="is-active">
-      <div
-        className=" p-0 flex flex-col h-screen box-border w-screen bg-backlight relative
-        sm:p-5 xl:flex-row 2xl:h-screen"
-      >
+      <div className={mainStyle}>
         <Settings
           open={settingsOpen}
           onClose={() => setSettingsOpen(false)}

@@ -3,7 +3,7 @@ import React from "react";
 function Appearance() {
   return (
     <div>
-      <p className="font-semibold text-2xl">Appearance</p>
+      <p className="font-semibold text-2xl hidden xl:block">Appearance</p>
     </div>
   );
 }
