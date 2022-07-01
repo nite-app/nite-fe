@@ -172,10 +172,10 @@ function Dashboard({ active, setActive }) {
 
   return (
     <div className="w-full h-full min-h-full box-border overflow-y-scroll rounded-3xl bg-backpanel p-8 relative 2xl:p-12">
-      <div className="flex items-center cursor-pointer">
+      <div className="flex items-center">
         <BsReverseLayoutSidebarInsetReverse
           size={28}
-          className="mr-5"
+          className="mr-5 cursor-pointer"
           onClick={() => {
             setActive(!active);
           }}

@@ -58,7 +58,7 @@ function Main() {
           <Dashboard active={active} setActive={setActive} />
         </TabPanelUnstyled>
         <TabPanelUnstyled value={1} className="w-full">
-          <Home />
+          <Home active={active} setActive={setActive} />
         </TabPanelUnstyled>
         <TabPanelUnstyled value={2} className="w-full">
           <Sleep />

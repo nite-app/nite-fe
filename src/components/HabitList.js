@@ -1,53 +1,34 @@
-import { useState } from "react";
-import Checkbox from "@mui/material/Checkbox";
-import "../styles/HabitList.scss";
-import "../styles/Main.scss";
-import choiceMenuIcon from "../img/choiceMenuHabit.png";
-function HabitList(props) {
-  const [srcIcon, setSrcIcon] = useState(props.icon);
-  const [isChecked, setIsChecked] = useState(true);
+import React from "react";
+
+function HabitList({ children }) {
   return (
-    <div className="container">
-      <Checkbox
-        {...props.key}
-        className="checkboxHabit"
-        sx={{
-          color: "#000",
-          "&.Mui-checked": {
-            color: "#000",
-          },
-          "& .MuiSvgIcon-root": {
-            borderRadius: 30,
-          },
-        }}
-        size="medium"
-        onChange={() => {
-          setIsChecked(!isChecked);
-          if (isChecked) {
-            document.querySelector(
-              "#habitLabel" + props.ID
-            ).style.textDecoration = "line-through";
-          } else {
-            document.querySelector(
-              "#habitLabel" + props.ID
-            ).style.textDecoration = "none";
-          }
-        }}
-      />
-      <span class="nameLabel" id={"habitLabel" + props.ID}>
-        {props.habitName}
-      </span>
-      <span id="iconContainer">
-        <img
-          src={srcIcon}
-          width={(750 * 100) / window.innerWidth}
-          alt=""
-          id="iconHabit"
-          onMouseOver={() => setSrcIcon(choiceMenuIcon)}
-          onMouseOut={() => setSrcIcon(props.icon)}
-        />
-      </span>
+    <div className="box-border w-5/12 p-5 grid grid-rows-4 grid-cols-2 gap-x-5 gap-y-3 bg-white rounded-3xl">
+      <div className="flex box-border rounded-2xl p-5 py-2 items-center bg-gray-200 w-full h-14">
+        {children}
+      </div>
+      <div className="flex box-border rounded-2xl p-5 py-2 items-center bg-gray-200 w-full h-14">
+        {children}
+      </div>
+      <div className="flex box-border rounded-2xl p-5 py-2 items-center bg-gray-200 w-full h-14">
+        {children}
+      </div>
+      <div className="flex box-border rounded-2xl p-5 py-2 items-center bg-gray-200 w-full h-14">
+        {children}
+      </div>
+      <div className="flex box-border rounded-2xl p-5 py-2 items-center bg-gray-200 w-full h-14">
+        {children}
+      </div>
+      <div className="flex box-border rounded-2xl p-5 py-2 items-center bg-gray-200 w-full h-14">
+        {children}
+      </div>
+      <div className="flex box-border rounded-2xl p-5 py-2 items-center bg-gray-200 w-full h-14">
+        {children}
+      </div>
+      <div className="flex box-border rounded-2xl p-5 py-2 items-center bg-gray-200 w-full h-14">
+        {children}
+      </div>
     </div>
   );
 }
+
 export default HabitList;
