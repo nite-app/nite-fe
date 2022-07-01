@@ -47,7 +47,7 @@ body {
     @apply relative flex items-center justify-center mr-5 text-lighttxt transition-all duration-300 ease-linear;
   }
   .collapsedtab-icon {
-    @apply relative flex items-center justify-center text-lighttxt transition-all duration-300 ease-linear;
+    @apply relative flex items-center justify-center m-auto text-lighttxt transition-all duration-300 ease-linear;
   }
   .tab-text {
     @apply font-semibold text-xl text-lighttxt align-text-bottom transition-all duration-300 ease-linear;

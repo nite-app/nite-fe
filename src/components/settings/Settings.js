@@ -69,10 +69,10 @@ function Settings({ open, onClose }) {
             >
               <p className="settings-btntxt">✌️ About</p>
             </button>
+            {aboutOpen ? <About /> : <></>}
             <button className="settings-btn mb-5">
               <p className="settings-btntxt text-red-600">🛫 Logout</p>
             </button>
-            {aboutOpen ? <About /> : <></>}
           </div>
           <div className="hidden h-full xl:flex flex-col p-5">
             <TabsUnstyled defaultValue={0} className="is-active">
