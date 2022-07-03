@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { BsCheck } from "react-icons/bs";
 
 function SingleHabit({ text, icon, checked }) {
   const [checkedCheckbox, setCheckedCheckbox] = useState(
@@ -29,13 +30,26 @@ function SingleHabit({ text, icon, checked }) {
 
   return (
     <div className="w-full flex items-center relative">
-      <input
-        type="checkbox"
-        className={checkedCheckbox}
-        onClick={() => {
-          toggleItems();
-        }}
-      />
+      <div className="relative flex justify-center items-center">
+        <input
+          type="checkbox"
+          className={checkedCheckbox}
+          onClick={() => {
+            toggleItems();
+          }}
+        />
+        {isChecked ? (
+          <BsCheck
+            size={20}
+            className="text-white absolute top-0 left-0"
+            onClick={() => {
+              toggleItems();
+            }}
+          />
+        ) : (
+          <></>
+        )}
+      </div>
       <p className={checkedText}>{text}</p>
       <p className="absolute right-0 w-6">{icon}</p>
     </div>
