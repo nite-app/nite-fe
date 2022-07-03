@@ -23,8 +23,21 @@ function Home({ active, setActive }) {
         </p>
         <div className="flex">
           <HabitList>
-            <SingleHabit text={"Item 1"}></SingleHabit>
-            <SingleHabit text={"item 2"}></SingleHabit>
+            <SingleHabit
+              text={"Item 1"}
+              icon={"🍎"}
+              checked={false}
+            ></SingleHabit>
+            <SingleHabit
+              text={"item 2"}
+              icon={"🤾‍♂️"}
+              checked={false}
+            ></SingleHabit>
+            <SingleHabit
+              text={"item 3"}
+              icon={"👨‍💻"}
+              checked={true}
+            ></SingleHabit>
           </HabitList>
         </div>
       </div>
