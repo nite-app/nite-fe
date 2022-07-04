@@ -5,6 +5,27 @@ import HabitList from "../HabitList";
 import SingleHabit from "../SingleHabit";
 
 function Home({ active, setActive }) {
+  const habits = [
+    {
+      id: 0,
+      text: "Eat healthy",
+      icon: "🍎",
+      checked: false,
+    },
+    {
+      id: 1,
+      text: "Meditate",
+      icon: "🧘",
+      checked: true,
+    },
+    {
+      id: 2,
+      text: "Run 5 miles",
+      icon: "🏃‍♂️",
+      checked: true,
+    },
+  ];
+
   return (
     <div className="w-full h-full min-h-full box-border overflow-y-scroll rounded-3xl bg-backpanel p-8 relative 2xl:p-12">
       <div className="flex items-center">
@@ -23,21 +44,17 @@ function Home({ active, setActive }) {
         </p>
         <div className="flex">
           <HabitList>
-            <SingleHabit
-              text={"Item 1"}
-              icon={"🍎"}
-              checked={false}
-            ></SingleHabit>
-            <SingleHabit
-              text={"item 2"}
-              icon={"🤾‍♂️"}
-              checked={false}
-            ></SingleHabit>
-            <SingleHabit
-              text={"item 3"}
-              icon={"👨‍💻"}
-              checked={true}
-            ></SingleHabit>
+            {habits.map((habit) => {
+              return (
+                <SingleHabit
+                  key={habit.id}
+                  id={habit.id}
+                  text={habit.text}
+                  icon={habit.icon}
+                  checked={habit.checked}
+                />
+              );
+            })}
           </HabitList>
         </div>
       </div>

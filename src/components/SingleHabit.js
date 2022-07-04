@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BsCheck } from "react-icons/bs";
 import { MenuUnstyled, MenuItemUnstyled } from "@mui/base";
 
-function SingleHabit({ text, icon, checked }) {
+function SingleHabit({ text, icon, checked, id }) {
   const [checkedCheckbox, setCheckedCheckbox] = useState(
     "mr-4 bg-lighttxt w-5 h-5 align-middle rounded-md appearance-none outline-none cursor-pointer"
   );
@@ -25,8 +25,6 @@ function SingleHabit({ text, icon, checked }) {
       );
       setCheckedText("font-medium");
     }
-
-    return () => {};
   }, [isChecked]);
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -67,12 +65,19 @@ function SingleHabit({ text, icon, checked }) {
           <></>
         )}
       </div>
-      <p className={checkedText}>{text}</p>
+      <p
+        className={checkedText}
+        onClick={() => {
+          toggleItems();
+        }}
+      >
+        {text}
+      </p>
       <p className="absolute right-0 w-6">{icon}</p>
       <img
         src={require("../img/choiceMenuHabit.png")}
         alt="choice"
-        className="absolute -right-1 w-8 hidden group-hover:block"
+        className="absolute -right-1 w-8 hidden cursor-pointer group-hover:block"
         onClick={handleButtonClick}
       />
       <MenuUnstyled
@@ -81,11 +86,11 @@ function SingleHabit({ text, icon, checked }) {
         anchorEl={anchorEl}
         className="z-20 rounded-xl p-2 bg-white"
       >
-        <MenuItemUnstyled className="mb-2 box-border bg-gray-100 p-2 rounded-lg w-28">
+        <MenuItemUnstyled className="mb-2 box-border bg-gray-100 p-2 rounded-lg w-28 cursor-pointer">
           ✍️ Edit
         </MenuItemUnstyled>
         <MenuItemUnstyled
-          className="box-border bg-red-100 p-2 rounded-lg w-28"
+          className="box-border bg-red-100 p-2 rounded-lg w-28 cursor-pointer"
           onClick={() => {}}
         >
           <p className="text-red-600">🗑️ Delete</p>
