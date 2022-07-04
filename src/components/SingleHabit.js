@@ -84,7 +84,10 @@ function SingleHabit({ text, icon, checked }) {
         <MenuItemUnstyled className="mb-2 box-border bg-gray-100 p-2 rounded-lg w-28">
           ✍️ Edit
         </MenuItemUnstyled>
-        <MenuItemUnstyled className="box-border bg-red-100 p-2 rounded-lg w-28">
+        <MenuItemUnstyled
+          className="box-border bg-red-100 p-2 rounded-lg w-28"
+          onClick={() => {}}
+        >
           <p className="text-red-600">🗑️ Delete</p>
         </MenuItemUnstyled>
       </MenuUnstyled>
