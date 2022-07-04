@@ -20,6 +20,7 @@ function Home({ active, setActive }) {
     });
   };
 
+  // provvisorio vi prego
   useEffect(() => {
     getQuote();
   }, []);
