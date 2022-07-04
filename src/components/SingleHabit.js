@@ -32,11 +32,12 @@ function SingleHabit({ text, icon, checked }) {
   const [anchorEl, setAnchorEl] = useState(null);
   const isOpen = Boolean(anchorEl);
 
-  const handleButtonClick = (event) => {
+  const handleButtonClick = (e) => {
+    e.preventDefault();
     if (isOpen) {
       setAnchorEl(null);
     } else {
-      setAnchorEl(event.currentTarget);
+      setAnchorEl(e.currentTarget);
     }
   };
 
@@ -72,21 +73,19 @@ function SingleHabit({ text, icon, checked }) {
         src={require("../img/choiceMenuHabit.png")}
         alt="choice"
         className="absolute -right-1 w-8 hidden group-hover:block"
-        onClick={() => {
-          handleButtonClick();
-        }}
+        onClick={handleButtonClick}
       />
       <MenuUnstyled
         open={isOpen}
         onClose={close}
         anchorEl={anchorEl}
-        className="z-20 rounded-xl p-2 bg-gray-200"
+        className="z-20 rounded-xl p-2 bg-white"
       >
-        <MenuItemUnstyled className="mb-1 box-border bg-white p-2 rounded-lg w-28">
+        <MenuItemUnstyled className="mb-2 box-border bg-gray-100 p-2 rounded-lg w-28">
           ✍️ Edit
         </MenuItemUnstyled>
-        <MenuItemUnstyled className="box-border bg-white p-2 rounded-lg w-28">
-          🗑️ Delete
+        <MenuItemUnstyled className="box-border bg-red-100 p-2 rounded-lg w-28">
+          <p className="text-red-600">🗑️ Delete</p>
         </MenuItemUnstyled>
       </MenuUnstyled>
     </div>
