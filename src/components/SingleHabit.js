@@ -44,7 +44,7 @@ function SingleHabit({ text, icon, checked, id }) {
   };
 
   return (
-    <div className="w-full flex items-center relative group">
+    <div className="w-full flex items-center relative box-border rounded-2xl p-5 py-2 bg-gray-200 h-14">
       <div className="relative flex justify-center items-center">
         <input
           type="checkbox"
@@ -65,37 +65,49 @@ function SingleHabit({ text, icon, checked, id }) {
           <></>
         )}
       </div>
-      <p
-        className={checkedText}
-        onClick={() => {
-          toggleItems();
-        }}
-      >
-        {text}
-      </p>
-      <p className="absolute right-0 w-6">{icon}</p>
-      <img
-        src={require("../img/choiceMenuHabit.png")}
-        alt="choice"
-        className="absolute -right-1 w-8 hidden cursor-pointer group-hover:block"
-        onClick={handleButtonClick}
-      />
-      <MenuUnstyled
-        open={isOpen}
-        onClose={close}
-        anchorEl={anchorEl}
-        className="z-20 rounded-xl p-2 bg-white"
-      >
-        <MenuItemUnstyled className="mb-2 box-border bg-gray-100 p-2 rounded-lg w-28 cursor-pointer">
-          ✍️ Edit
-        </MenuItemUnstyled>
-        <MenuItemUnstyled
-          className="box-border bg-red-100 p-2 rounded-lg w-28 cursor-pointer"
-          onClick={() => {}}
+      <div className="relative w-full">
+        <p
+          className={checkedText}
+          onClick={() => {
+            toggleItems();
+          }}
         >
-          <p className="text-red-600">🗑️ Delete</p>
-        </MenuItemUnstyled>
-      </MenuUnstyled>
+          {text}
+        </p>
+        <div className="group">
+          <p className="absolute right-0 top-0 w-6">{icon}</p>
+          <img
+            src={require("../img/choiceMenuHabit.png")}
+            alt="choice"
+            className="absolute -right-1 -top-1 w-8 hidden cursor-pointer group-hover:block"
+            onClick={handleButtonClick}
+          />
+        </div>
+
+        <MenuUnstyled
+          open={isOpen}
+          onClose={close}
+          anchorEl={anchorEl}
+          className="z-20 rounded-xl p-2 bg-white"
+        >
+          <MenuItemUnstyled
+            className="mb-2 box-border bg-gray-100 p-2 rounded-lg w-28 cursor-pointer focus:outline-none"
+            onClick={() => {
+              close();
+            }}
+          >
+            ✍️ Edit
+          </MenuItemUnstyled>
+          <MenuItemUnstyled
+            className="box-border bg-red-100 p-2 rounded-lg w-28 cursor-pointer focus:outline-none"
+            onClick={() => {
+              close();
+            }}
+          >
+            <p className="text-red-600">🗑️ Delete</p>
+          </MenuItemUnstyled>
+        </MenuUnstyled>
+      </div>
     </div>
   );
 }

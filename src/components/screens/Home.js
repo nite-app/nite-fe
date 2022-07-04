@@ -1,30 +1,28 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { BsReverseLayoutSidebarInsetReverse } from "react-icons/bs";
+import { quotesEmojis } from "../../data/QuotesEmojis";
+import { habits } from "../../data/Habits";
 
 import HabitList from "../HabitList";
 import SingleHabit from "../SingleHabit";
 
 function Home({ active, setActive }) {
-  const habits = [
-    {
-      id: 0,
-      text: "Eat healthy",
-      icon: "🍎",
-      checked: false,
-    },
-    {
-      id: 1,
-      text: "Meditate",
-      icon: "🧘",
-      checked: true,
-    },
-    {
-      id: 2,
-      text: "Run 5 miles",
-      icon: "🏃‍♂️",
-      checked: true,
-    },
-  ];
+  const [currentQuote, setCurrentQuote] = useState({});
+
+  const getQuote = () => {
+    axios.get("https://api.quotable.io/random").then((response) => {
+      setCurrentQuote({
+        content: response.data.content,
+        author: response.data.author,
+        icon: quotesEmojis[Math.floor(Math.random() * quotesEmojis.length)],
+      });
+    });
+  };
+
+  useEffect(() => {
+    getQuote();
+  }, []);
 
   return (
     <div className="w-full h-full min-h-full box-border overflow-y-scroll rounded-3xl bg-backpanel p-8 relative 2xl:p-12">
@@ -38,24 +36,37 @@ function Home({ active, setActive }) {
         />
         <p className="text-3xl font-semibold 2xl:text-5xl">Home</p>
       </div>
-      <div className="flex flex-col">
-        <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
-          Current habits
-        </p>
-        <div className="flex">
-          <HabitList>
-            {habits.map((habit) => {
-              return (
-                <SingleHabit
-                  key={habit.id}
-                  id={habit.id}
-                  text={habit.text}
-                  icon={habit.icon}
-                  checked={habit.checked}
-                />
-              );
-            })}
-          </HabitList>
+      <div className="flex flex-col lg:flex-row">
+        <div className="lg:w-1/2 lg:mr-5">
+          <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
+            Today at a glance
+          </p>
+          <div className="flex flex-col rounded-3xl bg-white w-full p-5">
+            <p className="font-medium ">{currentQuote.content}</p>
+            <p className="text-gray-500 text-sm mt-3">
+              {currentQuote.icon} - {currentQuote.author}
+            </p>
+          </div>
+        </div>
+        <div className="lg:w-1/2">
+          <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
+            Current habits
+          </p>
+          <div className="flex w-full">
+            <HabitList>
+              {habits.map((habit) => {
+                return (
+                  <SingleHabit
+                    key={habit.id}
+                    id={habit.id}
+                    text={habit.text}
+                    icon={habit.icon}
+                    checked={habit.checked}
+                  />
+                );
+              })}
+            </HabitList>
+          </div>
         </div>
       </div>
     </div>
