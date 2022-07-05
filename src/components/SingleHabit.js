@@ -18,12 +18,12 @@ function SingleHabit({ text, icon, checked, id }) {
       setCheckedCheckbox(
         "mr-4 bg-black w-5 h-5 align-middle rounded-md appearance-none outline-none cursor-pointer"
       );
-      setCheckedText("font-medium line-through");
+      setCheckedText("font-medium line-through cursor-pointer");
     } else {
       setCheckedCheckbox(
         "mr-4 bg-lighttxt w-5 h-5 align-middle rounded-md appearance-none outline-none cursor-pointer"
       );
-      setCheckedText("font-medium");
+      setCheckedText("font-medium cursor-pointer");
     }
   }, [isChecked]);
 

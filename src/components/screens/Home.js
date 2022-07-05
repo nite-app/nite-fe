@@ -1,29 +1,13 @@
-import axios from "axios";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, lazy, Suspense } from "react";
 import { BsReverseLayoutSidebarInsetReverse } from "react-icons/bs";
-import { quotesEmojis } from "../../data/QuotesEmojis";
 import { habits } from "../../data/Habits";
 
+import Spinner from "../Spinner";
 import HabitList from "../HabitList";
 import SingleHabit from "../SingleHabit";
 
 function Home({ active, setActive }) {
-  const [currentQuote, setCurrentQuote] = useState({});
-
-  const getQuote = () => {
-    axios.get("https://api.quotable.io/random").then((response) => {
-      setCurrentQuote({
-        content: response.data.content,
-        author: response.data.author,
-        icon: quotesEmojis[Math.floor(Math.random() * quotesEmojis.length)],
-      });
-    });
-  };
-
-  // provvisorio vi prego
-  useEffect(() => {
-    getQuote();
-  }, []);
+  const Quote = React.lazy(() => import("../pages/home/Quote"));
 
   return (
     <div className="w-full h-full min-h-full box-border overflow-y-scroll rounded-3xl bg-backpanel p-8 relative 2xl:p-12">
@@ -42,12 +26,9 @@ function Home({ active, setActive }) {
           <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
             Today at a glance
           </p>
-          <div className="flex flex-col rounded-3xl bg-white w-full p-5">
-            <p className="font-medium ">{currentQuote.content}</p>
-            <p className="text-gray-500 text-sm mt-3">
-              {currentQuote.icon} - {currentQuote.author}
-            </p>
-          </div>
+          <Suspense fallback={<Spinner />}>
+            <Quote />
+          </Suspense>
         </div>
         <div className="lg:w-1/2">
           <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
