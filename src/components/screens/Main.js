@@ -27,11 +27,11 @@ function Main() {
   useEffect(() => {
     if (settingsOpen === true) {
       setMainStyle(
-        "overflow-hidden p-3 flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen"
+        "overflow-hidden flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen"
       );
     } else {
       setMainStyle(
-        "p-3 flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen"
+        "flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen"
       );
     }
   }, [settingsOpen]);
