@@ -1,5 +1,5 @@
 # nite - frontend
-*if you are new to nite and want to know more about it, visit [this page](https://github.com/nite-app/nite-web).
+*if you are new to nite and want to know more about it, visit [this page](https://github.com/nite-app/nite-web)*.
 
 ## about this repo
 This repository was created to store nite's frontend files.<br>
