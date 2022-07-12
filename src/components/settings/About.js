@@ -21,10 +21,10 @@ function About() {
         <a href="https://nite.is" className="text-gray-500">
           Landing page
         </a>
-        <a href="htps://twitter.com" className="text-gray-500">
+        <a href="https://twitter.com/joinnite" className="text-gray-500">
           Twitter
         </a>
-        <a href="https://instagram.com" className="text-gray-500">
+        <a href="https://www.instagram.com/niteinc/" className="text-gray-500">
           Instagram
         </a>
       </div>

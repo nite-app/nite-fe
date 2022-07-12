@@ -1,10 +1,10 @@
 import React from "react";
-import { HashLoader } from "react-spinners";
+import { FadeLoader } from "react-spinners";
 
 function Spinner() {
   return (
     <div className="flex flex-col justify-center items-center">
-      <HashLoader />
+      <FadeLoader />
     </div>
   );
 }
