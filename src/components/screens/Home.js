@@ -1,5 +1,5 @@
 import React, { useEffect, useState, lazy, Suspense } from "react";
-import { BsReverseLayoutSidebarInsetReverse } from "react-icons/bs";
+import Header from "../Header";
 import { habits } from "../../data/Habits";
 
 import Spinner from "../Spinner";
@@ -11,16 +11,7 @@ function Home({ active, setActive }) {
 
   return (
     <div className="w-full h-full min-h-full box-border overflow-y-scroll rounded-3xl bg-backpanel p-8 relative 2xl:p-12">
-      <div className="flex items-center">
-        <BsReverseLayoutSidebarInsetReverse
-          size={28}
-          className="mr-5 cursor-pointer"
-          onClick={() => {
-            setActive(!active);
-          }}
-        />
-        <p className="text-3xl font-semibold 2xl:text-5xl">Home</p>
-      </div>
+      <Header active={active} setActive={setActive} />
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/2 lg:mr-5">
           <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">

@@ -27,7 +27,7 @@ function Settings({ open, onClose }) {
       ></div>
       <div
         id="settingsModal"
-        className="box-border absolute top-0 left-0 w-full h-full overflow-y-scroll flex m-auto z-50 p-5 bg-gray-100 rounded-none sm:rounded-3xl sm:w-10/12 sm:h-3/4 xl:w-2/3 2xl:w-3/5 max-w-[1150px]"
+        className="box-border absolute top-0 left-0 w-full h-full overflow-y-scroll flex m-auto z-50 p-5 bg-white rounded-none sm:rounded-3xl sm:w-10/12 sm:h-3/4 xl:w-2/3 2xl:w-3/5 max-w-[1150px]"
       >
         <div className="flex flex-col box-border w-full">
           <div className="absolute top-10 right-10 cursor-pointer">
@@ -94,7 +94,7 @@ function Settings({ open, onClose }) {
                         ✌️ About
                       </p>
                     </TabUnstyled>
-                    <button className="settings-tab p-5 bg-red-50 shadow-md">
+                    <button className="settings-tab p-5">
                       <p className="settings-txt text-red-600">🛫 Logout</p>
                     </button>
                   </TabsListUnstyled>

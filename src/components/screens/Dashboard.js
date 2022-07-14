@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BsReverseLayoutSidebarInsetReverse } from "react-icons/bs";
+import Header from "../Header";
 import LineChart from "../charts/LineChart";
 import { chartData } from "../../data/Data";
 import DonutChart from "../charts/DonutChart";
@@ -165,25 +165,9 @@ function Dashboard({ active, setActive }) {
     },
   ];
 
-  const [partOfTheDay, setPartOfTheDay] = useState();
-  useEffect(() => {
-    setPartOfTheDay(new Date().getHours() > 12 ? "Afternoon" : "Morning");
-  }, []);
-
   return (
     <div className="w-full h-full min-h-full box-border overflow-y-scroll rounded-3xl bg-backpanel p-8 relative 2xl:p-12">
-      <div className="flex items-center">
-        <BsReverseLayoutSidebarInsetReverse
-          size={28}
-          className="mr-5 cursor-pointer"
-          onClick={() => {
-            setActive(!active);
-          }}
-        />
-        <p className="text-3xl font-semibold 2xl:text-5xl">
-          Good {partOfTheDay}, Anna
-        </p>
-      </div>
+      <Header active={active} setActive={setActive} />
       <div className="flex flex-col">
         <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
           30 Days performance

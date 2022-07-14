@@ -61,10 +61,10 @@ function Main() {
           <Home active={active} setActive={setActive} />
         </TabPanelUnstyled>
         <TabPanelUnstyled value={2} className="w-full">
-          <Sleep />
+          <Sleep active={active} setActive={setActive} />
         </TabPanelUnstyled>
         <TabPanelUnstyled value={3} className="w-full">
-          <Habits />
+          <Habits active={active} setActive={setActive} />
         </TabPanelUnstyled>
       </div>
     </TabsUnstyled>
