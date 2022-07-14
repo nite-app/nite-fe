@@ -14,7 +14,7 @@ function Personal() {
             className="p-4 rounded-2xl bg-gray-300 box-border min-w-max text-md mb-2 focus:outline-none xl:mb-0 xl:mr-3 xl:w-8/12"
             placeholder="Name"
           />
-          <button className="rounded-2xl p-4 bg-white focus:outline-none xl:w-4/12">
+          <button className="rounded-2xl p-4 bg-gray-100 focus:outline-none xl:w-4/12">
             <p className="font-semibold text-md">Change name</p>
           </button>
         </div>
@@ -29,7 +29,7 @@ function Personal() {
             className="p-4 rounded-2xl bg-gray-300 box-border min-w-max text-md mb-2 focus:outline-none xl:mb-0 xl:mr-3 xl:w-8/12"
             placeholder="Email"
           />
-          <button className="rounded-2xl p-4 bg-white focus:outline-none xl:w-4/12">
+          <button className="rounded-2xl p-4 bg-gray-100 focus:outline-none xl:w-4/12">
             <p className="font-semibold text-md">Change email</p>
           </button>
         </div>
@@ -37,7 +37,7 @@ function Personal() {
       <div className="mt-6">
         <p className="font-semibold text-lg mb-4">Account Deletion</p>
         <div className="flex flex-col">
-          <button className="rounded-2xl p-4 bg-white focus:outline-none">
+          <button className="rounded-2xl p-4 bg-red-50 focus:outline-none">
             <p className="font-semibold text-md text-red-600">Delete Account</p>
           </button>
         </div>
