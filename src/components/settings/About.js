@@ -5,7 +5,7 @@ function About() {
   return (
     <div className="mb-10">
       <p className="font-semibold text-2xl hidden xl:block">About</p>
-      <div className="flex mt-10 items-end">
+      <div className="flex mt-5 items-end">
         <img
           src={require("../../img/devlogo.png")}
           alt="nite-icon"
