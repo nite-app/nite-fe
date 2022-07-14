@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BsCheck } from "react-icons/bs";
 import { MenuUnstyled, MenuItemUnstyled } from "@mui/base";
 
-function SmHabit({ text, icon, checked, id }) {
+function SingleHabit({ text, icon, checked, id }) {
   const [checkedCheckbox, setCheckedCheckbox] = useState(
     "mr-4 bg-lighttxt w-5 h-5 align-middle rounded-md appearance-none outline-none cursor-pointer"
   );
@@ -27,6 +27,7 @@ function SmHabit({ text, icon, checked, id }) {
     }
   }, [isChecked]);
 
+  //   MENU
   const [anchorEl, setAnchorEl] = useState(null);
   const isOpen = Boolean(anchorEl);
 
@@ -42,6 +43,7 @@ function SmHabit({ text, icon, checked, id }) {
   const close = () => {
     setAnchorEl(null);
   };
+  //   MENU
 
   return (
     <div className="w-full flex items-center relative box-border rounded-2xl p-5 py-2 bg-gray-200 h-14">
@@ -112,4 +114,4 @@ function SmHabit({ text, icon, checked, id }) {
   );
 }
 
-export default SmHabit;
+export default SingleHabit;

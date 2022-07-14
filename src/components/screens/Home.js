@@ -4,7 +4,7 @@ import { habits } from "../../data/Habits";
 
 import Spinner from "../Spinner";
 import SmHabitList from "../pages/home/SmHabitList";
-import SingleHabit from "../pages/home/SmHabit";
+import SingleHabit from "../pages/habits/SingleHabit";
 
 function Home({ active, setActive }) {
   const Quote = React.lazy(() => import("../pages/home/Quote"));
