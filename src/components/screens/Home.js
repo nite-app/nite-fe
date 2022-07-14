@@ -3,8 +3,8 @@ import Header from "../Header";
 import { habits } from "../../data/Habits";
 
 import Spinner from "../Spinner";
-import HabitList from "../HabitList";
-import SingleHabit from "../SingleHabit";
+import SmHabitList from "../pages/home/SmHabitList";
+import SingleHabit from "../pages/home/SmHabit";
 
 function Home({ active, setActive }) {
   const Quote = React.lazy(() => import("../pages/home/Quote"));
@@ -26,7 +26,7 @@ function Home({ active, setActive }) {
             Current habits
           </p>
           <div className="flex w-full">
-            <HabitList>
+            <SmHabitList>
               {habits.map((habit) => {
                 return (
                   <SingleHabit
@@ -38,7 +38,7 @@ function Home({ active, setActive }) {
                   />
                 );
               })}
-            </HabitList>
+            </SmHabitList>
           </div>
         </div>
       </div>

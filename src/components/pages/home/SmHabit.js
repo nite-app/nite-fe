@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BsCheck } from "react-icons/bs";
 import { MenuUnstyled, MenuItemUnstyled } from "@mui/base";
 
-function SingleHabit({ text, icon, checked, id }) {
+function SmHabit({ text, icon, checked, id }) {
   const [checkedCheckbox, setCheckedCheckbox] = useState(
     "mr-4 bg-lighttxt w-5 h-5 align-middle rounded-md appearance-none outline-none cursor-pointer"
   );
@@ -77,7 +77,7 @@ function SingleHabit({ text, icon, checked, id }) {
         <div className="group">
           <p className="absolute right-0 top-0 w-6">{icon}</p>
           <img
-            src={require("../img/choiceMenuHabit.png")}
+            src={require("../../../img/choiceMenuHabit.png")}
             alt="choice"
             className="absolute -right-1 -top-1 w-8 hidden cursor-pointer group-hover:block"
             onClick={handleButtonClick}
@@ -112,4 +112,4 @@ function SingleHabit({ text, icon, checked, id }) {
   );
 }
 
-export default SingleHabit;
+export default SmHabit;

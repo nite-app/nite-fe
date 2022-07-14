@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Header from "../Header";
+import InsightCard from "../pages/dashboard/InsightCard";
 import LineChart from "../charts/LineChart";
 import { chartData } from "../../data/Data";
 import DonutChart from "../charts/DonutChart";
@@ -173,38 +174,10 @@ function Dashboard({ active, setActive }) {
           30 Days performance
         </p>
         <div className="flex w-full overflow-x-scroll md:w-full 2xl:w-full 2xl:overflow-hidden">
-          <div className="min-w-max w-1/5 max-w-sm h-fit mr-8 rounded-xl p-5 bg-[url('./img/performance-1.png')] bg-cover md:w-full">
-            <p className="font-semibold text-base text-gray-300 2xl:text-xl">
-              Hours slept
-            </p>
-            <p className="font-semibold text-base text-gray-400 2xl:text-xl">
-              216
-            </p>
-          </div>
-          <div className="min-w-max w-1/5 max-w-sm h-fit mr-8 rounded-xl p-5 bg-[url('./img/performance-2.png')] bg-cover md:w-full">
-            <p className="font-semibold text-base text-gray-300 2xl:text-xl">
-              Average sleep
-            </p>
-            <p className="font-semibold text-base text-gray-400 2xl:text-xl">
-              7.2
-            </p>
-          </div>
-          <div className="min-w-max w-1/5 max-w-sm h-fit mr-8 rounded-xl p-5 bg-[url('./img/performance-3.png')] bg-cover md:w-full">
-            <p className="font-semibold text-base text-gray-300 2xl:text-xl">
-              Habits respected
-            </p>
-            <p className="font-semibold text-base text-gray-400 2xl:text-xl">
-              87
-            </p>
-          </div>
-          <div className="min-w-max w-1/5 max-w-sm h-fit mr-8 rounded-xl p-5 bg-[url('./img/performance-4.png')] bg-cover md:w-full">
-            <p className="font-semibold text-base text-gray-300 2xl:text-xl">
-              Notes taken
-            </p>
-            <p className="font-semibold text-base text-gray-400 2xl:text-xl">
-              23
-            </p>
-          </div>
+          <InsightCard title={"Hours slept"} data={"216"} />
+          <InsightCard title={"Average sleep"} data={"7.2"} />
+          <InsightCard title={"Habits respected"} data={"87"} />
+          <InsightCard title={"Notes taken"} data={"23"} />
         </div>
       </div>
       <div className="flex flex-col ">

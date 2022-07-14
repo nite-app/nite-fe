@@ -1,6 +1,6 @@
 import React from "react";
 
-function HabitList({ children }) {
+function SmHabitList({ children }) {
   const childrenArray = React.Children.toArray(children);
 
   return (
@@ -17,4 +17,4 @@ function HabitList({ children }) {
   );
 }
 
-export default HabitList;
+export default SmHabitList;
