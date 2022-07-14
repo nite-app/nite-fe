@@ -67,7 +67,7 @@ function SingleHabit({ text, icon, checked, id }) {
           <></>
         )}
       </div>
-      <div className="relative w-full">
+      <div className="w-full">
         <p
           className={checkedText}
           onClick={() => {
@@ -77,11 +77,13 @@ function SingleHabit({ text, icon, checked, id }) {
           {text}
         </p>
         <div className="group">
-          <p className="absolute right-0 top-0 w-6">{icon}</p>
+          <div className="absolute h-full flex items-center right-5 top-0">
+            <p className="text-xl">{icon}</p>
+          </div>
           <img
             src={require("../../../img/choiceMenuHabit.png")}
             alt="choice"
-            className="absolute -right-1 -top-1 w-8 hidden cursor-pointer group-hover:block"
+            className="absolute right-2 top-2 w-10 hidden cursor-pointer group-hover:block group-hover:duration-300"
             onClick={handleButtonClick}
           />
         </div>
