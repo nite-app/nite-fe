@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { BsCheck } from "react-icons/bs";
 import { MenuUnstyled, MenuItemUnstyled } from "@mui/base";
+import { HiDotsVertical } from "react-icons/hi";
 
 function SingleHabit({ text, icon, checked, id }) {
   const [checkedCheckbox, setCheckedCheckbox] = useState(
@@ -80,12 +81,12 @@ function SingleHabit({ text, icon, checked, id }) {
           <div className="absolute h-full flex items-center right-5 top-0">
             <p className="text-xl">{icon}</p>
           </div>
-          <img
-            src={require("../../../img/choiceMenuHabit.png")}
-            alt="choice"
-            className="absolute right-2 top-2 w-10 hidden cursor-pointer group-hover:block group-hover:duration-300"
+          <div
+            className="bg-gray-300 rounded-xl w-10 h-10 justify-center items-center cursor-pointer absolute right-2 top-2 hidden group-hover:flex"
             onClick={handleButtonClick}
-          />
+          >
+            <HiDotsVertical />
+          </div>
         </div>
 
         <MenuUnstyled
