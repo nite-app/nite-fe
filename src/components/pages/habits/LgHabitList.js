@@ -1,4 +1,5 @@
 import React from "react";
+import { FiPlus } from "react-icons/fi";
 
 function LgHabitList({ children }) {
   const childrenArray = React.Children.toArray(children);
@@ -9,14 +10,16 @@ function LgHabitList({ children }) {
         <input
           type="text"
           placeholder="Write a new task..."
-          className="bg-gray-400 w-full font-medium outline-none focus:outline-none placeholder:text-gray-700"
+          className="peer bg-gray-400 w-full font-medium outline-none focus:outline-none placeholder:text-gray-700"
         ></input>
-        <img
-          src={require("../../../img/choiceMenuHabit.png")}
-          alt="choice"
-          className="absolute right-2 top-2 w-10 hidden cursor-pointer group-hover:block"
-          // onClick={handleButtonClick}
-        />
+        <div className="absolute hidden right-2 top-0 h-full items-center peer-focus:flex group-hover:flex">
+          <button
+            type="submit"
+            className="flex bg-gray-100 p-2 rounded-xl w-10 h-10 justify-center items-center"
+          >
+            <FiPlus />
+          </button>
+        </div>
       </div>
       {/* random icon on insert, edit with dots after add */}
       {childrenArray[0]}
