@@ -4,13 +4,15 @@ import Axios from "axios";
 
 function HabitInsert() {
   const [habit, setHabit] = useState("");
+  const [id, setId] = useState(0);
 
   const addHabit = () => {
-    Axios.post("http://localhost:3001/api/addhabit", { habit: habit }).then(
-      () => {
-        alert("added habit to db");
-      }
-    );
+    Axios.post("http://localhost:3001/api/addhabit", {
+      id: id,
+      habit: habit,
+    }).then(() => {
+      alert("added habit to db");
+    });
   };
 
   return (
