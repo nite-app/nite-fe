@@ -8,7 +8,13 @@ function SingleHabit({ text, icon, checked, id }) {
     "mr-4 bg-lighttxt w-5 h-5 align-middle rounded-md appearance-none outline-none cursor-pointer"
   );
   const [checkedText, setCheckedText] = useState("font-medium");
-  const [isChecked, setIsChecked] = useState(checked);
+  const [isChecked, setIsChecked] = useState(() => {
+    if (checked === 0) {
+      return false;
+    } else if (checked === 1) {
+      return true;
+    }
+  });
 
   const toggleItems = () => {
     setIsChecked(!isChecked);
