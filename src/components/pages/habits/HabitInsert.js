@@ -1,15 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { FiPlus } from "react-icons/fi";
 import Axios from "axios";
 
 function HabitInsert() {
   const [habit, setHabit] = useState("");
-  const [id, setId] = useState(0);
+  const [id, setId] = useState(2);
+  const icons = ["👨‍💻", "🏃‍♂️", "🧘", "📖", "✍️", "👷", "🍎", "🐕‍🦺", "🍳", "🛏️"];
 
   const addHabit = () => {
+    setHabit("");
     Axios.post("http://localhost:3001/api/addhabit", {
       id: id,
       habit: habit,
+      icon: Math.floor(Math.random() * icons.length),
     }).then(() => {
       alert("added habit to db");
     });
@@ -24,6 +27,7 @@ function HabitInsert() {
         onChange={(e) => {
           setHabit(e.target.value);
         }}
+        value={habit}
       ></input>
       <div className="absolute hidden right-2 top-0 h-full items-center peer-focus:flex group-hover:flex">
         <button
