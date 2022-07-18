@@ -40,7 +40,7 @@ body {
 .emoji-picker-react input.emoji-search {
   border-radius: 12px !important;
   margin-top: 20px !important;
-  margin-bottom: 10px !important;
+  margin-bottom: 5px !important;
   background-color: rgb(156 163 175 / var(--tw-bg-opacity)) !important;
   border: none !important;
 }
@@ -52,8 +52,8 @@ body {
   background: #e5e7eb !important;
   padding-left: 10px !important;
   color: #696969 !important;
-  margin-bottom: 5px !important;
-  margin-top: 5px !important;
+  margin-bottom: 10px !important;
+  margin-top: 10px !important;
 }
 .content-wrapper::before {
   display: none !important;
