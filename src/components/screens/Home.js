@@ -5,7 +5,6 @@ import { habits } from "../../data/Habits";
 import Spinner from "../Spinner";
 import SmHabitList from "../pages/home/SmHabitList";
 import SingleHabit from "../pages/habits/SingleHabit";
-import EmojiPicker from "emoji-picker-react";
 
 function Home({ active, setActive }) {
   const Quote = React.lazy(() => import("../pages/home/Quote"));
@@ -23,7 +22,6 @@ function Home({ active, setActive }) {
               <Quote />
             </Suspense>
           </div>
-          <EmojiPicker />
         </div>
         <div className="lg:w-1/2">
           <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">

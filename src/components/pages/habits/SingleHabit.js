@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BsCheck } from "react-icons/bs";
-import { MenuUnstyled, MenuItemUnstyled } from "@mui/base";
+import { MenuUnstyled, MenuItemUnstyled, PopperUnstyled } from "@mui/base";
 import { HiDotsVertical } from "react-icons/hi";
+import EmojiPicker from "emoji-picker-react";
 
 function SingleHabit({ text, icon, checked, id }) {
   const [checkedCheckbox, setCheckedCheckbox] = useState(
@@ -52,6 +53,17 @@ function SingleHabit({ text, icon, checked, id }) {
   };
   //   MENU
 
+  //POPPER
+  const [popperAnchor, setPopperAnchor] = React.useState(null);
+
+  const handlePopperClick = (event) => {
+    setPopperAnchor(popperAnchor ? null : event.currentTarget);
+  };
+
+  const popperOpen = Boolean(popperAnchor);
+  const pid = popperOpen ? "simple-popper" : undefined;
+  //EMOJI PICKER
+
   return (
     <div className="w-full flex items-center relative box-border rounded-2xl p-5 py-2 bg-gray-200 h-14">
       <div className="relative flex justify-center items-center">
@@ -95,6 +107,12 @@ function SingleHabit({ text, icon, checked, id }) {
           </div>
         </div>
 
+        <div>
+          <PopperUnstyled id={pid} open={popperOpen} anchorEl={popperAnchor}>
+            <div>The content of the Popper.</div>
+          </PopperUnstyled>
+        </div>
+
         <MenuUnstyled
           open={isOpen}
           onClose={close}
@@ -103,9 +121,7 @@ function SingleHabit({ text, icon, checked, id }) {
         >
           <MenuItemUnstyled
             className="mb-2 box-border bg-gray-100 p-2 rounded-lg w-28 cursor-pointer focus:outline-none"
-            onClick={() => {
-              close();
-            }}
+            onClick={handlePopperClick}
           >
             ✍️ Edit
           </MenuItemUnstyled>

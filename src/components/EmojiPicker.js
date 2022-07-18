@@ -1,24 +1,29 @@
 import React, { useState } from "react";
 import Picker from "emoji-picker-react";
 
-function EmojiPicker() {
+const EmojiPicker = () => {
   const [chosenEmoji, setChosenEmoji] = useState(null);
 
   const onEmojiClick = (event, emojiObject) => {
-    event.preventDefault();
     setChosenEmoji(emojiObject);
   };
 
   return (
-    <div className="flex flex-col rounded-3xl bg-white w-full p-5">
+    <div>
       {chosenEmoji ? (
-        <p>You chose: {chosenEmoji.unified}</p>
+        <span>You chose: {chosenEmoji.emoji}</span>
       ) : (
-        <p>No emoji selected</p>
+        <span>No emoji Chosen</span>
       )}
-      <Picker onEmojiClick={onEmojiClick} native={true} />
+      <Picker
+        onEmojiClick={onEmojiClick}
+        groupVisibility={{
+          flags: false,
+        }}
+        native={true}
+      />
     </div>
   );
-}
+};
 
 export default EmojiPicker;
