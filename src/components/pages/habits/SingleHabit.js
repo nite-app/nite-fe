@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BsCheck } from "react-icons/bs";
 import { MenuUnstyled, MenuItemUnstyled, PopperUnstyled } from "@mui/base";
 import { HiDotsVertical } from "react-icons/hi";
-import EmojiPicker from "emoji-picker-react";
+import Picker from "emoji-picker-react";
 
 function SingleHabit({ text, icon, checked, id }) {
   const [checkedCheckbox, setCheckedCheckbox] = useState(
@@ -63,6 +63,11 @@ function SingleHabit({ text, icon, checked, id }) {
   const popperOpen = Boolean(popperAnchor);
   const pid = popperOpen ? "simple-popper" : undefined;
   //EMOJI PICKER
+  const [chosenEmoji, setChosenEmoji] = useState(null);
+
+  const onEmojiClick = (event, emojiObject) => {
+    setChosenEmoji(emojiObject);
+  };
 
   return (
     <div className="w-full flex items-center relative box-border rounded-2xl p-5 py-2 bg-gray-200 h-14">
@@ -109,7 +114,13 @@ function SingleHabit({ text, icon, checked, id }) {
 
         <div>
           <PopperUnstyled id={pid} open={popperOpen} anchorEl={popperAnchor}>
-            <div>The content of the Popper.</div>
+            <Picker
+              onEmojiClick={onEmojiClick}
+              native={true}
+              pickerStyle={{ borderRadius: 20 }}
+              disableSkinTonePicker={true}
+              searchPlaceholder={"Search..."}
+            />
           </PopperUnstyled>
         </div>
 
@@ -121,7 +132,10 @@ function SingleHabit({ text, icon, checked, id }) {
         >
           <MenuItemUnstyled
             className="mb-2 box-border bg-gray-100 p-2 rounded-lg w-28 cursor-pointer focus:outline-none"
-            onClick={handlePopperClick}
+            onClick={(e) => {
+              handlePopperClick(e);
+              close();
+            }}
           >
             ✍️ Edit
           </MenuItemUnstyled>

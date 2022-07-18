@@ -34,6 +34,27 @@ body {
 .Mui-selected .tab-text {
   color: #000000;
 }
+.emoji-categories {
+  display: none !important;
+}
+.emoji-picker-react input.emoji-search {
+  border-radius: 12px !important;
+  margin-top: 20px !important;
+  margin-bottom: 10px !important;
+  background-color: rgb(156 163 175 / var(--tw-bg-opacity)) !important;
+  border: none !important;
+}
+.emoji-picker-react input.emoji-search::placeholder {
+  color: #696969;
+}
+.emoji-group::before {
+  border-radius: 12px !important;
+  background: #e5e7eb !important;
+  padding-left: 10px !important;
+  color: #696969 !important;
+  margin-bottom: 5px !important;
+  margin-top: 5px !important;
+}
 
 #settingsModal {
   position: absolute;

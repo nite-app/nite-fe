@@ -21,6 +21,9 @@ const EmojiPicker = () => {
           flags: false,
         }}
         native={true}
+        pickerStyle={{ borderRadius: "20px!important" }}
+        disableSkinTonePicker={true}
+        searchPlaceholder={"Search..."}
       />
     </div>
   );
