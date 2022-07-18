@@ -55,6 +55,9 @@ body {
   margin-bottom: 5px !important;
   margin-top: 5px !important;
 }
+.content-wrapper::before {
+  display: none !important;
+}
 
 #settingsModal {
   position: absolute;
