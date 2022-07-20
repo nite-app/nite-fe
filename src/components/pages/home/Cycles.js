@@ -27,8 +27,8 @@ function Cycles() {
     setTime1(formatAMPM(date1));
 
     const date2 = new Date();
-    date2.setMinutes(currentDate.getMinutes() + 30);
     date2.setHours(currentDate.getHours() + 7);
+    date2.setMinutes(currentDate.getMinutes() + 30);
     setTime2(formatAMPM(date2));
 
     const date3 = new Date();
