@@ -49,7 +49,7 @@ function Cycles() {
             id=""
             placeholder="Hours"
             step={5}
-            className="p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-semibold w-full h-14 focus:outline-none placeholder:text-lg placeholder:text-gray-500 md:w-32"
+            className="p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-semibold w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:w-32"
           />
           <input
             type="number"
@@ -57,7 +57,7 @@ function Cycles() {
             id=""
             placeholder="Minutes"
             step={5}
-            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-semibold w-full h-14 focus:outline-none placeholder:text-lg placeholder:text-gray-500 md:mt-0 md:w-32"
+            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-semibold w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:mt-0 md:w-32"
           />
           <select
             name="ampm"
