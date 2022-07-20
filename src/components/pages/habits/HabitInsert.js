@@ -8,14 +8,15 @@ function HabitInsert() {
   const icons = ["👨‍💻", "🏃‍♂️", "🧘", "📖", "✍️", "👷", "🍎", "🐕‍🦺", "🍳", "🛏️"];
 
   const addHabit = () => {
-    setHabit("");
-    Axios.post("http://localhost:3001/api/addhabit", {
-      id: id,
-      habit: habit,
-      icon: Math.floor(Math.random() * icons.length),
-    }).then(() => {
-      alert("added habit to db");
-    });
+    console.log("feature temporary disabled");
+    // setHabit("");
+    // Axios.post("http://localhost:3001/api/addhabit", {
+    //   id: id,
+    //   habit: habit,
+    //   icon: Math.floor(Math.random() * icons.length),
+    // }).then(() => {
+    //   alert("added habit to db");
+    // });
   };
 
   return (

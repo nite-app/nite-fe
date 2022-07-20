@@ -68,6 +68,7 @@ function SingleHabit({ text, icon, checked, id }) {
   const onEmojiClick = (event, emojiObject) => {
     setChosenEmoji(emojiObject);
   };
+  const emojis = ["🐕", "🍎", "📚", "🛏️", "👨‍💻", "🧘", "🏃‍♂️", "🍳", "✍️", "👷"];
 
   return (
     <div className="w-full flex items-center relative box-border rounded-2xl p-5 py-2 bg-gray-200 h-14">
@@ -102,7 +103,7 @@ function SingleHabit({ text, icon, checked, id }) {
         </p>
         <div className="group">
           <div className="absolute h-full flex items-center right-5 top-0">
-            <p className="text-xl">{icon}</p>
+            <p className="text-xl">{emojis[icon]}</p>
           </div>
           <div
             className="bg-gray-300 rounded-xl w-10 h-10 justify-center items-center cursor-pointer absolute right-2 top-2 hidden group-hover:flex"
@@ -112,17 +113,15 @@ function SingleHabit({ text, icon, checked, id }) {
           </div>
         </div>
 
-        <div>
-          <PopperUnstyled id={pid} open={popperOpen} anchorEl={popperAnchor}>
-            <Picker
-              onEmojiClick={onEmojiClick}
-              native={true}
-              pickerStyle={{ borderRadius: 20 }}
-              disableSkinTonePicker={true}
-              searchPlaceholder={"Search..."}
-            />
-          </PopperUnstyled>
-        </div>
+        {/* <div>
+          <Picker
+            onEmojiClick={onEmojiClick}
+            native={true}
+            pickerStyle={{ borderRadius: 20 }}
+            disableSkinTonePicker={true}
+            searchPlaceholder={"Search..."}
+          />
+        </div> */}
 
         <MenuUnstyled
           open={isOpen}
@@ -133,7 +132,6 @@ function SingleHabit({ text, icon, checked, id }) {
           <MenuItemUnstyled
             className="mb-2 box-border bg-gray-100 p-2 rounded-lg w-28 cursor-pointer focus:outline-none"
             onClick={(e) => {
-              handlePopperClick(e);
               close();
             }}
           >
@@ -141,7 +139,7 @@ function SingleHabit({ text, icon, checked, id }) {
           </MenuItemUnstyled>
           <MenuItemUnstyled
             className="box-border bg-red-100 p-2 rounded-lg w-28 cursor-pointer focus:outline-none"
-            onClick={() => {
+            onClick={(e) => {
               close();
             }}
           >
