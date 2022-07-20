@@ -9,7 +9,7 @@ function HabitInsert() {
 
   const addHabit = () => {
     console.log("feature temporary disabled");
-    // setHabit("");
+    setHabit("");
     // Axios.post("http://localhost:3001/api/addhabit", {
     //   id: id,
     //   habit: habit,
