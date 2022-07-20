@@ -1,10 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Cycles() {
+  const currentDate = new Date();
   const [selectedTime, setSelectedTime] = useState();
+  const [sel1, setSel1] = useState();
+  const [sel2, setSel2] = useState();
+  const [sel3, setSel3] = useState();
   const [time1, setTime1] = useState();
   const [time2, setTime2] = useState();
   const [time3, setTime3] = useState();
+
+  function formatAMPM(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? "pm" : "am";
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+    var strTime = hours + ":" + minutes + " " + ampm;
+    return strTime;
+  }
+
+  useEffect(() => {
+    const date1 = new Date();
+    date1.setHours(currentDate.getHours() + 6);
+    setTime1(formatAMPM(date1));
+
+    const date2 = new Date();
+    date2.setMinutes(currentDate.getMinutes() + 30);
+    date2.setHours(currentDate.getHours() + 7);
+    setTime2(formatAMPM(date2));
+
+    const date3 = new Date();
+    date3.setHours(currentDate.getHours() + 9);
+    setTime3(formatAMPM(date3));
+  }, []);
 
   return (
     <div className="flex flex-col p-10 rounded-3xl bg-white">
@@ -49,14 +79,14 @@ function Cycles() {
               Then, try to fall asleep at one of the following times:
             </p>
             <div className="flex flex-col md:flex-row">
-              <div className="mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
-                {time1}
+              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+                <p className="font-medium text-xl">{sel1}</p>
               </div>
-              <div className="mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
-                {time2}
+              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+                <p className="font-medium text-xl">{sel2}</p>
               </div>
-              <div className="mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
-                {time3}
+              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+                <p className="font-medium text-xl">{sel3}</p>
               </div>
             </div>
           </div>
@@ -65,19 +95,19 @@ function Cycles() {
         <>
           <div>
             <p className="font-semibold text-xl mb-5 mt-10">
-              If you went to bed now,
+              If you go to bed now,
               <br />
               try to wake up at one of the following times:
             </p>
             <div className="flex flex-col md:flex-row">
-              <div className="mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
-                {time1}
+              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+                <p className="font-medium text-xl">{time1}</p>
               </div>
-              <div className="mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
-                {time2}
+              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+                <p className="font-medium text-xl">{time2}</p>
               </div>
-              <div className="mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
-                {time3}
+              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+                <p className="font-medium text-xl">{time3}</p>
               </div>
             </div>
           </div>
