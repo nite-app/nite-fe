@@ -28,7 +28,7 @@ function Cycles() {
     const date = new Date();
     date.setHours(selHours);
     date.setMinutes(selMins);
-    if (ampm === "pm") date.setHours(date.getHours() + 12);
+    if (ampm === "pm") date.setHours(date.getHours() + 12); //convert from am to pm
     setSelectedTime(date);
 
     const date1 = new Date();
