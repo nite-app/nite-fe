@@ -129,13 +129,13 @@ function Cycles() {
               Then, try to fall asleep at one of the following times:
             </p>
             <div className="flex flex-col md:flex-row">
-              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
                 <p className="font-medium text-xl">{sel1}</p>
               </div>
-              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
                 <p className="font-medium text-xl">{sel2}</p>
               </div>
-              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
                 <p className="font-medium text-xl">{sel3}</p>
               </div>
             </div>
@@ -150,13 +150,13 @@ function Cycles() {
               try to wake up at one of the following times:
             </p>
             <div className="flex flex-col md:flex-row">
-              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
                 <p className="font-medium text-xl">{time1}</p>
               </div>
-              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
                 <p className="font-medium text-xl">{time2}</p>
               </div>
-              <div className="flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36">
+              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
                 <p className="font-medium text-xl">{time3}</p>
               </div>
             </div>
