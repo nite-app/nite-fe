@@ -30,7 +30,7 @@ function SmHabitList({ children }) {
         </div>
       ) : (
         <div className="box-border w-full p-5 flex flex-col bg-white rounded-3xl md:grid">
-          <p className="">
+          <p className="p-3 rounded-xl bg-red-100">
             Damn! You don't have any habit set, run to the habits page to create
             new ones!
           </p>
