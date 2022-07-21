@@ -3,22 +3,51 @@ import React, { useEffect, useState } from "react";
 function Cycles() {
   const currentDate = new Date();
   const [selectedTime, setSelectedTime] = useState();
+  const [selHours, setSelHours] = useState();
+  const [selMins, setSelMins] = useState();
   const [sel1, setSel1] = useState();
   const [sel2, setSel2] = useState();
   const [sel3, setSel3] = useState();
+  const [ampm, setAmpm] = useState();
   const [time1, setTime1] = useState();
   const [time2, setTime2] = useState();
   const [time3, setTime3] = useState();
 
   function formatAMPM(date) {
-    var hours = date.getHours();
-    var minutes = date.getMinutes();
-    var ampm = hours >= 12 ? "pm" : "am";
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let ampm = hours >= 12 ? "pm" : "am";
     hours = hours % 12;
     hours = hours ? hours : 12; // the hour '0' should be '12'
     minutes = minutes < 10 ? "0" + minutes : minutes;
-    var strTime = hours + ":" + minutes + " " + ampm;
+    let strTime = hours + ":" + minutes + " " + ampm;
     return strTime;
+  }
+
+  function handleCustomCalc() {
+    const date = new Date();
+    date.setHours(selHours);
+    date.setMinutes(selMins);
+    if (ampm === "pm") date.setHours(date.getHours() + 12);
+    setSelectedTime(date);
+
+    const date1 = new Date();
+    date1.setHours(date.getHours() - 9);
+    date1.setMinutes(date.getMinutes());
+    setSel1(formatAMPM(date1));
+
+    const date2 = new Date();
+    date2.setHours(date.getHours() - 7);
+    date2.setMinutes(date.getMinutes() - 30);
+    setSel2(formatAMPM(date2));
+
+    const date3 = new Date();
+    date3.setHours(date.getHours() - 6);
+    date3.setMinutes(date.getMinutes());
+    setSel3(formatAMPM(date3));
+
+    setSelHours("");
+    setSelMins("");
   }
 
   useEffect(() => {
@@ -37,7 +66,7 @@ function Cycles() {
   }, []);
 
   return (
-    <div className="flex flex-col p-10 rounded-3xl bg-white">
+    <div className="flex flex-col p-5 rounded-3xl bg-white md:p-10">
       <div>
         <p className="font-semibold text-xl mb-5">
           At what time do you have to wake up?
@@ -50,6 +79,10 @@ function Cycles() {
             placeholder="Hours"
             step={5}
             className="p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-semibold w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:w-32"
+            value={selHours}
+            onChange={(e) => {
+              setSelHours(e.currentTarget.value);
+            }}
           />
           <input
             type="number"
@@ -58,17 +91,27 @@ function Cycles() {
             placeholder="Minutes"
             step={5}
             className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-semibold w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:mt-0 md:w-32"
+            value={selMins}
+            onChange={(e) => {
+              setSelMins(e.currentTarget.value);
+            }}
           />
           <select
             name="ampm"
             id=""
             className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-semibold w-full h-14 focus:outline-none md:mt-0 md:w-28"
+            onChange={(e) => {
+              setAmpm(e.target.value);
+            }}
           >
             <option value="am">am</option>
             <option value="pm">pm</option>
           </select>
         </div>
-        <button className="p-3 px-5 bg-gray-800 text-white font-semibold mt-2 rounded-2xl">
+        <button
+          className="p-3 px-5 bg-gray-800 text-white font-semibold mt-2 rounded-2xl"
+          onClick={handleCustomCalc}
+        >
           Calculate
         </button>
       </div>
