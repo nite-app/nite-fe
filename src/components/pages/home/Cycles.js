@@ -25,6 +25,13 @@ function Cycles() {
   }
 
   function handleCustomCalc() {
+    if (selHours > 12 || selHours < 0 || selMins > 59 || selMins < 0) {
+      alert("Insert a valid time!");
+      setSelHours("");
+      setSelMins("");
+      return;
+    }
+
     const date = new Date();
     date.setHours(selHours);
     date.setMinutes(selMins);
