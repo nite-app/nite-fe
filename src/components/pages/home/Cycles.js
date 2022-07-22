@@ -74,7 +74,7 @@ function Cycles() {
   }, []);
 
   return (
-    <div className="flex flex-col p-5 rounded-3xl bg-white md:p-10">
+    <div className="flex flex-col p-5 rounded-3xl bg-white">
       <div>
         <p className="font-semibold text-xl mb-5">
           At what time do you have to wake up?
