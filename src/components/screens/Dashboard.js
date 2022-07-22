@@ -174,10 +174,26 @@ function Dashboard({ active, setActive }) {
           30 Days performance
         </p>
         <div className="flex w-full overflow-x-scroll md:w-full 2xl:w-full 2xl:overflow-hidden">
-          <InsightCard title={"Hours slept"} data={"216"} />
-          <InsightCard title={"Average sleep"} data={"7.2"} />
-          <InsightCard title={"Habits respected"} data={"87"} />
-          <InsightCard title={"Notes taken"} data={"23"} />
+          <InsightCard
+            title={"Hours slept"}
+            data={"216"}
+            img={"/img/performance-1.png"}
+          />
+          <InsightCard
+            title={"Average sleep"}
+            data={"7.2"}
+            img={"/img/performance-2.png"}
+          />
+          <InsightCard
+            title={"Habits respected"}
+            data={"87"}
+            img={"/img/performance-3.png"}
+          />
+          <InsightCard
+            title={"Notes taken"}
+            data={"23"}
+            img={"/img/performance-4.png"}
+          />
         </div>
       </div>
       <div className="flex flex-col ">
