@@ -195,7 +195,7 @@ function Cycles() {
             </p>
             <div className="flex flex-col md:flex-row">
               <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
-                <Tooltip title={"test"}>
+                <Tooltip title={"Click for more details"}>
                   <div
                     className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
                     onClick={() => {
@@ -214,14 +214,16 @@ function Cycles() {
                 )}
               </div>
               <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
-                <div
-                  className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
-                  onClick={() => {
-                    setCr2(!cr2);
-                  }}
-                >
-                  <p className="font-medium text-xl">{time2}</p>
-                </div>
+                <Tooltip title={"Click for more details"}>
+                  <div
+                    className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
+                    onClick={() => {
+                      setCr2(!cr2);
+                    }}
+                  >
+                    <p className="font-medium text-xl">{time2}</p>
+                  </div>
+                </Tooltip>
                 {cr2 ? (
                   <>
                     <CycleCard cycles={5} hours={"seven and a half"} />
@@ -231,14 +233,16 @@ function Cycles() {
                 )}
               </div>
               <div className="box-border mt-2 w-full md:w-36 lg:w-1/3">
-                <div
-                  className="flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
-                  onClick={() => {
-                    setCr3(!cr3);
-                  }}
-                >
-                  <p className="font-medium text-xl">{time3}</p>
-                </div>
+                <Tooltip title={"Click for more details"}>
+                  <div
+                    className="flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
+                    onClick={() => {
+                      setCr3(!cr3);
+                    }}
+                  >
+                    <p className="font-medium text-xl">{time3}</p>
+                  </div>
+                </Tooltip>
                 {cr3 ? (
                   <>
                     <CycleCard cycles={4} hours={"six"} />
