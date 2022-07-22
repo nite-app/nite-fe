@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import CycleCard from "./CycleCard";
+import Tooltip from "../../Tooltip";
 
 function Cycles() {
   const currentDate = new Date();
@@ -194,14 +195,16 @@ function Cycles() {
             </p>
             <div className="flex flex-col md:flex-row">
               <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
-                <div
-                  className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
-                  onClick={() => {
-                    setCr1(!cr1);
-                  }}
-                >
-                  <p className="font-medium text-xl">{time1}</p>
-                </div>
+                <Tooltip title={"test"}>
+                  <div
+                    className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
+                    onClick={() => {
+                      setCr1(!cr1);
+                    }}
+                  >
+                    <p className="font-medium text-xl">{time1}</p>
+                  </div>
+                </Tooltip>
                 {cr1 ? (
                   <>
                     <CycleCard cycles={6} hours={"nine"} />

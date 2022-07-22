@@ -12,7 +12,7 @@ function News() {
   return (
     <div className="p-5 rounded-3xl bg-white">
       <div
-        className="box-border rounded-2xl mb-8 bg-cover bg-no-repeat relative aspect-[21/9]"
+        className="box-border rounded-2xl mb-8 bg-cover bg-no-repeat relative aspect-[21/9] 2xl:aspect-[21/7]"
         style={{ backgroundImage: `url(${img})` }}
       >
         <img
