@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import CycleCard from "./CycleCard";
 
 function Cycles() {
   const currentDate = new Date();
@@ -52,9 +53,6 @@ function Cycles() {
     date3.setHours(date.getHours() - 6);
     date3.setMinutes(date.getMinutes());
     setSel3(formatAMPM(date3));
-
-    setSelHours("");
-    setSelMins("");
   }
 
   useEffect(() => {
@@ -85,7 +83,7 @@ function Cycles() {
             id=""
             placeholder="Hours"
             step={5}
-            className="p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-semibold w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:w-32"
+            className="p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:w-32"
             value={selHours}
             onChange={(e) => {
               setSelHours(e.currentTarget.value);
@@ -97,7 +95,7 @@ function Cycles() {
             id=""
             placeholder="Minutes"
             step={5}
-            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-semibold w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:mt-0 md:w-32"
+            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:mt-0 md:w-32"
             value={selMins}
             onChange={(e) => {
               setSelMins(e.currentTarget.value);
@@ -106,7 +104,7 @@ function Cycles() {
           <select
             name="ampm"
             id=""
-            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-semibold w-full h-14 focus:outline-none md:mt-0 md:w-28"
+            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none md:mt-0 md:w-28"
             onChange={(e) => {
               setAmpm(e.target.value);
             }}
@@ -129,14 +127,23 @@ function Cycles() {
               Then, try to fall asleep at one of the following times:
             </p>
             <div className="flex flex-col md:flex-row">
-              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
-                <p className="font-medium text-xl">{sel1}</p>
+              <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
+                <div className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 ">
+                  <p className="font-medium text-xl">{sel1}</p>
+                </div>
+                {<CycleCard cycles={6} hours={"nine"} />}
               </div>
-              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
-                <p className="font-medium text-xl">{sel2}</p>
+              <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
+                <div className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 ">
+                  <p className="font-medium text-xl">{sel2}</p>
+                </div>
+                {<CycleCard cycles={5} hours={"seven and a half"} />}
               </div>
-              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
-                <p className="font-medium text-xl">{sel3}</p>
+              <div className="box-border mt-2 w-full md:w-36 lg:w-1/3">
+                <div className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 ">
+                  <p className="font-medium text-xl">{sel3}</p>
+                </div>
+                {<CycleCard cycles={4} hours={"six"} />}
               </div>
             </div>
           </div>
@@ -150,14 +157,23 @@ function Cycles() {
               try to wake up at one of the following times:
             </p>
             <div className="flex flex-col md:flex-row">
-              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
-                <p className="font-medium text-xl">{time1}</p>
+              <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
+                <div className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14">
+                  <p className="font-medium text-xl">{time1}</p>
+                </div>
+                {<CycleCard cycles={6} hours={"nine"} />}
               </div>
-              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
-                <p className="font-medium text-xl">{time2}</p>
+              <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
+                <div className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14">
+                  <p className="font-medium text-xl">{time2}</p>
+                </div>
+                {<CycleCard cycles={5} hours={"seven and a half"} />}
               </div>
-              <div className="box-border flex flex-col justify-center mt-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 mr-2 md:w-36 lg:w-1/3">
-                <p className="font-medium text-xl">{time3}</p>
+              <div className="box-border mt-2 w-full md:w-36 lg:w-1/3">
+                <div className="flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14">
+                  <p className="font-medium text-xl">{time3}</p>
+                </div>
+                {<CycleCard cycles={4} hours={"six"} />}
               </div>
             </div>
           </div>
