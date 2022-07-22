@@ -13,6 +13,9 @@ function Cycles() {
   const [time1, setTime1] = useState();
   const [time2, setTime2] = useState();
   const [time3, setTime3] = useState();
+  const [cr1, setCr1] = useState(false);
+  const [cr2, setCr2] = useState(false);
+  const [cr3, setCr3] = useState(false);
 
   function formatAMPM(date) {
     let hours = date.getHours();
@@ -128,22 +131,55 @@ function Cycles() {
             </p>
             <div className="flex flex-col md:flex-row">
               <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
-                <div className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 ">
+                <div
+                  className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
+                  onClick={() => {
+                    setCr1(!cr1);
+                  }}
+                >
                   <p className="font-medium text-xl">{sel1}</p>
                 </div>
-                {<CycleCard cycles={6} hours={"nine"} />}
+                {cr1 ? (
+                  <>
+                    <CycleCard cycles={6} hours={"nine"} />
+                  </>
+                ) : (
+                  <></>
+                )}
               </div>
               <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
-                <div className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 ">
+                <div
+                  className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
+                  onClick={() => {
+                    setCr2(!cr2);
+                  }}
+                >
                   <p className="font-medium text-xl">{sel2}</p>
                 </div>
-                {<CycleCard cycles={5} hours={"seven and a half"} />}
+                {cr2 ? (
+                  <>
+                    <CycleCard cycles={5} hours={"seven and a half"} />
+                  </>
+                ) : (
+                  <></>
+                )}
               </div>
               <div className="box-border mt-2 w-full md:w-36 lg:w-1/3">
-                <div className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 ">
+                <div
+                  className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
+                  onClick={() => {
+                    setCr3(!cr3);
+                  }}
+                >
                   <p className="font-medium text-xl">{sel3}</p>
                 </div>
-                {<CycleCard cycles={4} hours={"six"} />}
+                {cr3 ? (
+                  <>
+                    <CycleCard cycles={4} hours={"six"} />
+                  </>
+                ) : (
+                  <></>
+                )}
               </div>
             </div>
           </div>
@@ -158,22 +194,55 @@ function Cycles() {
             </p>
             <div className="flex flex-col md:flex-row">
               <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
-                <div className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14">
+                <div
+                  className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
+                  onClick={() => {
+                    setCr1(!cr1);
+                  }}
+                >
                   <p className="font-medium text-xl">{time1}</p>
                 </div>
-                {<CycleCard cycles={6} hours={"nine"} />}
+                {cr1 ? (
+                  <>
+                    <CycleCard cycles={6} hours={"nine"} />
+                  </>
+                ) : (
+                  <></>
+                )}
               </div>
               <div className="box-border mt-2 mr-2 w-full md:w-36 lg:w-1/3">
-                <div className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14">
+                <div
+                  className="box-border flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
+                  onClick={() => {
+                    setCr2(!cr2);
+                  }}
+                >
                   <p className="font-medium text-xl">{time2}</p>
                 </div>
-                {<CycleCard cycles={5} hours={"seven and a half"} />}
+                {cr2 ? (
+                  <>
+                    <CycleCard cycles={5} hours={"seven and a half"} />
+                  </>
+                ) : (
+                  <></>
+                )}
               </div>
               <div className="box-border mt-2 w-full md:w-36 lg:w-1/3">
-                <div className="flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14">
+                <div
+                  className="flex flex-col justify-center mt-2 mb-2 rounded-2xl p-3 px-5 bg-gray-300 w-full h-14 cursor-pointer"
+                  onClick={() => {
+                    setCr3(!cr3);
+                  }}
+                >
                   <p className="font-medium text-xl">{time3}</p>
                 </div>
-                {<CycleCard cycles={4} hours={"six"} />}
+                {cr3 ? (
+                  <>
+                    <CycleCard cycles={4} hours={"six"} />
+                  </>
+                ) : (
+                  <></>
+                )}
               </div>
             </div>
           </div>
