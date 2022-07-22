@@ -2,6 +2,7 @@ import React, { useEffect, useState, lazy, Suspense } from "react";
 import Header from "../Header";
 import { habits } from "../../data/Habits";
 
+import News from "../pages/home/News";
 import Spinner from "../Spinner";
 import SmHabitList from "../pages/home/SmHabitList";
 import SingleHabit from "../pages/habits/SingleHabit";
@@ -17,11 +18,9 @@ function Home({ active, setActive }) {
         <div className="lg:w-1/2 lg:mr-8">
           <div className="mb-10">
             <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
-              Today at a glance
+              Today at nite
             </p>
-            <Suspense fallback={<Spinner />}>
-              <Quote />
-            </Suspense>
+            <News />
           </div>
           <div>
             <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
@@ -50,6 +49,14 @@ function Home({ active, setActive }) {
               Sleep cycles
             </p>
             <Cycles />
+          </div>
+          <div className="mb-10">
+            <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
+              Today at a glance
+            </p>
+            <Suspense fallback={<Spinner />}>
+              <Quote />
+            </Suspense>
           </div>
         </div>
       </div>
