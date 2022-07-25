@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 function Appearance() {
   const [lightSelected, setLightSelected] = useState(
@@ -9,6 +9,14 @@ function Appearance() {
   );
   const [lightText, setLightText] = useState("✔️ Light");
   const [darkText, setDarkText] = useState("Dark");
+
+  const setDarkTheme = () => {
+    localStorage.theme = "dark";
+  };
+
+  const setLightTheme = () => {
+    localStorage.theme = "light";
+  };
 
   return (
     <div className="mb-10">
@@ -22,6 +30,7 @@ function Appearance() {
               alt="appearancelight"
               className={lightSelected}
               onClick={() => {
+                setLightTheme();
                 setLightSelected(
                   "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
                 );
@@ -40,6 +49,7 @@ function Appearance() {
               alt="appearancedark"
               className={darkSelected}
               onClick={() => {
+                setDarkTheme();
                 setLightSelected(
                   "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
                 );

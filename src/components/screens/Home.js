@@ -12,7 +12,7 @@ function Home({ active, setActive }) {
   const Quote = React.lazy(() => import("../pages/home/Quote"));
 
   return (
-    <div className="w-full h-full min-h-full box-border overflow-y-scroll rounded-3xl bg-backpanel p-8 relative 2xl:p-12">
+    <div className="w-full h-full min-h-full box-border overflow-y-scroll rounded-3xl bg-backpanel p-8 relative 2xl:p-12 dark:bg-neutral-800">
       <Header active={active} setActive={setActive} />
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/2 lg:mr-8">

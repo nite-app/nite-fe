@@ -27,14 +27,27 @@ function Main() {
   useEffect(() => {
     if (settingsOpen === true) {
       setMainStyle(
-        "overflow-hidden flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen"
+        "overflow-hidden flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen dark:bg-neutral-900"
       );
     } else {
       setMainStyle(
-        "flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen"
+        "flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen dark:bg-neutral-900"
       );
     }
   }, [settingsOpen]);
+
+  useEffect(() => {
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [localStorage.theme]);
 
   return (
     <TabsUnstyled defaultValue={0} className="is-active">

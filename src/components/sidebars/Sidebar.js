@@ -15,7 +15,7 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
   return (
     <div
       className="hidden h-full w-full bg-backpanel box-border flex-col rounded-3xl p-5 mr-5
-      xl:flex xl:w-3/12"
+      xl:flex xl:w-3/12 dark:bg-neutral-800"
     >
       <div className="p-5 flex box-border items-center">
         <div
