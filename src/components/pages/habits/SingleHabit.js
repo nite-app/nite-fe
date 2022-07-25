@@ -24,14 +24,14 @@ function SingleHabit({ text, icon, checked, id }) {
   useEffect(() => {
     if (isChecked === true) {
       setCheckedCheckbox(
-        "mr-4 bg-black w-5 h-5 align-middle rounded-md appearance-none outline-none cursor-pointer"
+        "mr-4 bg-black w-5 h-5 align-middle rounded-md appearance-none outline-none cursor-pointer dark:bg-white"
       );
-      setCheckedText("font-medium line-through cursor-pointer");
+      setCheckedText("font-medium line-through cursor-pointer dark:text-white");
     } else {
       setCheckedCheckbox(
-        "mr-4 bg-lighttxt w-5 h-5 align-middle rounded-md appearance-none outline-none cursor-pointer"
+        "mr-4 bg-lighttxt w-5 h-5 align-middle rounded-md appearance-none outline-none cursor-pointer dark:bg-neutral-400"
       );
-      setCheckedText("font-medium cursor-pointer");
+      setCheckedText("font-medium cursor-pointer dark:text-white");
     }
   }, [isChecked]);
 
@@ -71,7 +71,7 @@ function SingleHabit({ text, icon, checked, id }) {
   const emojis = ["🐕", "🍎", "📚", "🛏️", "👨‍💻", "🧘", "🏃‍♂️", "🍳", "✍️", "👷"];
 
   return (
-    <div className="w-full flex items-center relative box-border rounded-2xl p-5 py-2 bg-gray-200 h-14">
+    <div className="w-full flex items-center relative box-border rounded-2xl p-5 py-2 bg-gray-200 h-14 dark:bg-neutral-500">
       <div className="relative flex justify-center items-center">
         <input
           type="checkbox"
@@ -83,7 +83,7 @@ function SingleHabit({ text, icon, checked, id }) {
         {isChecked ? (
           <BsCheck
             size={20}
-            className="text-white absolute top-0 left-0 cursor-pointer"
+            className="text-white absolute top-0 left-0 cursor-pointer dark:text-neutral-800"
             onClick={() => {
               toggleItems();
             }}

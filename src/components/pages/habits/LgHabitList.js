@@ -13,7 +13,7 @@ function LgHabitList({ children }) {
   }, []);
 
   return (
-    <div className="p-5 bg-white rounded-3xl grid grid-rows-auto grid-cols-1 gap-y-3">
+    <div className="p-5 bg-white rounded-3xl grid grid-rows-auto grid-cols-1 gap-y-3 dark:bg-neutral-700">
       <HabitInsert />
       <>
         {habits[0] ? (

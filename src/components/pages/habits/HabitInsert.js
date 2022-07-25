@@ -33,10 +33,10 @@ function HabitInsert() {
       <div className="absolute hidden right-2 top-0 h-full items-center peer-focus:flex group-hover:flex">
         <button
           type="submit"
-          className="flex bg-gray-100 p-2 rounded-xl w-10 h-10 justify-center items-center"
+          className="flex bg-gray-100 p-2 rounded-xl w-10 h-10 justify-center items-center dark:bg-neutral-600"
           onClick={addHabit}
         >
-          <FiPlus />
+          <FiPlus className="dark:text-white" />
         </button>
       </div>
     </div>

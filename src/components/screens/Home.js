@@ -17,13 +17,13 @@ function Home({ active, setActive }) {
       <div className="flex flex-col lg:flex-row">
         <div className="lg:w-1/2 lg:mr-8">
           <div className="mb-10">
-            <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
+            <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl dark:text-white">
               Today at nite
             </p>
             <News />
           </div>
           <div>
-            <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
+            <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl dark:text-white">
               Current habits
             </p>
             <div className="flex w-full">
@@ -45,13 +45,13 @@ function Home({ active, setActive }) {
         </div>
         <div className="lg:w-1/2">
           <div className="mb-10">
-            <p className="font-semibold text-xl mt-10 mb-5 2xl:text-2xl lg:mt-8">
+            <p className="font-semibold text-xl mt-10 mb-5 2xl:text-2xl lg:mt-8 dark:text-white">
               Sleep cycles
             </p>
             <Cycles />
           </div>
           <div className="mb-10">
-            <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
+            <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl dark:text-white">
               Today at a glance
             </p>
             <Suspense fallback={<Spinner />}>

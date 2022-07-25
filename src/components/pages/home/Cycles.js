@@ -30,33 +30,31 @@ function Cycles() {
   }
 
   function handleCustomCalc() {
-    if (selHours > 12 || selHours < 0 || selMins > 59 || selMins < 0) {
+    if (selHours <= 12 || selHours <= 0 || selMins >= 59 || selMins <= 0) {
+      const date = new Date();
+      date.setHours(selHours);
+      date.setMinutes(selMins);
+      if (ampm === "pm") date.setHours(date.getHours() + 12); //convert from am to pm
+      setSelectedTime(date);
+
+      const date1 = new Date();
+      date1.setHours(date.getHours() - 9);
+      date1.setMinutes(date.getMinutes());
+      setSel1(formatAMPM(date1));
+
+      const date2 = new Date();
+      date2.setHours(date.getHours() - 7);
+      date2.setMinutes(date.getMinutes() - 30);
+      setSel2(formatAMPM(date2));
+
+      const date3 = new Date();
+      date3.setHours(date.getHours() - 6);
+      date3.setMinutes(date.getMinutes());
+      setSel3(formatAMPM(date3));
+    } else {
       alert("Insert a valid time!");
-      setSelHours("");
-      setSelMins("");
       return;
     }
-
-    const date = new Date();
-    date.setHours(selHours);
-    date.setMinutes(selMins);
-    if (ampm === "pm") date.setHours(date.getHours() + 12); //convert from am to pm
-    setSelectedTime(date);
-
-    const date1 = new Date();
-    date1.setHours(date.getHours() - 9);
-    date1.setMinutes(date.getMinutes());
-    setSel1(formatAMPM(date1));
-
-    const date2 = new Date();
-    date2.setHours(date.getHours() - 7);
-    date2.setMinutes(date.getMinutes() - 30);
-    setSel2(formatAMPM(date2));
-
-    const date3 = new Date();
-    date3.setHours(date.getHours() - 6);
-    date3.setMinutes(date.getMinutes());
-    setSel3(formatAMPM(date3));
   }
 
   useEffect(() => {
@@ -75,9 +73,9 @@ function Cycles() {
   }, []);
 
   return (
-    <div className="flex flex-col p-5 rounded-3xl bg-white">
+    <div className="flex flex-col p-5 rounded-3xl bg-white dark:bg-neutral-700">
       <div>
-        <p className="font-semibold text-xl mb-5">
+        <p className="font-semibold text-xl mb-5 dark:text-white">
           At what time do you have to wake up?
         </p>
         <div className="flex flex-col md:flex-row">
@@ -87,7 +85,7 @@ function Cycles() {
             id=""
             placeholder="Hours"
             step={5}
-            className="p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:w-32"
+            className="p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:w-32 dark:bg-neutral-600 dark:placeholder:text-neutral-300"
             value={selHours}
             onChange={(e) => {
               setSelHours(e.currentTarget.value);
@@ -99,7 +97,7 @@ function Cycles() {
             id=""
             placeholder="Minutes"
             step={5}
-            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:mt-0 md:w-32"
+            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:mt-0 md:w-32 dark:bg-neutral-600 dark:placeholder:text-neutral-300"
             value={selMins}
             onChange={(e) => {
               setSelMins(e.currentTarget.value);
@@ -108,17 +106,21 @@ function Cycles() {
           <select
             name="ampm"
             id=""
-            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none md:mt-0 md:w-28"
+            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none md:mt-0 md:w-28 dark:bg-neutral-600 dark:text-white"
             onChange={(e) => {
               setAmpm(e.target.value);
             }}
           >
-            <option value="am">am</option>
-            <option value="pm">pm</option>
+            <option value="am" className="dark:text-white">
+              am
+            </option>
+            <option value="pm" className="dark:text-white">
+              pm
+            </option>
           </select>
         </div>
         <button
-          className="p-3 px-5 bg-gray-800 text-white font-semibold mt-2 rounded-2xl"
+          className="p-3 px-5 bg-gray-800 text-white font-semibold mt-2 rounded-2xl dark:bg-neutral-200 dark:text-neutral-600"
           onClick={handleCustomCalc}
         >
           Calculate
@@ -127,7 +129,7 @@ function Cycles() {
       {selectedTime ? (
         <>
           <div>
-            <p className="font-semibold text-xl mb-5 mt-10">
+            <p className="font-semibold text-xl mb-5 mt-10 dark:text-white">
               Then, try to fall asleep at one of the following times:
             </p>
             <div className="flex flex-col md:flex-row">
@@ -188,7 +190,7 @@ function Cycles() {
       ) : (
         <>
           <div>
-            <p className="font-semibold text-xl mb-5 mt-10">
+            <p className="font-semibold text-xl mb-5 mt-10 dark:text-white">
               If you go to bed now,
               <br />
               try to wake up at one of the following times:

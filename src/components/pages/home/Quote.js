@@ -21,9 +21,9 @@ function Quote() {
   }, []);
 
   return (
-    <div className="flex flex-col rounded-3xl bg-white w-full p-5">
-      <p className="font-medium ">{currentQuote.content}</p>
-      <p className="text-gray-500 text-sm mt-3">
+    <div className="flex flex-col rounded-3xl bg-white w-full p-5 dark:bg-neutral-700">
+      <p className="font-medium dark:text-white">{currentQuote.content}</p>
+      <p className="text-gray-500 text-sm mt-3 dark:text-gray-300">
         {currentQuote.icon} - {currentQuote.author}
       </p>
     </div>

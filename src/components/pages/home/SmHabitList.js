@@ -15,7 +15,7 @@ function SmHabitList({ children }) {
   return (
     <>
       {habits[0] ? (
-        <div className="box-border w-full p-5 flex flex-col grid-rows-auto grid-cols-2 gap-x-5 gap-y-3 bg-white rounded-3xl md:grid">
+        <div className="box-border w-full p-5 flex flex-col grid-rows-auto grid-cols-2 gap-x-5 gap-y-3 bg-white rounded-3xl md:grid dark:bg-neutral-700">
           {habits.map((habit) => {
             return (
               <SingleHabit
