@@ -84,18 +84,33 @@ input[type="number"] {
   transform: translate(-50%, -50%);
 }
 
+@media (prefers-color-scheme: dark) {
+  .Mui-selected {
+    background-color: #404040;
+  }
+  .Mui-selected .tab-icon {
+    color: #ffffff;
+  }
+  .Mui-selected .collapsedtab-icon {
+    color: #ffffff;
+  }
+  .Mui-selected .tab-text {
+    color: #ffffff;
+  }
+}
+
 @layer components {
   .tab-icon {
-    @apply relative flex items-center justify-center mr-5 text-lighttxt transition-all duration-300 ease-linear;
+    @apply relative flex items-center justify-center mr-5 text-lighttxt transition-all duration-300 ease-linear dark:text-neutral-100;
   }
   .collapsedtab-icon {
-    @apply relative flex items-center justify-center m-auto text-lighttxt transition-all duration-300 ease-linear;
+    @apply relative flex items-center justify-center m-auto text-lighttxt transition-all duration-300 ease-linear dark:text-neutral-100;
   }
   .tab-text {
-    @apply font-semibold text-xl text-lighttxt align-text-bottom transition-all duration-300 ease-linear;
+    @apply font-semibold text-xl text-lighttxt align-text-bottom transition-all duration-300 ease-linear dark:text-neutral-100;
   }
   .tab-item {
-    @apply relative flex items-center p-5 rounded-2xl mb-0 transition-all duration-300 ease-linear hover:bg-panelhover xl:mb-2;
+    @apply relative flex items-center p-5 rounded-2xl mb-0 transition-all duration-300 ease-linear hover:bg-panelhover xl:mb-2 dark:hover:bg-neutral-600;
   }
   .tab-tooltip {
     @apply absolute w-auto p-2 left-24 rounded-md min-w-max bg-gray-400 text-xs font-semibold transition-all duration-200 scale-0 origin-left z-10 hidden;

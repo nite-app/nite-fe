@@ -13,13 +13,13 @@ function Header({ active, setActive }) {
       <Tooltip title={"Toggle sidebar"}>
         <BsReverseLayoutSidebarInsetReverse
           size={28}
-          className="mr-5 cursor-pointer"
+          className="mr-5 cursor-pointer dark:text-white"
           onClick={() => {
             setActive(!active);
           }}
         />
       </Tooltip>
-      <p className="text-3xl font-semibold 2xl:text-5xl">
+      <p className="text-3xl font-semibold 2xl:text-5xl dark:text-white">
         Good {partOfTheDay}, Anna
       </p>
     </div>

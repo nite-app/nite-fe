@@ -170,7 +170,7 @@ function Dashboard({ active, setActive }) {
     <div className="w-full h-full min-h-full box-border overflow-y-scroll rounded-3xl bg-backpanel p-8 relative 2xl:p-12 dark:bg-neutral-800">
       <Header active={active} setActive={setActive} />
       <div className="flex flex-col">
-        <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl">
+        <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl dark:text-white">
           30 Days performance
         </p>
         <div className="flex w-full overflow-x-scroll md:w-full 2xl:w-full 2xl:overflow-hidden">
@@ -197,30 +197,35 @@ function Dashboard({ active, setActive }) {
         </div>
       </div>
       <div className="flex flex-col ">
-        <p className="font-semibold text-xl mt-10 mb-5 2xl:text-2xl">
+        <p className="font-semibold text-xl mt-10 mb-5 2xl:text-2xl dark:text-white">
           Analytics
         </p>
         <div className="flex flex-col xl:flex-row 2xl:flex-row">
           <div
             className="flex box-border w-full justify-center items-center p-5 mr-8 mb-5 rounded-2xl bg-white 
             xl:w-1/2 h-72 max-h-64 xl:mb-0
-            2xl:w-1/2 h-80 max-h-72 2xl:mb-0"
+            2xl:w-1/2 h-80 max-h-72 2xl:mb-0
+            dark:bg-neutral-700"
           >
             <LineChart chartData={userData} chartOptions={userOptions} />
           </div>
-          <div className="flex h-full h-min-max w-full p-7 rounded-2xl bg-white xl:w-1/3 2xl:w-1/3">
-            <p className="font-semibold text-xl">Sleep quality</p>
+          <div className="flex h-full h-min-max w-full p-7 rounded-2xl bg-white xl:w-1/3 2xl:w-1/3 dark:bg-neutral-700">
+            <p className="font-semibold text-xl dark:text-neutral-50">
+              Sleep quality
+            </p>
           </div>
         </div>
       </div>
       <div className="flex flex-col">
-        <p className="font-semibold text-xl mt-10 mb-5 2xl:text-2xl">
+        <p className="font-semibold text-xl mt-10 mb-5 2xl:text-2xl dark:text-white">
           Challenges
         </p>
         <div className="grid grid-rows-2 gap-x-8 gap-y-8 w-full h-full box-border xl:grid-cols-2 grid-rows-1">
-          <div className="w-full mr-8 rounded-2xl p-8 box-border bg-white md:flex justify-between">
+          <div className="w-full mr-8 rounded-2xl p-8 box-border bg-white md:flex justify-between dark:bg-neutral-700">
             <div>
-              <p className="font-semibold text-2xl mb-4">Weekly target</p>
+              <p className="font-semibold text-2xl mb-4 dark:text-neutral-100">
+                Weekly target
+              </p>
               <p className="font-medium text-lg text-gray-400">25% Achieved</p>
             </div>
             <div className="w-24 aspect-square mt-5 lg:mt-0">
@@ -231,9 +236,11 @@ function Dashboard({ active, setActive }) {
               />
             </div>
           </div>
-          <div className="w-full rounded-2xl p-8 box-border bg-white md:flex justify-between">
+          <div className="w-full rounded-2xl p-8 box-border bg-white md:flex justify-between dark:bg-neutral-700">
             <div>
-              <p className="font-semibold text-2xl mb-4">Monthly target</p>
+              <p className="font-semibold text-2xl mb-4 dark:text-neutral-100">
+                Monthly target
+              </p>
               <p className="font-medium text-lg text-gray-400">50% Achieved</p>
             </div>
             <div className="w-24 aspect-square mt-5 lg:mt-0">

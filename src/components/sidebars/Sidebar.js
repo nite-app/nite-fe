@@ -27,7 +27,9 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
           <p className="text-2xl font-semibold">AS</p>
         </div>
         <div className="flex flex-col">
-          <h3 className="text-2xl font-semibold">Anna Shumate</h3>
+          <h3 className="text-2xl font-semibold dark:text-white">
+            Anna Shumate
+          </h3>
         </div>
       </div>
 
@@ -36,27 +38,38 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
           <TabUnstyled value={0} className="tab-item group p-5">
             <MdOutlineSpaceDashboard
               size={24}
-              className="tab-icon group-hover:text-hovertxt"
+              className="tab-icon group-hover:text-hovertxt dark:group-hover:text-neutral-100"
             />
-            <p className="tab-text group-hover:text-hovertxt">Dashboard</p>
+            <p className="tab-text group-hover:text-hovertxt dark:group-hover:text-neutral-100">
+              Dashboard
+            </p>
           </TabUnstyled>
           <TabUnstyled value={1} className="tab-item group p-5">
             <BiSquareRounded
               size={20}
-              className="tab-icon group-hover:text-hovertxt"
+              className="tab-icon group-hover:text-hovertxt dark:group-hover:text-neutral-100"
             />
-            <p className="tab-text group-hover:text-hovertxt">Home</p>
+            <p className="tab-text group-hover:text-hovertxt dark:group-hover:text-neutral-100">
+              Home
+            </p>
           </TabUnstyled>
           <TabUnstyled value={2} className="tab-item group p-5">
-            <BiMoon size={24} className="tab-icon group-hover:text-hovertxt" />
-            <p className="tab-text group-hover:text-hovertxt">Sleep</p>
+            <BiMoon
+              size={24}
+              className="tab-icon group-hover:text-hovertxt dark:group-hover:text-neutral-100"
+            />
+            <p className="tab-text group-hover:text-hovertxt dark:group-hover:text-neutral-100">
+              Sleep
+            </p>
           </TabUnstyled>
           <TabUnstyled value={3} className="tab-item group p-5">
             <CgCheckR
               size={20}
-              className="tab-icon group-hover:text-lighttxt"
+              className="tab-icon group-hover:text-hovertxt dark:group-hover:text-neutral-100"
             />
-            <p className="tab-text group-hover:text-hovertxt">Habits</p>
+            <p className="tab-text group-hover:text-hovertxt dark:group-hover:text-neutral-100">
+              Habits
+            </p>
           </TabUnstyled>
         </TabsListUnstyled>
       </div>
