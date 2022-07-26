@@ -5,7 +5,7 @@ function Appearance() {
     "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
   );
   const [darkSelected, setDarkSelected] = useState(
-    "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
+    "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
   );
   const [lightText, setLightText] = useState("✔️ Light");
   const [darkText, setDarkText] = useState("Dark");
@@ -27,7 +27,7 @@ function Appearance() {
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       setLightSelected(
-        "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
+        "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
       );
       setDarkSelected(
         "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
@@ -48,9 +48,13 @@ function Appearance() {
 
   return (
     <div className="mb-10">
-      <p className="font-semibold text-2xl hidden xl:block">Appearance</p>
+      <p className="font-semibold text-2xl hidden xl:block dark:text-white">
+        Appearance
+      </p>
       <div className="mt-6">
-        <p className="font-semibold text-lg mb-4">Theme</p>
+        <p className="font-semibold text-lg mb-4 dark:text-neutral-200">
+          Theme
+        </p>
         <div className="flex">
           <div className="mr-4 max-w-[250px]">
             <img
@@ -64,13 +68,15 @@ function Appearance() {
                   "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
                 );
                 setDarkSelected(
-                  "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
+                  "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
                 );
                 setLightText("✔️ Light");
                 setDarkText("Dark");
               }}
             />
-            <p className="font-medium text-sm mt-2">{lightText}</p>
+            <p className="font-medium text-sm mt-2 dark:text-neutral-200">
+              {lightText}
+            </p>
           </div>
           <div className="max-w-[250px]">
             <img
@@ -81,7 +87,7 @@ function Appearance() {
                 setDarkTheme();
                 darkDoc();
                 setLightSelected(
-                  "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
+                  "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
                 );
                 setDarkSelected(
                   "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
@@ -90,7 +96,9 @@ function Appearance() {
                 setDarkText("✔️ Dark");
               }}
             />
-            <p className="font-medium text-sm mt-2">{darkText}</p>
+            <p className="font-medium text-sm mt-2 dark:text-neutral-200">
+              {darkText}
+            </p>
           </div>
         </div>
       </div>

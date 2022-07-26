@@ -75,7 +75,9 @@ function Settings({ open, onClose }) {
             </button>
             {aboutOpen ? <About /> : <></>}
             <button className="settings-btn mb-5 bg-red-50 shadow-md">
-              <p className="settings-btntxt text-red-600">🛫 Logout</p>
+              <p className="settings-btntxt text-red-600 dark:text-red-500">
+                🛫 Logout
+              </p>
             </button>
           </div>
           <div className="hidden h-full xl:flex flex-col p-5">
