@@ -22,19 +22,23 @@ function Settings({ open, onClose }) {
   return (
     <>
       <div
-        className="absolute top-0 left-0 overflow-hidden w-screen h-screen z-50 bg-black opacity-30"
+        className="absolute top-0 left-0 overflow-hidden w-screen h-screen z-50 bg-black opacity-30 dark:opacity-50"
         onClick={onClose}
       ></div>
       <div
         id="settingsModal"
-        className="box-border absolute top-0 left-0 w-full h-full overflow-y-scroll flex m-auto z-50 p-5 bg-white rounded-none sm:rounded-3xl sm:w-10/12 sm:h-3/4 xl:w-2/3 2xl:w-3/5 max-w-[1150px]"
+        className="box-border absolute top-0 left-0 w-full h-full overflow-y-scroll flex m-auto z-50 p-5 bg-white rounded-none sm:rounded-3xl sm:w-10/12 sm:h-3/4 xl:w-2/3 2xl:w-3/5 max-w-[1150px] dark:bg-neutral-800 dark:shadow-md"
       >
         <div className="flex flex-col box-border w-full">
           <div className="absolute top-10 right-10 cursor-pointer">
-            <IoClose size={32} onClick={onClose} />
+            <IoClose
+              size={32}
+              onClick={onClose}
+              className="text-black dark:text-white"
+            />
           </div>
           <div className="p-5 flex box-border items-center">
-            <p className="font-semibold text-3xl">Settings</p>
+            <p className="font-semibold text-3xl dark:text-white">Settings</p>
           </div>
           <div className="flex flex-col p-5 xl:hidden">
             <button
@@ -80,22 +84,18 @@ function Settings({ open, onClose }) {
                 <div className="w-1/4 box-border">
                   <TabsListUnstyled className="flex flex-col justify-center">
                     <TabUnstyled value={0} className="settings-tab group p-5">
-                      <p className="settings-txt group-hover:text-hovertxt">
-                        👤 Personal
-                      </p>
+                      <p className="settings-txt">👤 Personal</p>
                     </TabUnstyled>
                     <TabUnstyled value={1} className="settings-tab group p-5">
-                      <p className="settings-txt group-hover:text-hovertxt">
-                        🎨 Appearance
-                      </p>
+                      <p className="settings-txt">🎨 Appearance</p>
                     </TabUnstyled>
                     <TabUnstyled value={2} className="settings-tab group p-5">
-                      <p className="settings-txt group-hover:text-hovertxt">
-                        ✌️ About
-                      </p>
+                      <p className="settings-txt">✌️ About</p>
                     </TabUnstyled>
                     <button className="settings-tab p-5">
-                      <p className="settings-txt text-red-600">🛫 Logout</p>
+                      <p className="settings-txt text-red-600 dark:text-red-500">
+                        🛫 Logout
+                      </p>
                     </button>
                   </TabsListUnstyled>
                 </div>
