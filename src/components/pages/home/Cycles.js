@@ -85,7 +85,7 @@ function Cycles() {
             id=""
             placeholder="Hours"
             step={5}
-            className="p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:w-32 dark:bg-neutral-600 dark:placeholder:text-neutral-300"
+            className="p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:w-32 dark:bg-neutral-600 dark:placeholder:text-neutral-300 dark:text-white"
             value={selHours}
             onChange={(e) => {
               setSelHours(e.currentTarget.value);
@@ -97,7 +97,7 @@ function Cycles() {
             id=""
             placeholder="Minutes"
             step={5}
-            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:mt-0 md:w-32 dark:bg-neutral-600 dark:placeholder:text-neutral-300"
+            className="mt-2 p-3 pl-5 mr-2 bg-gray-300 rounded-2xl text-xl font-medium w-full h-14 focus:outline-none placeholder:text-md placeholder:text-gray-500 md:mt-0 md:w-32 dark:bg-neutral-600 dark:placeholder:text-neutral-300 dark:text-white"
             value={selMins}
             onChange={(e) => {
               setSelMins(e.currentTarget.value);

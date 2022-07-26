@@ -84,19 +84,17 @@ input[type="number"] {
   transform: translate(-50%, -50%);
 }
 
-@media (prefers-color-scheme: dark) {
-  .Mui-selected {
-    background-color: #404040;
-  }
-  .Mui-selected .tab-icon {
-    color: #ffffff;
-  }
-  .Mui-selected .collapsedtab-icon {
-    color: #ffffff;
-  }
-  .Mui-selected .tab-text {
-    color: #ffffff;
-  }
+.dark .Mui-selected {
+  background-color: #404040;
+}
+.dark .Mui-selected .tab-icon {
+  color: #ffffff;
+}
+.dark .Mui-selected .collapsedtab-icon {
+  color: #ffffff;
+}
+.dark .Mui-selected .tab-text {
+  color: #ffffff;
 }
 
 @layer components {

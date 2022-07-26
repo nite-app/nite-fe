@@ -12,11 +12,39 @@ function Appearance() {
 
   const setDarkTheme = () => {
     localStorage.theme = "dark";
+    document.documentElement.classList.add("dark");
   };
 
   const setLightTheme = () => {
     localStorage.theme = "light";
+    document.documentElement.classList.remove("dark");
   };
+
+  useEffect(() => {
+    if (
+      localStorage.theme === "dark" ||
+      (!("theme" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+    ) {
+      setLightSelected(
+        "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
+      );
+      setDarkSelected(
+        "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
+      );
+      setLightText("Light");
+      setDarkText("✔️ Dark");
+    }
+  }, []);
+
+  var metaThemeColor = document.querySelector("meta[name=theme-color]");
+
+  function darkDoc() {
+    metaThemeColor.setAttribute("content", "#171717");
+  }
+  function lightDoc() {
+    metaThemeColor.setAttribute("content", "#ECECEC");
+  }
 
   return (
     <div className="mb-10">
@@ -31,6 +59,7 @@ function Appearance() {
               className={lightSelected}
               onClick={() => {
                 setLightTheme();
+                lightDoc();
                 setLightSelected(
                   "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
                 );
@@ -50,6 +79,7 @@ function Appearance() {
               className={darkSelected}
               onClick={() => {
                 setDarkTheme();
+                darkDoc();
                 setLightSelected(
                   "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
                 );
