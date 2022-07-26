@@ -77,6 +77,12 @@ input[type="number"] {
   padding: 10px;
 }
 
+.dark .MuiTooltip-tooltip {
+  border-radius: 8px !important;
+  background-color: #ffffff !important;
+  padding: 10px;
+}
+
 #settingsModal {
   position: absolute;
   top: 50%;
