@@ -10,6 +10,7 @@ import {
   TabPanelUnstyled,
   TabUnstyled,
 } from "@mui/base";
+import Tooltip from "../Tooltip";
 
 function Sidebar({ settingsOpen, setSettingsOpen }) {
   return (
@@ -18,14 +19,16 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
       xl:flex xl:w-3/12 dark:bg-neutral-800"
     >
       <div className="p-5 flex box-border items-center">
-        <div
-          className="rounded-2xl bg-slate-400 p-4 mr-5 cursor-pointer"
-          onClick={() => {
-            setSettingsOpen(true);
-          }}
-        >
-          <p className="text-2xl font-semibold">AS</p>
-        </div>
+        <Tooltip title={"Settings"} placement={"bottom"}>
+          <div
+            className="rounded-2xl bg-slate-400 p-4 mr-5 cursor-pointer"
+            onClick={() => {
+              setSettingsOpen(true);
+            }}
+          >
+            <p className="text-2xl font-semibold">AS</p>
+          </div>
+        </Tooltip>
         <div className="flex flex-col">
           <h3 className="text-2xl font-semibold dark:text-white">
             Anna Shumate

@@ -36,6 +36,8 @@ function Main() {
     }
   }, [settingsOpen]);
 
+  var metaThemeColor = document.querySelector("meta[name=theme-color]");
+
   useEffect(() => {
     // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (
@@ -44,10 +46,12 @@ function Main() {
         window.matchMedia("(prefers-color-scheme: dark)").matches)
     ) {
       document.documentElement.classList.add("dark");
+      metaThemeColor.setAttribute("content", "#171717");
     } else {
       document.documentElement.classList.remove("dark");
+      metaThemeColor.setAttribute("content", "#171717");
     }
-  }, [localStorage.theme]);
+  }, []);
 
   return (
     <TabsUnstyled defaultValue={0} className="is-active">

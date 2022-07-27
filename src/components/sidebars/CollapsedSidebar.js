@@ -16,14 +16,16 @@ function CollapsedSidebar({ settingsOpen, setSettingsOpen }) {
   return (
     <div className="relative h-full w-full mb-5 min-w-24 bg-backpanel box-border flex flex-row rounded-3xl p-0 items-center mr-5 xl:flex-col xl:w-24 xl:p-5 xl:mb-0 dark:bg-neutral-800">
       <div className="p-5 box-border items-center justify-center pr-0 md:pr-5">
-        <div
-          className="rounded-2xl bg-slate-400 p-3 cursor-pointer md:p-4"
-          onClick={() => {
-            setSettingsOpen(true);
-          }}
-        >
-          <p className="text-2xl font-semibold">AS</p>
-        </div>
+        <Tooltip title={"Settings"} placement={"right"}>
+          <div
+            className="rounded-2xl bg-slate-400 p-3 cursor-pointer md:p-4"
+            onClick={() => {
+              setSettingsOpen(true);
+            }}
+          >
+            <p className="text-2xl font-semibold">AS</p>
+          </div>
+        </Tooltip>
       </div>
       <div className="p-5 flex flex-row justify-center xl:flex-col">
         <TabsListUnstyled className="flex flex-row justify-center xl:flex-col">

@@ -144,7 +144,11 @@ function Cycles() {
                 </div>
                 {cr1 ? (
                   <>
-                    <CycleCard cycles={6} hours={"nine"} />
+                    <CycleCard
+                      cycles={6}
+                      hours={"nine"}
+                      img={"/img/stats-1.png"}
+                    />
                   </>
                 ) : (
                   <></>
@@ -161,7 +165,11 @@ function Cycles() {
                 </div>
                 {cr2 ? (
                   <>
-                    <CycleCard cycles={5} hours={"seven and a half"} />
+                    <CycleCard
+                      cycles={5}
+                      hours={"seven and a half"}
+                      img={"/img/stats-2.png"}
+                    />
                   </>
                 ) : (
                   <></>
@@ -178,7 +186,11 @@ function Cycles() {
                 </div>
                 {cr3 ? (
                   <>
-                    <CycleCard cycles={4} hours={"six"} />
+                    <CycleCard
+                      cycles={4}
+                      hours={"six"}
+                      img={"/img/stats-3.png"}
+                    />
                   </>
                 ) : (
                   <></>
@@ -209,7 +221,11 @@ function Cycles() {
                 </Tooltip>
                 {cr1 ? (
                   <>
-                    <CycleCard cycles={6} hours={"nine"} />
+                    <CycleCard
+                      cycles={6}
+                      hours={"nine"}
+                      img={"/img/stats-1.png"}
+                    />
                   </>
                 ) : (
                   <></>
@@ -228,7 +244,11 @@ function Cycles() {
                 </Tooltip>
                 {cr2 ? (
                   <>
-                    <CycleCard cycles={5} hours={"seven and a half"} />
+                    <CycleCard
+                      cycles={5}
+                      hours={"seven and a half"}
+                      img={"/img/stats-2.png"}
+                    />
                   </>
                 ) : (
                   <></>
@@ -247,7 +267,11 @@ function Cycles() {
                 </Tooltip>
                 {cr3 ? (
                   <>
-                    <CycleCard cycles={4} hours={"six"} />
+                    <CycleCard
+                      cycles={4}
+                      hours={"six"}
+                      img={"/img/stats-3.png"}
+                    />
                   </>
                 ) : (
                   <></>

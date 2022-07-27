@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { BsReverseLayoutSidebarInsetReverse } from "react-icons/bs";
+import { BsLayoutSidebarInset } from "react-icons/bs";
 import Tooltip from "./Tooltip";
 
 function Header({ active, setActive }) {
@@ -11,13 +12,29 @@ function Header({ active, setActive }) {
   return (
     <div className="flex items-center">
       <Tooltip title={"Toggle sidebar"}>
-        <BsReverseLayoutSidebarInsetReverse
-          size={28}
-          className="mr-5 cursor-pointer dark:text-white"
-          onClick={() => {
-            setActive(!active);
-          }}
-        />
+        <div>
+          {active ? (
+            <>
+              <BsReverseLayoutSidebarInsetReverse
+                size={28}
+                className="mr-5 cursor-pointer dark:text-white"
+                onClick={() => {
+                  setActive(!active);
+                }}
+              />
+            </>
+          ) : (
+            <>
+              <BsLayoutSidebarInset
+                size={28}
+                className="mr-5 cursor-pointer dark:text-white"
+                onClick={() => {
+                  setActive(!active);
+                }}
+              />
+            </>
+          )}
+        </div>
       </Tooltip>
       <p className="text-3xl font-semibold 2xl:text-5xl dark:text-white">
         Good {partOfTheDay}, Anna
