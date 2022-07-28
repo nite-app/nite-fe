@@ -27,7 +27,7 @@ function Main() {
   );
 
   useEffect(() => {
-    if (settingsOpen === true) {
+    if (settingsOpen === true || newsOpen === true) {
       setMainStyle(
         "overflow-hidden flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen dark:bg-neutral-900"
       );
@@ -36,7 +36,7 @@ function Main() {
         "flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen dark:bg-neutral-900"
       );
     }
-  }, [settingsOpen]);
+  }, [settingsOpen, newsOpen]);
 
   var metaThemeColor = document.querySelector("meta[name=theme-color]");
 
