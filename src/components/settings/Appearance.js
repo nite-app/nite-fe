@@ -7,8 +7,12 @@ function Appearance() {
   const [darkSelected, setDarkSelected] = useState(
     "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
   );
+  const [autoSelected, setAutoSelected] = useState(
+    "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
+  );
   const [lightText, setLightText] = useState("✔️ Light");
   const [darkText, setDarkText] = useState("Dark");
+  const [autoText, setAutoText] = useState("Auto");
 
   const setDarkTheme = () => {
     localStorage.theme = "dark";
@@ -18,6 +22,10 @@ function Appearance() {
   const setLightTheme = () => {
     localStorage.theme = "light";
     document.documentElement.classList.remove("dark");
+  };
+
+  const setAutoTheme = () => {
+    localStorage.removeItem("theme");
   };
 
   useEffect(() => {
@@ -70,15 +78,19 @@ function Appearance() {
                 setDarkSelected(
                   "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
                 );
+                setAutoSelected(
+                  "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
+                );
                 setLightText("✔️ Light");
                 setDarkText("Dark");
+                setAutoText("Auto");
               }}
             />
             <p className="font-medium text-sm mt-2 dark:text-neutral-200">
               {lightText}
             </p>
           </div>
-          <div className="max-w-[250px]">
+          <div className="mr-4 max-w-[250px]">
             <img
               src={require("../../img/appearancedark.png")}
               alt="appearancedark"
@@ -92,14 +104,43 @@ function Appearance() {
                 setDarkSelected(
                   "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
                 );
+                setAutoSelected(
+                  "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
+                );
                 setLightText("Light");
                 setDarkText("✔️ Dark");
+                setAutoText("Auto");
               }}
             />
             <p className="font-medium text-sm mt-2 dark:text-neutral-200">
               {darkText}
             </p>
           </div>
+          {/* <div className="mr-4 max-w-[250px]">
+            <img
+              src={require("../../img/appearanceauto.png")}
+              alt="appearanceauto"
+              className={autoSelected}
+              onClick={() => {
+                setAutoTheme();
+                setLightSelected(
+                  "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
+                );
+                setDarkSelected(
+                  "rounded-lg border-white border-4 cursor-pointer md:rounded-xl lg:rounded-2xl dark:border-neutral-800"
+                );
+                setAutoSelected(
+                  "rounded-lg border-blue-600 border-4 cursor-pointer md:rounded-xl lg:rounded-2xl"
+                );
+                setLightText("Light");
+                setDarkText("Dark");
+                setAutoText("✔️ Auto");
+              }}
+            />
+            <p className="font-medium text-sm mt-2 dark:text-neutral-200">
+              {autoText}
+            </p>
+          </div> */}
         </div>
       </div>
     </div>
