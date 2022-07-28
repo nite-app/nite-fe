@@ -8,7 +8,7 @@ import SmHabitList from "../pages/home/SmHabitList";
 import SingleHabit from "../pages/habits/SingleHabit";
 import Cycles from "../pages/home/Cycles";
 
-function Home({ active, setActive }) {
+function Home({ active, setActive, newsOpen, setNewsOpen }) {
   const Quote = React.lazy(() => import("../pages/home/Quote"));
 
   return (
@@ -20,7 +20,7 @@ function Home({ active, setActive }) {
             <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl dark:text-white">
               Today at nite
             </p>
-            <News />
+            <News newsOpen={newsOpen} setNewsOpen={setNewsOpen} />
           </div>
           <div>
             <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl dark:text-white">

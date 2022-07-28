@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function News() {
+function News({ newsOpen, setNewsOpen }) {
   //get from db api next
   const [img, setImg] = useState("/img/demonw.png");
   const [title, setTitle] = useState("Sleeping tips with Diego");
@@ -12,8 +12,11 @@ function News() {
   return (
     <div className="p-5 rounded-3xl bg-white dark:bg-neutral-700">
       <div
-        className="box-border rounded-2xl mb-5 bg-cover bg-no-repeat relative aspect-[21/9] 2xl:aspect-[21/7]"
+        className="box-border rounded-2xl mb-5 bg-cover bg-no-repeat relative aspect-[21/9] 2xl:aspect-[21/7] cursor-pointer"
         style={{ backgroundImage: `url(${img})` }}
+        onClick={() => {
+          setNewsOpen(true);
+        }}
       >
         <img
           src={require("../../../img/logo.png")}

@@ -7,6 +7,7 @@ import {
   TabPanelUnstyled,
   TabUnstyled,
 } from "@mui/base";
+import NewsModal from "../pages/home/NewsModal";
 
 // side components
 import Dashboard from "./Dashboard";
@@ -19,6 +20,7 @@ import Settings from "../settings/Settings";
 function Main() {
   const [active, setActive] = useState(true);
   const [settingsOpen, setSettingsOpen] = useState(false);
+  const [newsOpen, setNewsOpen] = useState(false);
 
   const [mainStyle, setMainStyle] = useState(
     "p-0 flex flex-col h-screen box-border w-screen bg-backlight relative sm:p-5 xl:flex-row 2xl:h-screen"
@@ -60,6 +62,10 @@ function Main() {
           open={settingsOpen}
           onClose={() => setSettingsOpen(false)}
         ></Settings>
+        <NewsModal
+          open={newsOpen}
+          onClose={() => setNewsOpen(false)}
+        ></NewsModal>
         {active ? (
           <Sidebar
             settingsOpen={settingsOpen}
@@ -75,7 +81,12 @@ function Main() {
           <Dashboard active={active} setActive={setActive} />
         </TabPanelUnstyled>
         <TabPanelUnstyled value={1} className="w-full">
-          <Home active={active} setActive={setActive} />
+          <Home
+            active={active}
+            setActive={setActive}
+            newsOpen={newsOpen}
+            setNewsOpen={setNewsOpen}
+          />
         </TabPanelUnstyled>
         <TabPanelUnstyled value={2} className="w-full">
           <Sleep active={active} setActive={setActive} />

@@ -87,6 +87,12 @@ input[type="number"] {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+#newsModal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .dark .Mui-selected {
   background-color: #404040;
