@@ -29,4 +29,4 @@ If you encounter a bug or have a feature request, [send us an email](mailto:info
 ## Credits
 
 Everyone who provided and is still providing valuable feedback on this and older versions of nite.</br>
-All of the [contributors](https://github.com/nite-app/nite-web/graphs/contributors) that have helped with implementing various features, fixing bugs, and more.
+All of the [contributors](https://github.com/nite-app/nite-fe/graphs/contributors) that have helped with implementing various features, fixing bugs, and more.
