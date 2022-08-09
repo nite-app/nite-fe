@@ -4,10 +4,12 @@ import { IoClose } from "react-icons/io5";
 function NewsModal({ open, onClose }) {
   //get from db api next
   const [img, setImg] = useState("/img/demonw.png");
-  const [title, setTitle] = useState("Sleeping tips with Diego");
+  const [title, setTitle] = useState(
+    "Fostering Pro-Sleep Habits During the Day"
+  );
   const [content, setContent] = useState("");
   const [preview, setPreview] = useState(
-    "For today, we reserved you some practical tips to help you fall asleep faster, and wake up more energic than ever before! "
+    "Setting the table for high-quality sleep is an all-day affair. A handful of steps that you can take during the day can pave the way for better sleep at night. "
   );
 
   if (!open) return null;
@@ -19,14 +21,14 @@ function NewsModal({ open, onClose }) {
       ></div>
       <div
         id="newsModal"
-        className="box-border absolute top-0 left-0 w-full h-full overflow-y-scroll flex m-auto z-50 p-5 bg-white rounded-none sm:rounded-3xl sm:w-10/12 sm:h-3/4 xl:w-2/3 2xl:w-3/5 max-w-[1150px] dark:bg-neutral-800 dark:shadow-md"
+        className="box-border absolute top-0 left-0 w-11/12 h-5/6 overflow-y-scroll flex m-auto z-50 p-5 bg-white rounded-3xl sm:w-10/12 sm:h-3/4 xl:w-2/3 2xl:w-3/5 max-w-[1150px] dark:bg-neutral-800 dark:shadow-md"
       >
-        <div className="p-5 flex flex-col box-border w-full">
-          <div className="absolute top-14 right-14 cursor-pointer z-10">
+        <div className="flex flex-col box-border w-full sm:p-5">
+          <div className="relative flex z-10">
             <IoClose
               size={32}
               onClick={onClose}
-              className="text-black dark:text-white"
+              className="absolute right-2 top-2 text-black dark:text-white cursor-pointer"
             />
           </div>
           <div

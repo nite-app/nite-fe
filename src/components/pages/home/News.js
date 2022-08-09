@@ -2,11 +2,14 @@ import React, { useEffect, useState } from "react";
 
 function News({ newsOpen, setNewsOpen }) {
   //get from db api next
+  //get from db api next
   const [img, setImg] = useState("/img/demonw.png");
-  const [title, setTitle] = useState("Sleeping tips with Diego");
+  const [title, setTitle] = useState(
+    "Fostering Pro-Sleep Habits During the Day"
+  );
   const [content, setContent] = useState("");
   const [preview, setPreview] = useState(
-    "For today, we reserved you some practical tips to help you fall asleep faster, and wake up more energic than ever before! "
+    "Setting the table for high-quality sleep is an all-day affair. A handful of steps that you can take during the day can pave the way for better sleep at night. "
   );
 
   return (
