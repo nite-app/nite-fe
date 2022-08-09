@@ -41,7 +41,6 @@ function Main() {
   var metaThemeColor = document.querySelector("meta[name=theme-color]");
 
   useEffect(() => {
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
     if (
       localStorage.theme === "dark" ||
       (!("theme" in localStorage) &&
@@ -51,7 +50,7 @@ function Main() {
       metaThemeColor.setAttribute("content", "#171717");
     } else {
       document.documentElement.classList.remove("dark");
-      metaThemeColor.setAttribute("content", "#171717");
+      metaThemeColor.setAttribute("content", "#ECECEC");
     }
   }, []);
 

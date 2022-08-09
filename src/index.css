@@ -141,3 +141,13 @@ input[type="number"] {
     @apply font-medium text-lg text-black align-text-bottom transition-all duration-300 ease-linear dark:text-white;
   }
 }
+
+@media screen and (max-width: 1280px) {
+  .MuiTooltip-tooltip {
+    display: none !important;
+  }
+
+  .dark .MuiTooltip-tooltip {
+    display: none !important;
+  }
+}
