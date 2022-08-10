@@ -37,7 +37,7 @@ function NewsModal({ open, onClose }) {
       ></div>
       <div
         id="newsModal"
-        className="box-border absolute top-0 left-0 w-11/12 h-5/6 max-h-5/6 overflow-y-scroll flex m-auto z-50 p-5 bg-white rounded-3xl sm:w-10/12 sm:h-3/4 xl:w-2/3 2xl:w-3/5 max-w-[1150px] dark:bg-neutral-800 dark:shadow-md"
+        className="box-border absolute top-0 left-0 w-11/12 h-5/6 max-h-5/6 max-w-5/6 overflow-y-scroll flex m-auto z-50 p-5 bg-white rounded-3xl sm:w-10/12 sm:h-3/4 xl:w-2/3 2xl:w-3/5 max-w-[1150px] dark:bg-neutral-800 dark:shadow-md"
       >
         <div className="flex flex-col box-border w-full sm:p-5">
           <div className="relative flex z-10">
@@ -47,10 +47,12 @@ function NewsModal({ open, onClose }) {
               className="absolute right-2 top-2 text-black dark:text-white cursor-pointer"
             />
           </div>
-          <div
-            className="rounded-2xl w-full mt-15 aspect-[21/9] 2xl:aspect-[21/7] bg-no-repeat bg-cover relative mb-10 min-h-[200px]"
-            style={{ backgroundImage: `url(${img})` }}
-          >
+          <div className="relative mb-10">
+            <img
+              src="./img/demonw.png"
+              className="rounded-2xl w-full mt-15 relative"
+              alt="news img"
+            ></img>
             <img
               src={require("../../../img/logo.png")}
               alt="logo"
