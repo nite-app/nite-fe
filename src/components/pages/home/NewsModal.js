@@ -81,7 +81,7 @@ function NewsModal({ open, onClose }) {
             <p className="font-medium text-lg mt-5 dark:text-neutral-200">
               • See the Light of Day
             </p>
-            <p className="mt-2 dark: text-neutral-300">
+            <p className="mt-2 dark: dark:text-neutral-300">
               Our internal clocks are regulated by light exposure. Sunlight has
               the strongest effect, so try to take in daylight by getting
               outside or opening up windows or blinds to natural light. Getting
@@ -92,7 +92,7 @@ function NewsModal({ open, onClose }) {
             <p className="font-medium text-lg mt-5 dark:text-neutral-200">
               • Find Time to Move
             </p>
-            <p className="mt-2 mb-5 dark: text-neutral-300">
+            <p className="mt-2 mb-5 dark:text-neutral-300">
               Daily exercise has across-the-board benefits for health, and the
               changes it initiates in energy use and body temperature can
               promote solid sleep. Most experts advise against intense exercise
@@ -103,7 +103,7 @@ function NewsModal({ open, onClose }) {
               discover more{" "}
               <a
                 href="https://www.sleepfoundation.org/sleep-hygiene/healthy-sleep-tips"
-                className="text-blue-900"
+                className="text-blue-700 dark:text-blue-900"
               >
                 here
               </a>
