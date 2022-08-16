@@ -6,11 +6,11 @@ function QualityCard({ text, selected }) {
   useEffect(() => {
     if (selected)
       setStyle(
-        "p-3 rounded-2xl mr-2 mt-2 bg-gray-400 pr-5 cursor-pointer whitespace-nowrap w-fit inline-block"
+        "p-3 rounded-2xl mr-2 mt-2 bg-gray-400 pr-5 cursor-pointer whitespace-nowrap w-fit inline-block dark:bg-neutral-600"
       );
     else
       setStyle(
-        "p-3 rounded-2xl mr-2 mt-2 bg-gray-200 pr-5 cursor-pointer whitespace-nowrap w-fit inline-block"
+        "p-3 rounded-2xl mr-2 mt-2 bg-gray-200 pr-5 cursor-pointer whitespace-nowrap w-fit inline-block dark:bg-neutral-400"
       );
   }, []);
 

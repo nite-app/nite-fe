@@ -4,9 +4,11 @@ import QualityCard from "./QualityCard";
 function SleepQuality() {
   return (
     <div className="flex flex-col rounded-3xl bg-white w-full p-5 dark:bg-neutral-700">
-      <p className="font-semibold text-lg mb-3">How do you feel today?</p>
+      <p className="font-semibold text-lg mb-3 dark:text-white">
+        How do you feel today?
+      </p>
       <div className="max-w-max box-border">
-        <div className="mt-2 box-border grid-cols-2 gap-y-2">
+        <div className="box-border grid-cols-2 gap-y-2">
           <QualityCard text={"⚡ Energetic"} selected={false}></QualityCard>
           <QualityCard text={"😴 Tired"} selected={false}></QualityCard>
           <QualityCard text={"👌 Normal"} selected={true}></QualityCard>
