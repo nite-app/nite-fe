@@ -11,7 +11,7 @@ function About() {
         <img
           src={require("../../img/devlogo.png")}
           alt="nite-icon"
-          className="w-20 shadow-md rounded-xl"
+          className="w-20 shadow-md rounded-2xl"
         />
         <div className="ml-5">
           <p className="font-semibold text-xl dark:text-neutral-200">Nite</p>
