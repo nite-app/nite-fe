@@ -16,6 +16,7 @@ import Sleep from "./Sleep";
 import Habits from "./Habits";
 
 import Settings from "../settings/Settings";
+import InnerSplash from "../InnerSplash";
 
 function Main() {
   const [active, setActive] = useState(true);
@@ -57,6 +58,7 @@ function Main() {
   return (
     <TabsUnstyled defaultValue={0} className="is-active">
       <div className={mainStyle}>
+        <InnerSplash />
         <Settings
           open={settingsOpen}
           onClose={() => setSettingsOpen(false)}

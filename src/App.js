@@ -12,8 +12,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/" element={<Splash />}></Route>
-        <Route exact path="/main" element={<Main />} />
+        <Route exact path="/splash" element={<Splash />}></Route>
+        <Route exact path="/" element={<Main />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/login" element={<Login />} />
         <Route exact path="/reset" element={<Reset />} />
