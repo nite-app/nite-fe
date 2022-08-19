@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import Main from "./screens/Main";
 
 function Loading() {
   return (
@@ -11,7 +12,18 @@ function Loading() {
 function Splash() {
   const [loading, setLoading] = useState(true);
 
-  return <div>{loading ? <Loading /> : <></>}</div>;
+  useEffect(() => {
+    try {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1500);
+    } catch (err) {
+      console.log(err);
+      setLoading(false);
+    }
+  }, []);
+
+  return <div>{loading ? <Loading /> : <Main />}</div>;
 }
 
 export default Splash;
