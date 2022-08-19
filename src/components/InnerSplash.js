@@ -7,24 +7,22 @@ let logospan = document.querySelectorAll(".logo");
 
 function InnerSplash() {
   useEffect(() => {
+    logospan.forEach((span, i) => {
+      setTimeout(() => {
+        span.classList.add("active");
+      }, (i + 1) * 300);
+    }, 0);
     setTimeout(() => {
       logospan.forEach((span, i) => {
         setTimeout(() => {
-          span.classList.add("active");
-        }, (i + 1) * 300);
+          span.classList.remove("active");
+          span.classList.add("fade");
+        }, (i + 1) * 50);
       });
-      setTimeout(() => {
-        logospan.forEach((span, i) => {
-          setTimeout(() => {
-            span.classList.remove("active");
-            span.classList.add("fade");
-          }, (i + 1) * 50);
-        });
-      }, 2000);
-      setTimeout(() => {
-        container.style.opacity = 0;
-      }, 2300);
-    }, 0);
+    }, 2000);
+    setTimeout(() => {
+      container.style.opacity = 0;
+    }, 2300);
   }, []);
 
   return (

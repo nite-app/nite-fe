@@ -1,7 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import Splash from "./components/withSplash";
 import Main from "./components/screens/Main";
 
 import Register from "./components/auth/Register";
@@ -12,7 +11,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/splash" element={<Splash />}></Route>
         <Route exact path="/" element={<Main />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/login" element={<Login />} />
