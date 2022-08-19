@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Main from "./screens/Main";
+import Spinner from "./Spinner";
 
 function Loading() {
   return (
-    <div>
-      <div>Replace w gif</div>
+    <div className="h-screen flex flex-col justify-center items-center">
+      <Spinner />
     </div>
   );
 }
