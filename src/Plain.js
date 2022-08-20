@@ -1,12 +1,14 @@
-import React, { useEffect } from "react";
-import "../styles/splash.css";
+// First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+let vh = window.innerHeight * 0.01;
+// Then we set the value in the --vh custom property to the root of the document
+document.documentElement.style.setProperty("--vh", `${vh}px`);
 
 let container = document.querySelector(".splash-container");
 let logo = document.querySelector(".logo-p");
 let logospan = document.querySelectorAll(".logo");
 
-function InnerSplash() {
-  // useEffect(() => {
+export default function Plain() {
+  console.log("splash");
   //   logospan.forEach((span, i) => {
   //     setTimeout(() => {
   //       span.classList.add("active");
@@ -23,18 +25,6 @@ function InnerSplash() {
   //   setTimeout(() => {
   //     container.style.opacity = 0;
   //   }, 2300);
-  // }, []);
 
-  return (
-    <div className="splash-container">
-      <div className="w-full h-full flex flex-col justify-center items-center">
-        <p className="logo-p">
-          <span className="logo">ni</span>
-          <span className="logo">te.</span>
-        </p>
-      </div>
-    </div>
-  );
+  logospan.classList.add("active");
 }
-
-export default InnerSplash;
