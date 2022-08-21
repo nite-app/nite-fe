@@ -58,7 +58,7 @@ function Main() {
   return (
     <TabsUnstyled defaultValue={0} className="is-active">
       <div className={mainStyle}>
-        {/* <InnerSplash /> */}
+        <InnerSplash />
         <Settings
           open={settingsOpen}
           onClose={() => setSettingsOpen(false)}
