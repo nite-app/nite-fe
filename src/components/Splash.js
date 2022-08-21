@@ -1,11 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../styles/splash.css";
 
-let container = document.querySelector(".splash-container");
-let logo = document.querySelector(".logo-p");
-let logospan = document.querySelectorAll(".logo");
-
-function InnerSplash() {
+function Splash() {
   const [logospan1, setLogoSpan1] = useState("logo");
   const [logospan2, setLogoSpan2] = useState("logo");
   const [container, setContainer] = useState("splash-container");
@@ -45,4 +41,4 @@ function InnerSplash() {
   );
 }
 
-export default InnerSplash;
+export default Splash;
