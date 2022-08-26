@@ -24,10 +24,6 @@ function NewsModal({ open, onClose }) {
     },
   ]);
 
-  useEffect(() => {
-    console.log(data);
-  }, []);
-
   if (!open) return null;
   return (
     <>

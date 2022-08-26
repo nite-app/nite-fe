@@ -3,9 +3,18 @@
     -6px -6px 10px -1px rgba(255, 255, 255, 0.7);
 }
 #inner {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2),
+    inset -4px -4px 6px -1px rgba(0, 0, 0, 0.2),
+    -0.5px -0.5px 0px 1px rgba(255, 255, 255, 1),
+    0.5px 0.5px 0px rgba(0, 0, 0, 0.1);
 }
 
 .dark #outer {
   box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.2),
     -6px -6px 10px -1px rgba(255, 255, 255, 0.1);
+}
+
+.dark #inner {
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.5),
+    inset -4px -4px 6px -1px rgba(0, 0, 0, 0.2);
 }
