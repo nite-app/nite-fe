@@ -4,6 +4,7 @@ import InsightCard from "../pages/dashboard/InsightCard";
 import LineChart from "../charts/LineChart";
 import { chartData } from "../../data/Data";
 import DonutChart from "../charts/DonutChart";
+import ProgressBar from "../pages/dashboard/ProgressBar";
 
 let width, height, gradient;
 function getGradient(ctx, chartArea) {
@@ -209,10 +210,11 @@ function Dashboard({ active, setActive }) {
           >
             <LineChart chartData={userData} chartOptions={userOptions} />
           </div>
-          <div className="flex h-full h-min-max w-full p-7 rounded-2xl bg-white xl:w-1/3 2xl:w-1/3 dark:bg-neutral-700">
-            <p className="font-semibold text-xl dark:text-neutral-50">
+          <div className="flex flex-col h-full w-full p-7 rounded-2xl bg-white xl:w-1/3 2xl:w-1/3 dark:bg-neutral-700">
+            <p className="font-semibold text-xl dark:text-neutral-50 mb-5">
               Sleep quality
             </p>
+            <ProgressBar />
           </div>
         </div>
       </div>
