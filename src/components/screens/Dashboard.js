@@ -214,7 +214,7 @@ function Dashboard({ active, setActive }) {
             <p className="font-semibold text-xl dark:text-neutral-50 mb-5">
               Sleep quality
             </p>
-            <ProgressBar text={"85%"} />
+            <ProgressBar text={"85%"} progress={85} />
           </div>
         </div>
       </div>
