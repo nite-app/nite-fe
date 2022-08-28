@@ -3,8 +3,8 @@ import Header from "../Header";
 import InsightCard from "../pages/dashboard/InsightCard";
 import LineChart from "../charts/LineChart";
 import { chartData } from "../../data/Data";
-import DonutChart from "../charts/DonutChart";
 import ProgressBar from "../pages/dashboard/ProgressBar";
+import DonutChart from "../pages/dashboard/DonutChart";
 
 let width, height, gradient;
 function getGradient(ctx, chartArea) {
@@ -104,50 +104,6 @@ function Dashboard({ active, setActive }) {
     },
   });
 
-  const [userData2, setUserData2] = useState({
-    labels: ["Completed", "Uncompleted"],
-    datasets: [
-      {
-        label: "Completion",
-        data: [25, 75],
-        backgroundColor: ["#F9896B", "#F6F6FC"],
-      },
-    ],
-  });
-
-  const [userOptions2, setUserOptions2] = useState({
-    responsive: true,
-    borderJoinStyle: "round",
-    cutout: "80%",
-    plugins: {
-      legend: {
-        display: false,
-      },
-    },
-  });
-
-  const [userData3, setUserData3] = useState({
-    labels: ["Completed", "Uncompleted"],
-    datasets: [
-      {
-        label: "Completion",
-        data: [50, 50],
-        backgroundColor: ["#F9896B", "#F6F6FC"],
-      },
-    ],
-  });
-
-  const [userOptions3, setUserOptions3] = useState({
-    responsive: true,
-    borderJoinStyle: "round",
-    cutout: "80%",
-    plugins: {
-      legend: {
-        display: false,
-      },
-    },
-  });
-
   const plugins = [
     {
       beforeDraw: function (chart) {
@@ -230,12 +186,8 @@ function Dashboard({ active, setActive }) {
               </p>
               <p className="font-medium text-lg text-gray-400">25% Achieved</p>
             </div>
-            <div className="w-24 aspect-square mt-5 lg:mt-0">
-              <DonutChart
-                chartData={userData2}
-                chartOptions={userOptions2}
-                plugins={plugins}
-              />
+            <div className="aspect-square mt-5 lg:mt-0">
+              <DonutChart size="100" progress="25" label="25%" />
             </div>
           </div>
           <div className="w-full rounded-2xl p-8 box-border bg-white md:flex justify-between dark:bg-neutral-700">
@@ -245,8 +197,8 @@ function Dashboard({ active, setActive }) {
               </p>
               <p className="font-medium text-lg text-gray-400">50% Achieved</p>
             </div>
-            <div className="w-24 aspect-square mt-5 lg:mt-0">
-              <DonutChart chartData={userData3} chartOptions={userOptions3} />
+            <div className="aspect-square mt-5 lg:mt-0">
+              <DonutChart size="100" progress="50" label="50%" />
             </div>
           </div>
         </div>
