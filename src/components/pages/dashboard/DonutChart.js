@@ -50,9 +50,7 @@ function DonutChart(props) {
           />
         </svg>
         <div className="svg-pi-label">
-          <span className="font-bold text-sm" style={{ color: labelColor }}>
-            {label}
-          </span>
+          <span className="font-bold text-sm dark:text-white">{label}</span>
         </div>
       </div>
     </>
