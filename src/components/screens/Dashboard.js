@@ -186,7 +186,7 @@ function Dashboard({ active, setActive }) {
               </p>
               <p className="font-medium text-lg text-gray-400">25% Achieved</p>
             </div>
-            <div className="aspect-square mt-5 lg:mt-0">
+            <div className="mt-5 lg:mt-0">
               <DonutChart size="100" progress="25" label="25%" />
             </div>
           </div>
@@ -197,7 +197,7 @@ function Dashboard({ active, setActive }) {
               </p>
               <p className="font-medium text-lg text-gray-400">50% Achieved</p>
             </div>
-            <div className="aspect-square mt-5 lg:mt-0">
+            <div className="mt-5 lg:mt-0">
               <DonutChart size="100" progress="50" label="50%" />
             </div>
           </div>

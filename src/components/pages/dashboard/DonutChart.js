@@ -6,9 +6,9 @@ function DonutChart(props) {
     size = 150,
     progress = 0,
     trackWidth = 10,
-    trackColor = `#ddd`,
+    trackColor = `#F6F6F6`,
     indicatorWidth = 10,
-    indicatorColor = `#07c`,
+    indicatorColor = `#F9896B`,
     indicatorCap = `round`,
     label = `0%`,
     labelColor = `#333`,
@@ -22,7 +22,10 @@ function DonutChart(props) {
 
   return (
     <>
-      <div className="svg-pi-wrapper" style={{ width: size, height: size }}>
+      <div
+        className="svg-pi-wrapper"
+        style={{ width: size + "px", height: size + "px" }}
+      >
         <svg className="svg-pi" style={{ width: size, height: size }}>
           <circle
             className="svg-pi-track"
