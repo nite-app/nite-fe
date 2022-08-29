@@ -17,3 +17,16 @@
 .dark .svg-pi-track {
   stroke: #515151;
 }
+
+.svg-pi-indicator {
+  animation: animate 1s ease-in-out;
+}
+
+@keyframes animate {
+  0% {
+    stroke-dashoffset: 250%;
+  }
+  20% {
+    stroke-dashoffset: 250%;
+  }
+}
