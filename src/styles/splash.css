@@ -11,12 +11,20 @@
   overflow: hidden;
 }
 
+.dark .splash-container {
+  background-color: #171717;
+}
+
 .logo-p {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: black;
+}
+
+.dark .logo-p {
+  color: white;
 }
 
 .logo {
