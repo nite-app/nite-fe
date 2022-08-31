@@ -5,15 +5,21 @@ import Tooltip from "../../Tooltip";
 function Cycles() {
   const currentDate = new Date();
   const [selectedTime, setSelectedTime] = useState();
+  // selected hours by the user
   const [selHours, setSelHours] = useState();
+  // selected minutes by the user
   const [selMins, setSelMins] = useState();
+  // 3 responses on selected time
   const [sel1, setSel1] = useState();
   const [sel2, setSel2] = useState();
   const [sel3, setSel3] = useState();
-  const [ampm, setAmpm] = useState();
+  // 3 responses for current time
   const [time1, setTime1] = useState();
   const [time2, setTime2] = useState();
   const [time3, setTime3] = useState();
+  // am/pm converter
+  const [ampm, setAmpm] = useState();
+  // cards showing variables
   const [cr1, setCr1] = useState(false);
   const [cr2, setCr2] = useState(false);
   const [cr3, setCr3] = useState(false);
