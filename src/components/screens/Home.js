@@ -6,7 +6,6 @@ import News from "../pages/home/News";
 import Spinner from "../Spinner";
 import SmHabitList from "../pages/home/SmHabitList";
 import SingleHabit from "../pages/habits/SingleHabit";
-import Cycles from "../pages/home/Cycles";
 
 function Home({ active, setActive, newsOpen, setNewsOpen }) {
   const Quote = React.lazy(() => import("../pages/home/Quote"));
@@ -44,12 +43,6 @@ function Home({ active, setActive, newsOpen, setNewsOpen }) {
           </div>
         </div>
         <div className="lg:w-1/2">
-          <div className="mb-10">
-            <p className="font-semibold text-xl mt-10 mb-5 2xl:text-2xl lg:mt-8 dark:text-white">
-              Sleep cycles
-            </p>
-            <Cycles />
-          </div>
           <div className="mb-10">
             <p className="font-semibold text-xl mt-8 mb-5 2xl:text-2xl dark:text-white">
               Today at a glance

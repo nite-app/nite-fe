@@ -19,6 +19,10 @@ function SleepQuality() {
           <QualityCard text={"😩 Stressed"} selected={true}></QualityCard>
         </div>
       </div>
+      {/* <p className="font-semibold text-lg mb-3 mt-5 dark:text-white">
+        How long did you sleep?
+      </p> */}
+      <div className="max-w-max box-border"></div>
     </div>
   );
 }

@@ -120,7 +120,7 @@ function Cycles() {
           </select>
         </div>
         <button
-          className="p-3 px-5 bg-gray-800 text-white font-semibold mt-2 rounded-2xl dark:bg-neutral-200 dark:text-neutral-600"
+          className="p-3 px-5 bg-gray-800 text-white font-semibold mt-2 rounded-2xl dark:bg-neutral-50 dark:text-neutral-600"
           onClick={handleCustomCalc}
         >
           Calculate

@@ -9,6 +9,9 @@ function CycleCard({ cycles, hours, img }) {
       <p className="dark:text-white">
         {cycles} full cycles, Corresponding to {hours} hours of sleep
       </p>
+      <button className="mt-3 px-4 py-2 text-left w-fit rounded-xl bg-black dark:bg-neutral-50">
+        <p className="text-white dark:text-black">Select</p>
+      </button>
     </div>
   );
 }
