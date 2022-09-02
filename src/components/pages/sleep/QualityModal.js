@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 
 function QualityModal() {
-  const [qualityOpen, setQualityOpen] = useState(true);
+  const [qualityOpen, setQualityOpen] = useState(false);
 
   // useEffect(() => {
   //   if (!localStorage.qualityopen) localStorage.setItem("qualityopen", false);
