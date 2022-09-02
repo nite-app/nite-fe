@@ -41,18 +41,6 @@ function Personal() {
         </div>
       </div>
       <div className="mt-6">
-        <p className="font-semibold text-lg mb-4 dark:text-neutral-50">
-          Account Deletion
-        </p>
-        <div className="flex flex-col">
-          <button className="rounded-2xl p-4 bg-red-50 focus:outline-none dark:bg-zinc-700">
-            <p className="font-semibold text-md text-red-600 dark:text-red-400">
-              Delete Account
-            </p>
-          </button>
-        </div>
-      </div>
-      <div className="mt-6">
         <p className="font-semibold text-lg mb-2 dark:text-neutral-50">
           Export Data
         </p>
@@ -61,9 +49,21 @@ function Personal() {
           includes every single piece of data we own about your account.
         </p>
         <div className="flex flex-col">
+          <button className="rounded-2xl p-4 bg-gray-100 focus:outline-none dark:bg-zinc-700">
+            <p className="font-semibold text-md dark:text-neutral-200">
+              Export all data
+            </p>
+          </button>
+        </div>
+      </div>
+      <div className="mt-6">
+        <p className="font-semibold text-lg mb-4 dark:text-neutral-50">
+          Account Deletion
+        </p>
+        <div className="flex flex-col">
           <button className="rounded-2xl p-4 bg-red-50 focus:outline-none dark:bg-zinc-700">
             <p className="font-semibold text-md text-red-600 dark:text-red-400">
-              Export all data
+              Delete Account
             </p>
           </button>
         </div>

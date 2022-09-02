@@ -101,7 +101,7 @@ function Settings({ open, onClose }) {
                     </button>
                   </TabsListUnstyled>
                 </div>
-                <div className="w-3/4 overflow-y-scroll box-border pl-10">
+                <div className="w-3/4 overflow-y-scroll box-border pl-10 relative">
                   <TabPanelUnstyled value={0} className="w-full">
                     <Personal />
                   </TabPanelUnstyled>
