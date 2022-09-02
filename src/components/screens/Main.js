@@ -8,6 +8,7 @@ import {
   TabUnstyled,
 } from "@mui/base";
 import NewsModal from "../pages/home/NewsModal";
+import QualityModal from "../pages/sleep/QualityModal";
 
 // side components
 import Dashboard from "./Dashboard";
@@ -67,6 +68,7 @@ function Main() {
           open={newsOpen}
           onClose={() => setNewsOpen(false)}
         ></NewsModal>
+        <QualityModal />
         {active ? (
           <Sidebar
             settingsOpen={settingsOpen}
