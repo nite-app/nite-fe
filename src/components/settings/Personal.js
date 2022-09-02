@@ -52,6 +52,22 @@ function Personal() {
           </button>
         </div>
       </div>
+      <div className="mt-6">
+        <p className="font-semibold text-lg mb-2 dark:text-neutral-50">
+          Export Data
+        </p>
+        <p className="mb-4">
+          You can retrieve your own data every time you wish. <br /> This
+          includes every single piece of data we own about your account.
+        </p>
+        <div className="flex flex-col">
+          <button className="rounded-2xl p-4 bg-red-50 focus:outline-none dark:bg-zinc-700">
+            <p className="font-semibold text-md text-red-600 dark:text-red-400">
+              Export all data
+            </p>
+          </button>
+        </div>
+      </div>
     </div>
   );
 }
