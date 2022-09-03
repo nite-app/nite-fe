@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IoClose } from "react-icons/io5";
 
 function QualityModal() {
-  const [qualityOpen, setQualityOpen] = useState(false);
+  const [qualityOpen, setQualityOpen] = useState(true);
 
   // useEffect(() => {
   //   if (!localStorage.qualityopen) localStorage.setItem("qualityopen", false);
@@ -17,6 +17,12 @@ function QualityModal() {
   //     setQualityOpen(false);
   //   }
   // }, []);
+
+  useEffect(() => {
+    if (qualityOpen) {
+      document.body.style.overflow = "hidden";
+    }
+  }, [qualityOpen]);
 
   if (!qualityOpen) return null;
   return (
