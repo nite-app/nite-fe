@@ -5,22 +5,20 @@ import QualityCard from "./QualityCard";
 function QualityModal() {
   const [qualityOpen, setQualityOpen] = useState(true);
 
-  // useEffect(() => {
-  //   if (!localStorage.qualityopen) localStorage.setItem("qualityopen", false);
-  //   if (!localStorage.qualitydate)
-  //     localStorage.setItem("qualitydate", new Date().getDay());
-  //   if (
-  //     localStorage.qualityopen === false &&
-  //     localStorage.qualitydate < new Date().getDay()
-  //   ) {
-  //     setQualityOpen(true);
-  //   } else {
-  //     setQualityOpen(false);
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (
+      localStorage.qualitydate < new Date().getDate() ||
+      !localStorage.qualitydate
+    ) {
+      setQualityOpen(true);
+    } else {
+      setQualityOpen(false);
+    }
+  }, []);
 
   const onClose = () => {
     setQualityOpen(false);
+    localStorage.setItem("qualitydate", new Date().getDate());
   };
 
   useEffect(() => {
