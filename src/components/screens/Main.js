@@ -98,7 +98,7 @@ function Main() {
         <TabPanelUnstyled value={3} className="w-full">
           <Habits active={active} setActive={setActive} />
         </TabPanelUnstyled>
-        <TabPanelUnstyled value={3} className="w-full">
+        <TabPanelUnstyled value={4} className="w-full">
           <SettingsPage active={active} setActive={setActive} />
         </TabPanelUnstyled>
       </div>

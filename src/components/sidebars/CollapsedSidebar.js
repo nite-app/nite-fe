@@ -85,20 +85,6 @@ function CollapsedSidebar({ settingsOpen, setSettingsOpen }) {
               </span>
             </TabUnstyled>
           </Tooltip>
-          <Tooltip title={"Settings"} placement={"right"}>
-            <TabUnstyled
-              value={4}
-              className="tab-item group p-4 md:p-5 xl:mb-12"
-            >
-              <HiOutlineCog
-                size={24}
-                className="collapsedtab-icon group-hover:text-black dark:group-hover:text-neutral-100"
-              />
-              <span className="tab-tooltip group-hover:scale-100 xl:display:block">
-                Settings ⚙️
-              </span>
-            </TabUnstyled>
-          </Tooltip>
         </TabsListUnstyled>
       </div>
     </div>
