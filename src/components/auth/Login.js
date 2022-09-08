@@ -12,32 +12,32 @@ function Login() {
         />
         <h1 className="font-bold text-2xl">nite</h1>
       </div>
-      <div className="bg-white rounded-3xl p-10 w-11/12 sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/3 2xl:w-1/4">
+      <div className="bg-white rounded-3xl p-10 w-11/12 max-w-[400px]">
         <h1 className="font-semibold text-3xl">Log in</h1>
-        <p className="font-medium text-lighttxt mt-1">
+        <p className="font-medium text-lighttxt mt-1 text-sm">
           New to nite?{" "}
           <Link to="/register" className="text-blue-700">
             Register
           </Link>
         </p>
-        <form className="mt-10">
+        <form className="mt-8">
           <input
             type="email"
             placeholder="Email"
-            className="w-full rounded-2xl bg-neutral-100 mb-2 py-4 px-8 outline-none border-none "
+            className="w-full rounded-2xl bg-neutral-100 mb-2 p-4 outline-none border-none text-sm"
           />
           <input
             type="password"
             placeholder="Password"
-            className="w-full rounded-2xl bg-neutral-100 mb-2 py-4 px-8 outline-none border-none "
+            className="w-full rounded-2xl bg-neutral-100 mb-2 p-4 outline-none border-none text-sm"
           />
           <button
             type="submit"
-            className="rounded-2xl mt-5 w-full bg-black p-4 text-lighttxt text-center font-semibold "
+            className="rounded-2xl mt-2 w-full bg-black p-4 text-lighttxt text-center font-semibold text-sm"
           >
             Login
           </button>
-          <p className="font-medium text-blue-700 mt-4">
+          <p className="font-medium text-blue-700 mt-4 text-sm">
             Forgot your password?
           </p>
         </form>
