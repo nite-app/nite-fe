@@ -3,7 +3,7 @@ import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { BiSquareRounded } from "react-icons/bi";
 import { BiMoon } from "react-icons/bi";
 import { CgCheckR } from "react-icons/cg";
-import { IoMdSettings } from "react-icons/io";
+import { HiOutlineCog } from "react-icons/hi";
 import {
   TabsUnstyled,
   TabsListUnstyled,
@@ -74,7 +74,7 @@ function CollapsedSidebar({ settingsOpen, setSettingsOpen }) {
           <Tooltip title={"Habits"} placement={"right"}>
             <TabUnstyled
               value={3}
-              className="tab-item group p-4 md:p-5 xl:mb-12"
+              className="tab-item group p-4 md:p-5 xl:mb-2"
             >
               <CgCheckR
                 size={20}
@@ -82,6 +82,20 @@ function CollapsedSidebar({ settingsOpen, setSettingsOpen }) {
               />
               <span className="tab-tooltip group-hover:scale-100 xl:display:block">
                 Habits ✅
+              </span>
+            </TabUnstyled>
+          </Tooltip>
+          <Tooltip title={"Settings"} placement={"right"}>
+            <TabUnstyled
+              value={4}
+              className="tab-item group p-4 md:p-5 xl:mb-12"
+            >
+              <HiOutlineCog
+                size={24}
+                className="collapsedtab-icon group-hover:text-black dark:group-hover:text-neutral-100"
+              />
+              <span className="tab-tooltip group-hover:scale-100 xl:display:block">
+                Settings ⚙️
               </span>
             </TabUnstyled>
           </Tooltip>

@@ -15,6 +15,7 @@ import Dashboard from "./Dashboard";
 import Home from "./Home";
 import Sleep from "./Sleep";
 import Habits from "./Habits";
+import SettingsPage from "./SettingsPage";
 
 import Settings from "../settings/Settings";
 import Splash from "../Splash";
@@ -96,6 +97,9 @@ function Main() {
         </TabPanelUnstyled>
         <TabPanelUnstyled value={3} className="w-full">
           <Habits active={active} setActive={setActive} />
+        </TabPanelUnstyled>
+        <TabPanelUnstyled value={3} className="w-full">
+          <SettingsPage active={active} setActive={setActive} />
         </TabPanelUnstyled>
       </div>
     </TabsUnstyled>

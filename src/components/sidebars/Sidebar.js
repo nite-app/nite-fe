@@ -3,7 +3,7 @@ import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { BiSquareRounded } from "react-icons/bi";
 import { BiMoon } from "react-icons/bi";
 import { CgCheckR } from "react-icons/cg";
-import { IoMdSettings } from "react-icons/io";
+import { HiOutlineCog } from "react-icons/hi";
 import {
   TabsUnstyled,
   TabsListUnstyled,
@@ -72,6 +72,15 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
             />
             <p className="tab-text group-hover:text-hovertxt dark:group-hover:text-neutral-100">
               Habits
+            </p>
+          </TabUnstyled>
+          <TabUnstyled value={4} className="tab-item group p-5">
+            <HiOutlineCog
+              size={24}
+              className="tab-icon group-hover:text-hovertxt dark:group-hover:text-neutral-100"
+            />
+            <p className="tab-text group-hover:text-hovertxt dark:group-hover:text-neutral-100">
+              Settings
             </p>
           </TabUnstyled>
         </TabsListUnstyled>
