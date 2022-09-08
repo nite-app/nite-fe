@@ -8,7 +8,7 @@ function Reset() {
         <img
           src={require("../../img/logo.png")}
           alt="logo"
-          className="mr-4 w-14 h-14"
+          className="mr-4 w-12 h-12"
         />
         <h1 className="font-bold text-2xl">nite</h1>
       </div>
