@@ -18,7 +18,8 @@ function CollapsedSidebar({ settingsOpen, setSettingsOpen }) {
       <div className="p-5 box-border items-center justify-center pr-0 md:pr-5">
         <Tooltip title={"Settings"} placement={"right"}>
           <div
-            className="rounded-2xl bg-slate-400 p-3 cursor-pointer md:p-4"
+            className="rounded-2xl bg-cover p-3 cursor-pointer md:p-4"
+            id="profile-pic"
             onClick={() => {
               setSettingsOpen(true);
             }}

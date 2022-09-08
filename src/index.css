@@ -87,6 +87,10 @@ input[type="number"] {
   transform: translate(-50%, -50%);
 }
 
+#profile-pic {
+  background-image: url("./img/backgroundbanner.png");
+}
+
 .dark .Mui-selected {
   background-color: #404040;
 }

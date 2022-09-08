@@ -22,7 +22,8 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
       <div className="rounded-2xl bg-gray-200 pb-5" id="profile-container">
         <div className="p-5 flex box-border items-center">
           <div
-            className="rounded-2xl bg-slate-400 p-4 mr-5 cursor-pointer"
+            className="rounded-2xl p-4 mr-5 cursor-pointer bg-cover"
+            id="profile-pic"
             onClick={() => {
               setSettingsOpen(true);
             }}
