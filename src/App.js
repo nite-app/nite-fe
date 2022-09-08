@@ -14,7 +14,7 @@ function App() {
         <Route exact path="/" element={<Main />} />
         <Route exact path="/register" element={<Register />} />
         <Route exact path="/login" element={<Login />} />
-        <Route exact path="/reset" element={<Reset />} />
+        <Route exact path="/reset-password" element={<Reset />} />
       </Routes>
     </BrowserRouter>
   );

@@ -33,13 +33,16 @@ function Login() {
           />
           <button
             type="submit"
-            className="rounded-2xl mt-2 w-full bg-black p-4 text-lighttxt text-center font-semibold text-sm"
+            className="rounded-2xl mt-2 mb-4 w-full bg-black p-4 text-lighttxt text-center font-semibold text-sm"
           >
             Login
           </button>
-          <p className="font-medium text-blue-700 mt-4 text-sm">
+          <Link
+            to="/reset-password"
+            className="font-medium text-blue-700 text-sm"
+          >
             Forgot your password?
-          </p>
+          </Link>
         </form>
       </div>
     </div>
