@@ -81,7 +81,7 @@ function Main() {
             setSettingsOpen={setSettingsOpen}
           />
         )}
-        <TabPanelUnstyled value={0} className="w-full">
+        <TabPanelUnstyled value={0} className="w-full ">
           <Dashboard active={active} setActive={setActive} />
         </TabPanelUnstyled>
         <TabPanelUnstyled value={1} className="w-full">

@@ -19,7 +19,10 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
       className="hidden h-full w-full bg-backpanel box-border flex-col rounded-3xl p-5 mr-5
       xl:flex xl:w-3/12 dark:bg-neutral-800"
     >
-      <div className="rounded-2xl bg-gray-200 pb-5" id="profile-container">
+      <div
+        className="rounded-2xl bg-gray-200 pb-5 dark:bg-neutral-700"
+        id="profile-container"
+      >
         <div className="p-5 flex box-border items-center">
           <div
             className="rounded-2xl p-4 mr-5 cursor-pointer bg-cover"
@@ -36,22 +39,31 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
             </h3>
           </div>
         </div>
-        <div className="flex px-5 box-border">
+        <div className="flex px-5 box-border" id="profile-menu">
           <TabUnstyled
             value={4}
-            className="flex items-center rounded-xl py-1 px-3 !bg-gray-300"
+            className="flex items-center rounded-xl py-1 px-3 !bg-gray-300 group dark:!bg-neutral-500"
+            id="settings-tab"
           >
-            <HiOutlineCog className="mr-2 text-gray-500" />
-            <p className="text-gray-500">Settings</p>
+            <HiOutlineCog
+              className="mr-2 text-gray-500 dark:text-neutral-300"
+              id="settings-icon"
+            />
+            <p
+              className="text-gray-500 dark:text-neutral-300"
+              id="settings-text"
+            >
+              Settings
+            </p>
           </TabUnstyled>
-          <button className="flex items-center rounded-xl py-1 px-3 !bg-gray-300 text-gray-500 ml-2">
-            <FiLogOut className="mr-2 text-gray-500" />
+          <button className="flex items-center rounded-xl py-1 px-3 !bg-gray-300 text-red-400 ml-2 dark:!bg-neutral-500">
+            <FiLogOut className="mr-2 text-red-400" />
             Log out
           </button>
         </div>
       </div>
 
-      <div className="p-5 flex flex-col justify-center ">
+      <div className="py-5 flex flex-col justify-center ">
         <TabsListUnstyled className="flex flex-col justify-center">
           <TabUnstyled value={0} className="tab-item group p-5">
             <MdOutlineSpaceDashboard

@@ -91,6 +91,36 @@ input[type="number"] {
   background-image: url("./img/backgroundbanner.png");
 }
 
+#profile-menu .Mui-selected #settings-icon {
+  color: black !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+#profile-menu .Mui-selected #settings-text {
+  color: black !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+#profile-menu .Mui-selected {
+  background-color: #a8afbd !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.dark #profile-menu .Mui-selected {
+  background-color: #61656d !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.dark #profile-menu .Mui-selected #settings-icon {
+  color: white !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
+.dark #profile-menu .Mui-selected #settings-text {
+  color: white !important;
+  transition: all 0.3s ease-in-out !important;
+}
+
 .dark .Mui-selected {
   background-color: #404040;
 }
