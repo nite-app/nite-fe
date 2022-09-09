@@ -184,7 +184,7 @@ function Dashboard({ active, setActive }) {
               <p className="font-semibold text-2xl mb-4 dark:text-neutral-100">
                 Weekly target
               </p>
-              <p className="font-medium text-lg text-gray-400">25% Achieved</p>
+              <p className="text-lg text-gray-400">25% Achieved</p>
             </div>
             <div className="mt-5 lg:mt-0">
               <DonutChart size="100" progress="25" label="25%" />
@@ -195,7 +195,7 @@ function Dashboard({ active, setActive }) {
               <p className="font-semibold text-2xl mb-4 dark:text-neutral-100">
                 Monthly target
               </p>
-              <p className="font-medium text-lg text-gray-400">50% Achieved</p>
+              <p className="text-lg text-gray-400">50% Achieved</p>
             </div>
             <div className="mt-5 lg:mt-0">
               <DonutChart size="100" progress="50" label="50%" />
