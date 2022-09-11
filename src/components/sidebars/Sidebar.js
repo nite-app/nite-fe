@@ -31,7 +31,7 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
               // setSettingsOpen(true);
             }}
           >
-            <p className="text-2xl font-semibold">AS</p>
+            <p className="text-2xl font-semibold cursor-default">AS</p>
           </div>
           <div className="flex flex-col">
             <h3 className="text-2xl font-semibold dark:text-white">
