@@ -40,10 +40,11 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
           </div>
         </div>
         <div className="flex px-5 box-border" id="profile-menu">
-          <TabUnstyled
-            value={4}
+          <button
             className="flex items-center rounded-xl py-1 px-3 !bg-gray-300 group dark:!bg-neutral-500"
-            id="settings-tab"
+            onClick={() => {
+              setSettingsOpen(true);
+            }}
           >
             <HiOutlineCog
               className="mr-2 text-gray-500 dark:text-neutral-300"
@@ -55,7 +56,7 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
             >
               Settings
             </p>
-          </TabUnstyled>
+          </button>
           <button className="flex items-center rounded-xl py-1 px-3 !bg-gray-300 text-red-400 ml-2 dark:!bg-neutral-500">
             <FiLogOut className="mr-2 text-red-400" />
             Log out
