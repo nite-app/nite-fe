@@ -28,7 +28,7 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
             className="rounded-2xl p-4 mr-5 cursor-pointer bg-cover"
             id="profile-pic"
             onClick={() => {
-              setSettingsOpen(true);
+              // setSettingsOpen(true);
             }}
           >
             <p className="text-2xl font-semibold">AS</p>
