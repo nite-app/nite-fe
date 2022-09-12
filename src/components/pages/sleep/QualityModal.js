@@ -38,11 +38,11 @@ function QualityModal() {
       ></div>
       <div
         id="modal"
-        className="box-border absolute top-0 left-0 w-11/12 max-h-5/6 max-w-5/6 overflow-hidden z-50 p-5 bg-white rounded-3xl sm:w-10/12 sm:w-3/5 md:w-1/2 lg:w-2/5 xl:w-1/4 2xl:w-1/5 max-w-[1150px] dark:bg-neutral-800 dark:shadow-md"
+        className="box-border absolute top-0 left-0 w-11/12 max-h-5/6 max-w-5/6 overflow-hidden z-50 p-5 bg-white rounded-3xl sm:w-10/12 md:w-1/2 lg:w-2/5 xl:w-1/4 2xl:w-1/5 max-w-[1150px] dark:bg-neutral-800 dark:shadow-md"
       >
         <div className="pt-5">
-          <p className="font-semibold text-2xl">Hi, Anna 👋</p>
-          <p className="mt-2">How are you feeling today?</p>
+          <p className="font-semibold text-2xl dark:text-white ">Hi, Anna 👋</p>
+          <p className="mt-2 dark:text-white">How are you feeling today?</p>
           <div className="max-w-max box-border mt-8 mb-4">
             <div className="box-border grid-cols-2 gap-y-2">
               <QualityCard text={"⚡ Energetic"} selected={false}></QualityCard>
