@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { BiSquareRounded } from "react-icons/bi";
 import { BiMoon } from "react-icons/bi";
@@ -11,9 +11,11 @@ import {
   TabPanelUnstyled,
   TabUnstyled,
 } from "@mui/base";
-import Tooltip from "../Tooltip";
+import AlertContext from "../../contexts/AlertContext";
 
 function Sidebar({ settingsOpen, setSettingsOpen }) {
+  const { alertText, setAlert } = useContext(AlertContext);
+
   return (
     <div
       className="hidden h-full w-full bg-backpanel box-border flex-col rounded-3xl p-5 mr-5
@@ -57,7 +59,12 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
               Settings
             </p>
           </button>
-          <button className="flex items-center rounded-xl py-1 px-3 !bg-gray-300 text-red-400 ml-2 dark:!bg-neutral-500">
+          <button
+            className="flex items-center rounded-xl py-1 px-3 !bg-gray-300 text-red-400 ml-2 dark:!bg-neutral-500"
+            onClick={() => {
+              setAlert("Ciao");
+            }}
+          >
             <FiLogOut className="mr-2 text-red-400" />
             Log out
           </button>
