@@ -14,7 +14,7 @@ import {
 import AlertContext from "../../contexts/AlertContext";
 
 function Sidebar({ settingsOpen, setSettingsOpen }) {
-  const { alertText, setAlert } = useContext(AlertContext);
+  const { alertText, setAlert, setAlertType } = useContext(AlertContext);
 
   return (
     <div
