@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { IoClose } from "react-icons/io5";
 import QualityCard from "./QualityCard";
 
 function QualityModal() {
@@ -32,10 +31,7 @@ function QualityModal() {
   if (!qualityOpen) return null;
   return (
     <>
-      <div
-        className="absolute top-0 left-0 overflow-hidden w-screen h-screen z-50 bg-black opacity-30 dark:opacity-50"
-        onClick={() => onClose()}
-      ></div>
+      <div className="absolute top-0 left-0 overflow-hidden w-screen h-screen z-50 bg-black opacity-30 dark:opacity-50"></div>
       <div
         id="modal"
         className="box-border absolute top-0 left-0 w-11/12 max-h-5/6 max-w-5/6 overflow-hidden z-50 p-5 bg-white rounded-3xl sm:w-10/12 md:w-1/2 lg:w-2/5 xl:w-1/4 2xl:w-1/5 max-w-[1150px] dark:bg-neutral-800 dark:shadow-md"

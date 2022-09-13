@@ -9,6 +9,7 @@ import {
 } from "@mui/base";
 import NewsModal from "../pages/home/NewsModal";
 import QualityModal from "../pages/sleep/QualityModal";
+import Alert from "../Alert";
 
 // side components
 import Dashboard from "./Dashboard";
