@@ -61,9 +61,7 @@ function Sidebar({ settingsOpen, setSettingsOpen }) {
           </button>
           <button
             className="flex items-center rounded-xl py-1 px-3 !bg-gray-300 text-red-400 ml-2 dark:!bg-neutral-500"
-            onClick={() => {
-              setAlert("Ciao");
-            }}
+            onClick={() => {}}
           >
             <FiLogOut className="mr-2 text-red-400" />
             Log out

@@ -12,11 +12,13 @@ function Alert() {
   if (alertText)
     return (
       <div className="w-full fixed bottom-20 right-0 flex justify-center items-center z-[100]">
-        <div className="px-8 py-5 bg-neutral-900 rounded-3xl flex justify-between">
-          <p className="font-semibold text-neutral-300 text-lg mr-40">
-            {alertText}
-          </p>
-          <IoClose size={26} className="text-neutral-300" onClick={clear} />
+        <div className="px-6 py-4 bg-neutral-900 rounded-[20px] flex justify-between items-center">
+          <p className="font-semibold text-neutral-300 mr-12">{alertText}</p>
+          <IoClose
+            size={22}
+            className="text-neutral-300 cursor-pointer"
+            onClick={clear}
+          />
         </div>
       </div>
     );
